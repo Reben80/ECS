@@ -1,0 +1,3312 @@
+<section>
+  <title>Most used functions in calculus and their properties</title>
+  <introduction>
+    <p>
+      \begin{motivatebox}[Motivating Questions]
+      <ol>
+        <li>
+          <p>
+            What is a function and what is its historical background?
+            How many ways a function can be represented?
+          </p>
+        </li>
+        <li>
+          <p>
+            Why do we need to learn about functions before we start calculus?
+          </p>
+        </li>
+        <li>
+          <p>
+            Describe various types of functions that are widely used in calculus.
+          </p>
+        </li>
+        <li>
+          <p>
+            What are the special attributes of function that will help us understand the key concepts of calculus?
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      \end{motivatebox}
+    </p>
+  </introduction>
+  <subsection>
+    <title>Introduction</title>
+    <p>
+      Functions arise whenever one quantity depends upon the other.
+      Calculus is the mathematics that describes changes in functions.
+      Therefore before we start learning calculus,
+      we need to have a thorough knowledge of the functions that we will see in the real-world application problems in calculus.
+    </p>
+    <p>
+      In this chapter,
+      we will review some of the functions that you will see in calculus like polynomial, power,
+      rational, trigonometric, exponential,
+      logarithmic functions, and piece-wise defined functions.
+    </p>
+    <p>
+      We will learn how to evaluate functions and how to find their domain and range.
+      We will also discuss the properties of their graphs and will provide examples of equations with terms involving these functions.
+      In short, this chapter provides the foundation for the material to come.
+    </p>
+    <p>
+      You will be using graphing utilities like Desmos or Geogebra in the examples and activities of this book.
+      The use of these devices will enable us to visualize and analyze the graph of complicated functions and study complex problems.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Function definition and notation</title>
+    <definition>
+      <statement>
+        <p>
+          : A function is a relation that relates an input to one and only one output.
+          The set of inputs is called the domain of function and the set of outputs is called the range of the function.
+          The modern definition of function was first given in 1837 by the German mathematician Peter Dirichlet.
+          The following representation of a function is called an arrow diagram.
+          Set A is called the set of input or the domain of the function and set B is called the set of output or the range of the function.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      \usetikzlibrary{arrows, positioning, shapes, fit, calc}
+    </p>
+    <p>
+      \pgfdeclarelayer{background} \pgfsetlayers{background,main}
+    </p>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node[setA,label=left\(:a\)] (a) {};
+\node [setA,below = of a,label=left\(:b\)] (b) {};
+\node [setA,below = of b,label=left\(:c\)] (c) {};
+\node[above=of a,anchor=south] {\(A\)};
+\node[inner sep=0pt,right=3cm of a] (x) {\(x\)};
+\node[below = of x] (y) {\(y\)};
+\node[inner sep=0pt,below = of y] (z) {\(z\)};
+\node[above=of x,anchor=south] {\(B\)};
+\draw[->,shorten >= 3pt] (a) -- node[label=above\(:f\)] {} (x);
+\draw[->,shorten >= 3pt] (b) -- node[label=above:] {} (x);
+\draw[->] (c) -- node[label=above:] {} (y);
+\begin{pgfonlayer}{background}
+\node[fit= (a)  (c) ] {};
+\node[fit= (x) (z) ] {};
+\end{pgfonlayer}\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <p>
+      <em>Function notation</em>: An example of a function notation is <m>y=f(x)</m> and is read as <m>y</m> is equal to <m>f</m> of <m>x</m> meaning <m>f</m> is a function of <m>x</m> or <m>f</m> depends upon <m>x</m>.
+      Here <m>x</m> is the independent variable and <m>y</m> is the dependent variable.
+    </p>
+    <p>
+      Another example is <m>x=g(t)</m> is read as <m>x</m> is equal to <m>g</m> of <m>t</m> means <m>g</m> is a function of <m>t</m>.
+      Here <m>t</m> is the independent variable and <m>x</m> is the dependent variable.
+    </p>
+    <example>
+      <statement>
+        <ul>
+          <li>
+            <p>
+              A model to find the basal metabolism rate,
+              in kcal/h, of a young man is given by
+              <me>
+                R(t)=85-0.18\cos(\frac{\pi t}{12})
+              </me>.
+              Where <m>t</m> is the time in hours measured from <m>5</m> am.Here <m>R(5)</m> represents the basal metabolism rate,
+              in kcal/h, of a young man at 10 am.
+            </p>
+          </li>
+          <li>
+            <p>
+              The birth rate and the death rate of a population in people per year are given by
+              <m>b(t)=1241e^{0.0197t}</m> and <m>d(t)=682e^{0.008t}</m> respectively.
+              The area between these curves for
+              <m>0 \leq t \leq 15</m> represents the increase in population over 15 year period.
+            </p>
+          </li>
+        </ul>
+      </statement>
+    </example>
+    <p>
+      <em>Domain and range of functions</em>: The domain of a function <m>f(x)</m> is the set of input at which the function <m>f(x)</m> is defined.
+      The domain of a function can vary,
+      depending on whether the function is complex-valued, real-valued, etc.
+      Values of <m>x</m> in a domain are not repeated meaning a given input has only one output.
+      The range of a function is the set of all possible outputs of the function corresponding to the allowed inputs.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Various ways to represent and write functions</title>
+    <p>
+      <em>Function representation</em>: We can represent different types of functions in different ways.
+      Usually, functions are represented using formulas or graphs.
+    </p>
+    <p>
+      There are four ways the representation of a function as given below:
+      <ol>
+        <li>
+          <p>
+            <em>Algebraic Representation</em>: Egyptian, Chinese,
+            and Babylonian engineers knew how the area of a square scales with the length of its side.
+            They knew that it was possible to store nine times more bales of hay if the side of the square loft was tripled.
+            They also found out how to calculate the area of more complex designs like rectangles T-shapes and so on.
+            However, they didn't know how to calculate the sides of the shapes - the length of the sides,
+            starting from a given area.
+            Area <m>A</m> of the square depends upon its side length <m>s</m>.
+            The rule that connects  <m>s</m> and <m>A</m> is given by the equation.
+            <me>
+              A=s^2
+            </me>
+            and we say that <m>A</m> is a function of <m>s</m>.
+            <ul>
+              <li>
+                <p>
+                  <em>Pros</em>: Shorthand Rule
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Cons</em>: Less intuitive
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Graphical Representation</em>: Often a graph is the best way to represent a function because it conveys so much information at a glance.
+            Just like electrocardiograms are graphs that enable cardiologists to diagnose possible problems.
+            It measures electric potential <m>V</m> (Millivolts) as a function of time <m>t</m>.
+            <ul>
+              <li>
+                <p>
+                  <em>Pros</em>: Easy to interpret
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Cons</em>: Not always practical
+                </p>
+              </li>
+            </ul>
+          </p>
+          <image>
+             <latex-image> <![CDATA[\begin{tikzpicture}\tikzset{ normal ecg/.pic={ \draw (0,455.0021) -- (11.8345,455.0021); \draw (11.8345,455.0021) .. controls (14.2834,454.8958) and (14.1385,448.7114) .. (18.8842,448.7114) .. controls (24.2116,448.7114) and (23.9695,454.8958) .. (26.3035,455.0021); \draw (26.3035,455.0021) -- (40.7723,455.0021); \draw (40.7723,455.0021) -- (42.7455,463.0645) -- (46.0339,413.3461) -- (48.6647,466.4235) -- (51.2955,455.0021); \draw (51.2955,455.0021) -- (61.1605,455.0021); \draw (61.1605,455.0021) .. controls (64.4487,454.3298) and (65.7118,441.6860) .. (70.3679,441.5241) .. controls (75.2428,441.3542) and (76.9447,454.3301) .. (80.2329,455.0021); \draw (80.2329,455.0021) .. controls (81.4852,455.0021) and (82.2677,452.8462) .. (84.1792,452.9863) .. controls (85.8717,453.1101) and (86.4830,455.0021) .. (87.4678,455.0021); \draw (87.4678,455.0021) -- (100,455.0021); } } \foreach \x in {0,...,3}{ \pic [very thick, scale=0.5] at (\x*50, 0) {normal ecg}; }\end{tikzpicture}]]> </latex-image>
+          </image>
+        </li>
+        <li>
+          <p>
+            <em>Numerical Representation</em>: Life expectancy improved dramatically in <m>20^\text{ th }</m> century.
+            The table gives the life expectancy at birth
+            (in years)
+            of males born in the United States.
+            <ul>
+              <li>
+                <p>
+                  <em>Pros</em>: Easy to read
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Cons</em>: Difficult to generate
+                </p>
+              </li>
+            </ul>
+          </p>
+          <table>
+            <title>Life expectancy</title>
+            <tabular>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell><em>Birth Year</em></cell>
+                <cell><em>Life expectancy</em></cell>
+              </row>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell>1960</cell>
+                <cell>66.6</cell>
+              </row>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell>1970</cell>
+                <cell>67.1</cell>
+              </row>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell>1980</cell>
+                <cell>70.0</cell>
+              </row>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell>1990</cell>
+                <cell>71.8</cell>
+              </row>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell>2000</cell>
+                <cell>73.0</cell>
+              </row>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+              </row>
+            </tabular>
+          </table>
+        </li>
+        <li>
+          <p>
+            <em>Visual Representation</em>: The cost <m>C</m> of mailing an envelope depends upon the weight <m>w</m>.
+            Although there is no simple formula that connects <m>w</m> and <m>C</m>,
+            the post office has a rule to determine <m>C</m> when <m>w</m> is known.
+            Here <m>C</m> is a function of <m>w</m>.
+            <ul>
+              <li>
+                <p>
+                  <em>Pros</em>: Easy to infer
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Cons</em>: No simple formula
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      <em>Various ways of writing functions</em> Explicit, implicit,
+      and parametric relations Explicitly defined functions are what we have been working with so far that is,
+      <m>y = f(x)</m>.
+      The ordered pair <m>(x, y)</m> is obtained easily as <m>(x, f(x))</m>.
+    </p>
+    <p>
+      A relationship between <m>x</m> and <m>y</m> is defined as an implicit function when there is no separation of dependent and independent variables.
+      A rule which may not be a function can still define a relation.
+      For example, consider the rule
+      <me>
+        x^2+y^2=100
+      </me>
+    </p>
+    <p>
+      This defines a set of ordered pairs <m>(x,y)</m> which we can sketch.
+    </p>
+    <figure>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines = middle,
+xmin=-11, xmax=11, ymin=-11, ymax=11,
+axis equal,
+xlabel = \(x\),
+ylabel = {\(f(x)\)},
+yticklabels={,,}
+]
+\draw (axis cs: 0, 0) circle [radius=10];
+\end{axis}
+\legend{\(x^2+y^2=100\)}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </figure>
+    <p>
+      This relation does not, however,
+      define a function, since the sketch will fail the vertical line test.
+      However, we can always break a relation like this up into many parts which will pass the vertical line test,
+      and these many parts will then be functions.
+      The following are examples of explicit functions.
+      <me>
+        y=\sqrt{100-x^2}
+      </me>
+      and
+      <me>
+        y=-\sqrt{100-x^2}
+      </me>
+    </p>
+    <p>
+      \pgfplotsset{compat=newest}
+    </p>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines = middle,
+xmin=-11, xmax=11, ymin=-11, ymax=11,
+axis equal,
+xlabel = \(x\),
+ylabel = {\(f(x)\)},
+yticklabels={,,}
+]
+\draw (axis cs: 10,0) arc[radius =10, start angle= 0, end angle= 180];
+\end{axis}
+\legend{\(y=\sqrt{100-x^2}\)}\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines = middle,
+xmin=-11, xmax=11, ymin=-11, ymax=11,
+axis equal,
+xlabel = \(x\),
+ylabel = {\(f(x)\)},
+yticklabels={,,}
+]
+\draw (axis cs: 10,0) arc[radius =10, start angle= 0, end angle= -180];
+\end{axis}
+\legend{\(y=-\sqrt{100-x^2}\)}\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <p>
+      A third way of defining relations is parametric which is a different way of writing functions,
+      just like explicit and implicit forms.
+      In this case,
+      the ordered pair <m>(x, y)</m> is defined in terms of the third variable called the parameter.
+      Here that parameter is <m>t</m>,
+      such as <m>x = t + 1, y = t^2+2t</m> This third variable controls the two variables <m>x</m> and <m>y</m>.
+    </p>
+    <p>
+      For different values of the parameter <m>t</m>,
+      we get different ordered pairs <m>(x, y)</m>.
+    </p>
+    <figure>
+      <caption>Parametric curve</caption>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\tkzInit[xmin=-7,xmax=7,ymin=-7,ymax=7,xstep=1,ystep=1] \tkzGrid
+\tkzAxeXY
+\tkzFctPar[samples=400,domain=0:pi,red,smooth,thick]{cos(t)+(t)*sin(t)}{sin(t)-(t)*cos(t)}
+\tkzFctPar[samples=400,domain=pi:2*pi,blue,smooth,thick]{cos(t)+(t)*sin(t)}{sin(t)-(t)*cos(t)};\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </figure>
+  </subsection>
+  <subsection>
+    <title>Basics of essential functions</title>
+    <introduction>
+      <p>
+        In this section,
+        we discuss the behavior and graph of many function that students will study in calculus.
+      </p>
+    </introduction>
+    <subsubsection>
+      <title>Polynomial functions</title>
+      <p>
+        The word polynomial joins two diverse roots:
+        the Greek poly, meaning "many", and the Latin nomen,
+        or "name". It was derived from the term binomial by replacing the Latin root bi- with the Greek poly-. That is,
+        it means a sum of many terms
+        (many monomials).
+        The word polynomial was first used in the <m>17^\text{ th }</m> century.
+      </p>
+      <definition>
+        <statement>
+          <p>
+            Polynomial functions are the functions of the form
+            <me>
+              P(x)= a_nx^n+a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\ldots+a_2x^2+a_1x+a_0
+            </me>
+          </p>
+          <p>
+            The degree of this polynomial (The largest degree of all of its terms) is <m>n</m> and the leading coefficient is <m>a_n</m>,
+            where <m>n</m> is a non-negative integer.
+            The highest degree term and the leading coefficient
+            (the coefficient of the highest degree term)
+            are the most important information about the polynomial.
+          </p>
+        </statement>
+      </definition>
+      <p>
+        <em>Domain of polynomial functions</em>
+      </p>
+      <p>
+        The domain of polynomials is all real numbers or
+        <m>(-\infty, \infty)</m> in interval notation form.
+      </p>
+      <example>
+        <statement>
+          <p>
+            Polynomials arise naturally in the study of problems involving the volume and surface area of three-dimensional containers such as boxes and cylinders because these formulas fundamentally involve sums and products of variables.
+            For instance,
+            the volume of cylinder <m>V</m> with height <m>h</m>,
+            and radius <m>r</m>, <m>V=\pi r^2 h</m>.
+          </p>
+          <p>
+            The surface area is given by
+            <me>
+              A=2\pi  r^2+2\pi  r  h
+            </me>
+          </p>
+          <p>
+            If the surface area is 1000 square units.
+            Then
+            <me>
+              2\pi  r^2+2\pi  r  h=1000
+            </me>
+            <me>
+              2\pi r  h=1000-2\pi  r^2
+            </me>
+            <me>
+              h=\frac{1000-2\pi  r^2}{2\pi  r}
+            </me>
+          </p>
+          <p>
+            So the volume becomes
+            <me>
+              V=\pi  r^2  (\frac{1000-2\pi  r^2}{2\pi r})
+            </me>
+            <me>
+              V(r)=r(500-\pi  r^2)=500r-\pi r^3
+            </me>
+            which is a cubic polynomial.
+          </p>
+        </statement>
+      </example>
+      <p>
+        We will now look at some of the commonly used polynomials in the study of calculus.
+        <em>Constant functions</em>:
+        <men>
+          f(x)=C
+        </men>
+      </p>
+      <p>
+        Where <m>C</m> is a constant There are many situations,
+        that involve constant change over time.
+        A constant function is a specific type of mathematical function that,
+        as its name suggests,
+        outputs will always be the same value for any input.
+        In other words,
+        the output of a constant function remains constant.
+        This is why it is called a constant function.
+        The graph of a constant function is a horizontal line parallel to the <m>x</m> axis.
+      </p>
+      <example>
+        <statement>
+          <me>
+            f(x)=2
+          </me>
+        </statement>
+      </example>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=middle,
+grid=major,
+xmin=-3.1,xmax=3.9,
+ymin=-4.1,ymax=3.9,
+restrict y to domain=-4:4,
+xlabel=\(x\),
+ylabel=\(f(x)\),
+clip=false]
+\addplot[color=blue,domain=-3:3,samples=100] {2};
+\addlegendentry{Constant function}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        <em>Linear functions</em> : A linear function is a function whose degree is one and its graph is a straight line.
+        The slope-intercept form of the linear function is
+        <men>
+          y=mx+b
+        </men>
+      </p>
+      <p>
+        Where <m>m</m> is a real number and is the slope of the line,
+        which is also interpreted as the rate of change of the function
+      </p>
+      <p>
+        <m>b</m> is a real number and is the <m>y</m>-intercept
+      </p>
+      <p>
+        <m>x</m> is the independent variable
+      </p>
+      <p>
+        <m>y</m> is the dependent variable
+      </p>
+      <p>
+        The standard form is
+        <men>
+          ax+by=c
+        </men>
+      </p>
+      <p>
+        Where <m>a</m>, <m>b</m>, and <m>c</m> are real numbers.
+        The point-slope form is
+        <men>
+          y-y_1=m(x-x_1)
+        </men>
+      </p>
+      <p>
+        Where <m>m</m> is a real number and is the slope of the line,
+        which is also the rate of change of the function and
+        <m>(x_1,y_1)</m> is a point on the line.
+      </p>
+      <example>
+        <statement>
+          <p>
+            Ms.Jane opened a retirement account and is starting at 100 dollars.
+            She plans to add 40 dollars each month to the account.
+            The function <m>f(t)</m> which represents the amount of money in the account each month is given by a Linear function
+            <me>
+              f(t)=40t+100
+            </me>
+          </p>
+        </statement>
+      </example>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=left,
+grid=major,
+xmin=0,xmax=10,
+ymin=0,ymax=500,
+restrict y to domain=0:1000,
+xlabel=\(t\),
+ylabel=\(f(t)\),
+clip=true]
+\addplot[color=magenta,domain=0:100,samples=100] {40*x+100};
+\addlegendentry{\(f(t)=40t+100\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        <em>Quadratic functions</em>: Quadratic functions are the functions of the form.
+        <men>
+          f(x)=ax^2+bx+c
+        </men>
+      </p>
+      <p>
+        Where <m>a</m>,
+        <m>b</m>, and <m>c</m> are real numbers and <m>a\neq 0</m>
+      </p>
+      <p>
+        The graph of a quadratic function is a U-shaped curve called a parabola.
+        If the leading coefficient of the quadratic function is positive then it is an upward-facing parabola,
+        in that case,
+        the vertex is the minimum point of the parabola and if it is negative then it is a down-facing parabola and the vertex is the maximum point of the parabola.
+        Parabola is one of the types of conic sections credited to having been discovered by Menaechmus.
+      </p>
+      <p>
+        Quadratic functions are used a lot in modeling falling objects.
+      </p>
+      <example>
+        <statement>
+          <p>
+            If a ball is not blocked by the defensive player,
+            how far down will it go before it hits the ground?
+            If the function
+            <me>
+              h(t)=-0.01t^2 +1.18t+2
+            </me>
+            gives the height of the ball,
+            <m>h</m> feet after <m>t</m> seconds.
+          </p>
+        </statement>
+      </example>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=left,
+grid=major,
+xmin=0,xmax=120,
+ymin=0,ymax=50,
+restrict y to domain=0:120,
+xlabel=\(t\),
+ylabel=\(f(t)\),
+clip=true]
+\addplot[color=magenta,domain=0:100,samples=100] {-.01*x^2 +1.18*x+2};
+\addlegendentry{\(f(t)=-0.01t^2 +1.18t+2\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <activity>
+        <p>
+          The cross-section of the hey shade is in the shape of an inverted parabola.
+          It can be modeled by the function
+          <me>
+            h=f(w)=0.2w(10-w)
+          </me>
+        </p>
+        <p>
+          Where <m>w</m> is the width of the hay shade and <m>h</m> is the height
+          (both in inches)
+          of the hay shade.
+          <ol>
+            <li>
+              <p>
+                Use Desmos to check the overall behavior and the shape of the given function.
+              </p>
+            </li>
+            <li>
+              <p>
+                How does this model
+                <me>
+                  h=f(w)=0.2w(10-w)
+                </me>
+                differ from the abstract model?
+                In particular,
+                how do the domain and range of model function and abstract function differ if at all?
+              </p>
+            </li>
+            <li>
+              <p>
+                What values of <m>w</m> make sense to consider in the context of this problem?
+                What values of <m>h</m> make sense in the same context?
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine and interpret with appropriate units the values of <m>f(0), f(10), f(5)</m>.
+                What is important about the value of <m>f(5)</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the value of <m>w</m> for which <m>f(w)=12</m> inches.
+                Does it make sense?
+                Why or why not?
+              </p>
+            </li>
+            <li>
+              <p>
+                Find how wide is the hay shade.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Power functions</title>
+      <p>
+        Power functions appear in many places in calculus,
+        for example when we have questions related to circles and spheres we see power functions there.
+      </p>
+      <definition>
+        <statement>
+          <p>
+            A power function is a function with a single term that is the product of a real number,
+            a coefficient,
+            and a variable raised to a fixed real number and is of the form
+            <me>
+              f(x)=kx^p
+            </me>
+          </p>
+          <p>
+            Where <m>k</m> and <m>p</m> are real numbers and <m>k\neq 0</m> is also known as the coefficient.
+          </p>
+        </statement>
+      </definition>
+      <p>
+        We consider several cases of power functions.
+        <m>p=n</m> where <m>n</m> is a positive integer.
+      </p>
+      <p>
+        The examples and graphs of
+        <m>f(x)=x^n</m> for <m>n=3</m> and <m>4</m> are given below.
+      </p>
+      <example>
+        <statement>
+          <p>
+            For <m>n=3</m>
+          </p>
+          <p>
+            Let <m>V</m> represent the volume of a sphere with a radius <m>r</m>.
+            The function that represents the volume of the sphere in terms of the radius <m>r</m> is <m>V(r) = \frac{4}{3}\pi r^3</m>
+          </p>
+        </statement>
+      </example>
+      <example>
+        <statement>
+          <p>
+            For <m>n=4</m>
+          </p>
+          <p>
+            When blood flows along a blood vessel, the flux
+            (the volume of blood per unit of time that flows past a given point)
+            is proportional to the fourth power of the radius <m>R</m> of the blood vessel:
+            <me>
+              F=kR^4
+            </me>
+          </p>
+          <p>
+            (This is known as Poiseuille's Law) A partially clogged artery can be expanded by an operation called angioplasty,
+            in which a balloon-tipped catheter is inflated inside the artery to widen it and restore normal blood flow.
+            A 5 percent increase in the radius will benefit the patient because a 5 percent increase in the radius corresponds to a 20 percent increase in blood flow.
+          </p>
+        </statement>
+      </example>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines = left,
+grid=major,
+xmin=0,xmax=2,
+ymin=0,ymax=5,
+restrict y to domain=-5:5,
+xlabel = \(r\),
+ylabel = {\(V(r)\)},
+]
+\addplot[
+domain=0:10,
+samples=100,
+color=red,
+]
+{4/3*x^3*3.14};
+\legend{\(V(r)=\frac{4\pi r^3}{3}\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=left,
+grid=major,
+xmin=0,xmax=2,
+ymin=0,ymax=5,
+restrict y to domain=0:5,
+xlabel=\(R\),
+ylabel=\(F\),
+clip=true]
+\addplot[color=blue,domain=-5:5,samples=100] {x^4};
+\addlegendentry{\(F=R^4\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        <m>p=\frac{1}{n}</m> where <m>n</m> is a positive integer
+      </p>
+      <p>
+        Root functions are examples of power functions.
+        A root function is a function expressed by
+        <m>x^\frac{1}{n}</m> for a positive integer <m>n\geq 1</m>.
+      </p>
+      <p>
+        The graphical representation of radical functions depends upon whether <m>n</m> is even or odd.
+      </p>
+      <example>
+        <statement>
+          <ul>
+            <li>
+              <p>
+                One application of roots has to do with the effect of gravity on falling objects.
+                The formula <m>t(h)=\frac{\sqrt{h}}{4}</m>. (This formula ignores air resistance) allows us to determine how long it will take a fallen object from <m>h</m> feet to hit the ground.
+                The time <m>t</m> in seconds it will take to reach the ground is found by evaluating the expression by plugging in the desired height <m>h</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>v</m> is the volume of a cubic container with the side length <m>a</m>.
+                Then the side is given by <m>a=\sqrt[3]{v}</m>.
+              </p>
+            </li>
+          </ul>
+        </statement>
+      </example>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=left,
+grid=major,
+xmin=0,xmax=2,
+ymin=0,ymax=1,
+restrict y to domain=0:5,
+xlabel=\(h\),
+ylabel=\(t\),
+clip=true]
+\addplot[<->] expression[domain=0:10,samples=1000]{x/abs(x)*abs(x)^(1/2)/4};
+\legend{\(t=\frac{\sqrt{h}}{4}\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=left,
+grid=major,
+xmin=0,xmax=2,
+ymin=0,ymax=2,
+restrict y to domain=0:5,
+xlabel=\(s\),
+ylabel=\(A\),
+clip=true]
+\addplot[<->] expression[domain=0:10,samples=1000]{x/abs(x)*abs(x)^(1/3)};
+\legend{\(a(v)=\sqrt[3]{v}\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        Note to Rebin: Please insert Desmos simulation power function simulation,
+        use slide
+      </p>
+      <p>
+        <em>Domain of root functions</em>
+        To find the domain of root functions,
+        we are going to use the fact that the even root of negative numbers is non-real but the odd root of negative numbers is real-valued.
+      </p>
+      <example>
+        <statement>
+          <me>
+            f(x)=\sqrt{x-4}
+          </me>
+          <p>
+            Since this is a square root function.
+            So the domain of this function is all real numbers except the values of <m>x</m> which makes the radicand negative.
+            <me>
+              x-4\geq 0
+            </me>
+            or
+            <me>
+              x\geq 4
+            </me>
+          </p>
+          <p>
+            So the domain of this function is is
+            <me>
+              [4, \infty)
+            </me>
+          </p>
+        </statement>
+      </example>
+      <example>
+        <statement>
+          <me>
+            f(x)=\sqrt[3]{x-4}
+          </me>
+          <p>
+            This is a cube root function.
+            We will use the fact that the odd root of negative numbers is real-valued.
+            Its domain is all real numbers or in interval notation form it is,
+            <m>(-\infty,\infty)</m>
+          </p>
+        </statement>
+      </example>
+      <p>
+        <m>p=-1</m> The graph of the reciprocal function is shown in the figure.
+        Its graph has the equation
+        <m>y=\frac{1}{x}</m> , or <m>xy=1</m>, and is a hyperbola.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-3:3,samples=50,smooth,red] {(1/x)};
+\legend{\(y=\frac{1}{x}\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <example>
+        <statement>
+          <p>
+            The reciprocal functions arise in many areas of life.
+            One such example is described in the following example.
+          </p>
+          <p>
+            The period <m>T</m> of a pendulum is inversely proportional to its frequency <m>n</m>.
+            <me>
+              T=\frac{k}{n}
+            </me>
+            where <m>k</m> is the constant of proportionality.
+          </p>
+        </statement>
+      </example>
+      <p>
+        power function activity on Geogebra
+      </p>
+      <activity>
+        <p>
+          Graph a function in desmos
+          <me>
+            f(x)=ax^b
+          </me>.
+          Use the slider for <m>a</m> and <m>b</m>.
+          Graph and examine the power function for various values of <m>a</m> and <m>b</m>.
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Rational functions</title>
+      <p>
+        : A rational function is a function that can be written as a quotient of two polynomial functions.
+        <men>
+          R(x)=\frac{f(x)}{g(x)}
+        </men>
+      </p>
+      <p>
+        Where <m>f(x)</m> and <m>g(x)</m> are polynomials and <m>g(x)\neq 0</m>.
+      </p>
+      <p>
+        Lots of applications in calculus involve rational functions.
+      </p>
+      <example>
+        <statement>
+          <me>
+            f(x)=\frac{x+2}{x-1}
+          </me>
+          <p>
+            This is a rational function.
+            Its domain is all real numbers except the value of <m>x</m> which makes the denominator zero.
+            So the domain is
+            <me>
+              (-\infty, 1) \cup(1,\infty)
+            </me>
+          </p>
+        </statement>
+      </example>
+      <example>
+        <statement>
+          <me>
+            f(x)=\frac{x+2}{\sqrt{x-1}}
+          </me>
+          <p>
+            The function in the denominator is a square root function.
+            Here the denominator may not be equal to zero and the radicand needs to be a non-negative number.
+            So the domain is <m>(1, \infty)</m>.
+          </p>
+        </statement>
+      </example>
+      <example>
+        <statement>
+          <p>
+            The concentration <m>C</m> (mg/ml) of a certain medicine in a patient's bloodstream <m>t</m> hours after taking the medicine is given by the rational function
+            <me>
+              C(t) = \frac{50t}{t^2+25}
+            </me>
+          </p>
+          <p>
+            The domain of this rational function is <m>(\infty,\infty)</m>.
+            However this is a time-dependent problem,
+            and time <m>t</m> may not be a negative quantity,
+            the actual domain of this function is all positive real numbers including zero <m>[0, \infty)</m>
+          </p>
+        </statement>
+      </example>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=middle,
+grid=major,
+xmin=0,xmax=50,
+ymin=0,ymax=7,
+restrict y to domain=0:50,
+xlabel=\(t\),
+ylabel=\(f(t)\),
+clip=false]
+\addplot[color=red,domain=0:50,samples=100] {(50*x)/(x^2+25)} node[right] {\(f(t) = \frac{50t}{t^2+25}\)};
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </subsubsection>
+    <subsubsection>
+      <title>Algebraic functions</title>
+      <p>
+        Algebraic functions are built from the finite combinations of the basic algebraic operations:
+        addition, subtraction, multiplication, division,
+        and raising to constant powers.
+        Examples include power, polynomial,
+        rational, and root functions.
+        The graphs of an algebraic function can assume a variety of shapes.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-3:3,samples=50,smooth,red] {x*sqrt(x+3)};
+\legend{\(y=x\sqrt{x+3}\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-3:3,samples=50,smooth,blue] {(x^2-4)^(1/4)};
+\legend{\(y=\sqrt[4]{x^2-4}\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        An example of algebraic function occurs in the theory of relativity.
+        The mass of a particle with the velocity <m>v</m> is
+        <me>
+          m=f(v)=\frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}
+        </me>
+      </p>
+      <p>
+        Where <m>m_0</m> is the rest mass of the particle and
+        <m>c=3*10^5</m> km/s is the speed of light in a vacuum.
+      </p>
+    </subsubsection>
+    <subsubsection>
+      <title>Transcendental functions</title>
+      <p>
+        Transcendental, in math, means
+        <q>non-algebraic</q>. These functions
+        <q>transcend</q>
+        the usual rules of algebra
+        (transcend means to
+        <q>go beyond the range or limits of…</q>).
+        Transcendental was first defined by Euler in his Introductio (1748) as functions not definable by the
+        <q>ordinary operations of algebra</q>.
+      </p>
+      <p>
+        Examples include logarithmic,
+        trigonometric, inverse trigonometric,
+        and exponential functions.
+      </p>
+      <p>
+        \begin{enumerate} \item <em>Exponential functions</em>
+      </p>
+      <p>
+        An exponential function is a function of the form
+        <men>
+          f(x)=a(b)^x
+        </men>
+      </p>
+      <p>
+        Where <m>a</m> and <m>b</m> are constants and <m>a\neq 0</m>,
+        <m>b</m> is the base,
+        <m>b \neq 1</m> , <m>b > 1</m> , <m>x</m> is the exponent and is a real number.
+        Its ubiquitous occurrence in pure and applied mathematics led mathematician Walter Rudin to consider the exponential function to be "the most important function in mathematics".
+      </p>
+      <p>
+        <em>Domain of exponential functions</em>
+      </p>
+      <p>
+        The domain of an exponential function is all real numbers or
+        <m>(-\infty, \infty)</m> in the interval notation form.
+      </p>
+      <example>
+        <statement>
+          <p>
+            After alcohol is consumed,
+            it is fully absorbed into the body and is metabolized with a half-life of about <m>1.5</m> hours.
+            Suppose a person's current blood alcohol level is <m>0.5</m> mg per ml.
+            The Exponential decay for the blood alcohol concentration <m>t</m> hours after the consumption is given by the model
+            <me>
+              C(t)=0.5e^{0.46t}
+            </me>
+          </p>
+          <p>
+            Here <m>C(5)</m> represents the blood alcohol concentration five hours after its consumption.
+          </p>
+        </statement>
+      </example>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=left,
+grid=major,
+xmin=0,xmax=15,
+ymin=0,ymax=1,
+restrict y to domain=0:500,
+xlabel=\(t\),
+ylabel=\(C(t)\),
+clip=true]
+\addplot[color=magenta,domain=0:250,samples=1000] {.5*e^(-.46*x)};
+\addlegendentry{\(C(t)=0.5e^{-0.46t}\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        <em>Properties of exponents</em>
+      </p>
+      <p>
+        Here are some important properties of exponents,
+        <m>x,m,n</m> are real numbers.
+        <ol>
+          <li>
+            <p>
+              <m>x^m x^n=x^{m+n}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\frac{x^m}{x^n} =x^{m-n}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(x^{m}){^n} =x^{mn}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x^0=1</m>, except when <m>x=0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x^{-m} =\frac{1}{x^{m}}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\frac{1}{x^{-m}} =x^{m}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(xy)^m =x^{m}y^{m}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>(\frac{x}{y})^m =\frac{x^m}{y^m}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x^\frac{m}{n}=\sqrt[n]{x^m}=(\sqrt[n]{x})^m</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <example>
+        <statement>
+          <p>
+            Simplify the following expression by applying the properties of exponents.
+            Write the answer in positive exponents only.
+            <me>
+              \frac{(2x^3y^5z^3)^2}{(2x^7y^5z)^3}
+            </me>
+            <me>
+              =\frac{2^2(x^3)^2(y^5)^2(z^3)^2}{2^3(x^7)^3(y^5)^3(z)^3}
+            </me>
+            <me>
+              =\frac{4(x^6)(y^{10})(z^6)}{8(x^{21})(y^{15})(z^3)}
+            </me>
+            <me>
+              =\frac{4}{8} \frac{x^6}{x^{21}} \frac{y^{10}}{y^{15}}\frac{z^6}{z^3}
+            </me>
+          </p>
+          <me>
+            =\frac{1}{2} x^{6-21} y^{10-15} z^{6-3}
+          </me>
+          <me>
+            =\frac{1}{2} \frac{1}{x^{15}} \frac{1}{y^5} z^3
+          </me>
+          <me>
+            =\frac{z^3}{2x^{15}y^5}
+          </me>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Use exponent rules to simplify the following expression.
+          Write the answer in positive exponents only.
+          <ol>
+            <li>
+              <p>
+                <me>
+                  2^{20}* 2^{30}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  (3x^{-7}y^4z^3)^0
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  (3x^{-7}yz^3)^{-2}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \frac{3x^4y^5z^6}{15x^3y^5z^8}
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <p>
+        \item <em>Inverse functions and Logarithms</em>
+      </p>
+      <p>
+        <em>Inverse functions</em>: An inverse function reverses the operation done by a particular function.
+        In other words, whatever a function does,
+        the inverse function undoes it.
+        In this subsection,
+        we define an inverse function formally and state the necessary conditions for an inverse function to exist.
+      </p>
+      <definition>
+        <statement>
+          <p>
+            Given a function,
+            <m>f(x)</m> with domain <m>D</m> and range <m>R</m>, its inverse function
+            (if it exists)
+            is the function denoted by
+            <m>f^{-1}(x)</m> if and only if <m>f(x)=y</m>.
+            In other words, for a function <m>f(x)</m> and its inverse
+            <m>f^{-1}(f(x))=x</m> for all <m>x</m> in <m>D</m> and
+            <m>f(f^{-1}(x))=x</m> for all <m>y</m> in <m>R</m>.
+            This notation was introduced by John Frederick William Herschel in 1813.
+          </p>
+          <p>
+            Note that <m>f^{-1}(x)</m> is read as
+            <q><m>f</m> inverse.</q>
+            Here, <m>-1</m> is not an exponent so
+            <me>
+              f^{-1}(x)\neq \frac{1}{f(x)}
+            </me>
+          </p>
+        </statement>
+      </definition>
+      <p>
+        \usetikzlibrary{arrows, positioning, shapes, fit, calc}
+      </p>
+      <p>
+        \pgfdeclarelayer{background} \pgfsetlayers{background,main}
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node[setA,label=left\(:a\)] (a) {};
+\node [setA,below = of a,label=left\(:b\)] (b) {};
+\node [setA,below = of b,label=left\(:c\)] (c) {};
+\node[above=of a,anchor=south] {\(A\)};
+\node[inner sep=0pt,right=3cm of a] (x) {\(x\)};
+\node[below = of x] (y) {\(y\)};
+\node[inner sep=0pt,below = of y] (z) {\(z\)};
+\node[above=of x,anchor=south] {\(B\)};
+\draw[->,shorten >= 3pt] (a) -- node[label=above\(:f\)] {} (x);
+\draw[->,shorten >= 3pt] (b) -- node[label=above:] {} (y);
+\draw[->] (c) -- node[label=above:] {} (z);
+\begin{pgfonlayer}{background}
+\node[fit= (a)  (c) ] {};
+\node[fit= (x) (z) ] {};
+\end{pgfonlayer}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\node[setA,label=left\(:a\)] (a) {};
+\node [setA,below = of a,label=left\(:b\)] (b) {};
+\node [setA,below = of b,label=left\(:c\)] (c) {};
+\node[above=of a,anchor=south] {\(A\)};
+\node[inner sep=0pt,right=3cm of a] (x) {\(x\)};
+\node[below = of x] (y) {\(y\)};
+\node[inner sep=0pt,below = of y] (z) {\(z\)};
+\node[above=of x,anchor=south] {\(B\)};
+\draw[->,shorten >= 3pt] (x) -- node[label=above\(:f^{-1}\)] {} (a);
+\draw[->,shorten >= 3pt] (y) -- node[label=above:] {} (b);
+\draw[->] (z) -- node[label=above:] {} (c);
+\begin{pgfonlayer}{background}
+\node[fit= (a)  (c) ] {};
+\node[fit= (x) (z) ] {};
+\end{pgfonlayer}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <example>
+        <statement>
+          <p>
+            Find the inverse of the function
+            <me>
+              f(x) = 3x-7
+            </me>
+          </p>
+          <p>
+            First, make sure this function passes the horizontal line test and is invertible.
+            Then follow the steps given
+            <ol>
+              <li>
+                <p>
+                  Replace <m>f(x)</m> by <m>y</m>
+                  <me>
+                    y=3x-7
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Solve for <m>x</m>
+                  <me>
+                    x=\frac{y+7}{3}
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Interchange <m>x</m> and <m>y</m>
+                  <me>
+                    y=\frac{x+7}{3}
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Replace <m>y</m> by <m>f^{-1}(x)</m>
+                  <me>
+                    f^{-1}(x)=\frac{x+7}{3}
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  The function <m>f^{-1}(x)=\frac{x+7}{3}</m> is an inverse of the function <m>f(x)=3x-7</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <p>
+        <em>Existence of inverse function</em>:
+      </p>
+      <p>
+        For a function to have an inverse or in other words,
+        a function is invertible if it is a one-to-one function.
+      </p>
+      <p>
+        <em>One-to-one function</em>:
+      </p>
+      <p>
+        A one-to-one function is a particular type of function in which for each output value <m>y</m> there is exactly one input value <m>x</m> that is associated with it.
+        In other words,
+        a function is one-to-one if each output <m>y</m> corresponds to precisely one input <m>x</m>.
+      </p>
+      <p>
+        <em>Identifying one-to-one function graphically</em>:
+      </p>
+      <p>
+        There is an easy graphical way to figure out if a function is an invertible function, This test is called a horizontal line test.
+      </p>
+      <p>
+        <em>A Horizontal line test</em>:
+      </p>
+      <p>
+        When examining a graph of a function, if a horizontal line
+        (which represents a single value for <m>y</m>),
+        intersects the graph of a function in more than one place,
+        then for each point of intersection,
+        you have a different value of <m>x</m> associated with the same value of <m>y</m>.
+        Thus the <m>y</m> value does not correspond to just precisely one input,
+        and the graph is not that of a one-to-one function.
+        This is the idea behind the Horizontal Line Test.
+      </p>
+      <example>
+        <statement>
+          <p>
+            A function <m>x^2+y^2=1</m> is not an invertible function.
+            Since its graph is a circle it fails the horizontal line test.
+            If you draw a horizontal line say <m>x=0</m>,
+            it will intersect the circle at two points,
+            <m>y=-1</m> and <m>y=1</m>.
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Use Desmos to draw the function
+          <me>
+            y=x^2
+          </me>
+          <ol>
+            <li>
+              <p>
+                What is the domain of this function?
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the horizontal line to confirm that it is not a one-to-one function.
+              </p>
+            </li>
+            <li>
+              <p>
+                Now restrict the domain of <m>f(x)</m> to <m>[0,\infty)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Check again to see if this function passes the horizontal line test.
+              </p>
+            </li>
+            <li>
+              <p>
+                If it does find its inverse in the restricted domain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <p>
+        <em>Logarithmic function</em>: A logarithmic function is a function of the form
+        <men>
+          f(x)=\log_b x
+        </men>
+      </p>
+      <p>
+        Where <m>b</m> is the base of the logarithmic function,
+        a positive real number and not equal to <m>1</m>.
+      </p>
+      <example>
+        <statement>
+          <p>
+            The magnitude of an earthquake is determined by using logarithm
+            <me>
+              M=\log\frac{I}{S}
+            </me>
+          </p>
+          <p>
+            Where <m>I</m> is the intensity of the earthquake and <m>S</m> is the intensity of the standard earthquake.
+          </p>
+        </statement>
+      </example>
+      <p>
+        Logarithms were discovered in the 16th century by John Napier,
+        a Scottish mathematician, scientist, and astronomer.
+        It is an important medium for math calculations.
+        It has numerous applications in astronomical and scientific calculations involving huge numbers.
+        Logarithmic functions are closely related to exponential functions and are considered the inverse of the exponential functions.
+      </p>
+      <p>
+        The exponential form
+        <me>
+          b^x=a
+        </me>
+        can be transformed into a logarithmic form
+        <me>
+          \log_b a = x
+        </me>
+      </p>
+      <example>
+        <statement>
+          <p>
+            the exponential function
+            <me>
+              f(x)=2^x
+            </me>
+            and the logarithmic function
+            <me>
+              f(x)=log_2x
+            </me>
+            are inverse of each other.
+            Their graphs are symmetric to a straight line <m>y=x</m>
+          </p>
+        </statement>
+      </example>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw[->] (-3.8,0) -- (5,0) node[right] {\(x\)};
+\draw[->] (0,-4) -- (0,5) node[left] {\(y\)};
+\node at (-2.8,-3)[above] {\color{black} \(y=x\)};
+\draw[smooth, domain=-3.8:2.3, color=purple, thick]
+plot (\x,{2^(\x)}) node [right] { \(f(x)=2^x\)};
+\fill [green] (\((0,1)\)) circle (1.5pt) node at (0,1.2)[left] {\color{purple}\((0,1)\)};
+\draw[smooth, domain = 0.06:5, color=blue, thick] plot (\x,{log2(\x)});
+\fill [blue] (\((1,0)\)) circle (1.5pt) node at (1.4,0)[below] {\color{blue}\((1,0)\)};
+\node at (4.6,2.4)[above] {\color{blue}\(f^{-1}(x)=\log_2 x\)};
+\draw[smooth, dashed, domain=-2.5:4.5, color=black] plot (\x,\x);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <activity>
+        <p>
+          Graph
+          <me>
+            f(x)=(b)^x
+          </me>
+          for various values of <m>b</m> using the slider in Desmos.
+          Graph
+          <me>
+            f(x)=\log_b x
+          </me>
+          for various values of <m>b</m> using the slider in Desmos.
+        </p>
+      </activity>
+      <p>
+        <em>The common log</em>: The log with base <m>10</m> is called the common log.
+        <men>
+          f(x)=\log_10 x
+        </men>
+      </p>
+      <p>
+        <em>The natural log</em>: The log with base <m>e</m> is called the natural log.
+        <men>
+          f(x)=\ln x
+        </men>
+      </p>
+      <p>
+        <em>Domain of logarithmic functions</em>:
+      </p>
+      <p>
+        The domain of the logarithmic function is all the values of <m>x</m> strictly greater than 0.
+        <me>
+          f(x)=\log(x-4)
+        </me>
+      </p>
+      <p>
+        Here the expression <m>(x-4)</m> needs to be greater than or equal to zero.
+        So the domain of this function is is
+        <me>
+          (4, \infty)
+        </me>
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=left,
+grid=major,
+xmin=0,xmax=10,
+ymin=0,ymax=3,
+restrict y to domain=-1:10,
+xlabel=\(x\),
+ylabel=\(f(x)\),
+clip=true]
+\addplot[color=magenta,domain=1:10,samples=100] {ln(x)};
+\addlegendentry{\(f(x)=lnx\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        <em>Properties of logarithmic functions and cancellation equations</em>:
+        <ol>
+          <li>
+            <p>
+              <m>\log_{b} a=\frac{\log a}{\log b}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_{b} b = 1</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_{b} b^{p} = p</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_{b} m^{p} = p\log_{b} m</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_{b} (m \times n) = \log_{b} m + \log_{b} n</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_{b} \left(\frac{m}{n}\right) = \log_{b} m - \log_{b} n</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_{b} \sqrt[q]{n} = \frac{1}{q}\log_{b} n</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log 1 = 0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_a (a)^x=x</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a^{\log_a x}=x</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\ln(e)^x=x</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>e^{lnx}=x</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <example>
+        <statement>
+          <p>
+            Write the following logarithms as one logarithm.
+            <ol>
+              <li>
+                <p>
+                  <me>
+                    \log(2x)=\log 2+\log x
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <me>
+                    \log(\frac{x}{2})=\log x-\log 2
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <me>
+                    \log\sqrt{x}=\frac{1}{2}\log x
+                  </me>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Use the rules of the logarithm to condense the following expressions.
+          <ol>
+            <li>
+              <p>
+                <me>
+                  \log4x+\log2y-\log3z
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  2\log_5x-log_5(x-1)
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Use the rules of the logarithm to expand the following expressions.
+          <ol>
+            <li>
+              <p>
+                <me>
+                  \log\sqrt\frac{4xy}{3z}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \log\frac{4(x+2)^2}{(x-2)^3(x+5)^4}
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Use the rules of the logarithm to solve the following equations.
+          <ol>
+            <li>
+              <p>
+                <me>
+                  \log_33^2=x
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \log_3\frac{1}{81}=x
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \ln(e^{-2})=x
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  lnx=2
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  e^x=2
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <p>
+        \item <em>Trigonometric functions</em>: The term "trigonometry" was derived from the Greek trigōnon, "triangle" and metron, "measure". Early study of triangles can be traced to the 2nd millennium BC, in Egyptian mathematics (Rhind Mathematical Papyrus) and Babylonian mathematics.
+        The trigonometric functions
+        (also called circular functions, or angle functions),
+        are real functions that relate the angle of a right-angled triangle to ratios of two side lengths.
+        They are widely used in all sciences that are related to geometry,
+        such as navigation,
+        solid mechanics, celestial mechanics, geodesy, and many others.
+        They are among the simplest periodic functions,
+        and as such are also widely used for studying periodic phenomena through Fourier analysis.
+      </p>
+      <p>
+        The trigonometric functions most widely used in modern mathematics are the sine,
+        the cosine, and the tangent.
+        Their reciprocals are the cosecant, the secant,
+        and the cotangent respectively, which are less used.
+        Each of these six trigonometric functions has a corresponding inverse function.
+        We will discuss trigonometric functions and their inverses in more detail in Chapter 4.
+      </p>
+      <example>
+        <statement>
+          <p>
+            A model for the amount of blood in the heart <m>V(t)</m> measured in milliliters is given by
+            <m>V(t)=35\cos(\frac{5\pi t}{3})+105</m>, Where <m>t</m> is measured in seconds since the heart was full.
+            We can use this model to determine other values associated with the amount of blood in the heart.
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Classify the following functions as one of the types of functions that we discussed.
+          <ol>
+            <li>
+              <p>
+                <m>f(x)=x^5</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=5^x</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\log_2 x</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\sin{x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\frac{x+1}{1-\sqrt{x}}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=1-x+4x^4</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+  </subsection>
+  <subsection>
+    <title>Piece-wise defined functions</title>
+    <p>
+      : It is a way of expressing functions.
+      A function is defined by multiple sub-functions,
+      where each sub-function applies to a different interval in the domain.
+      <men>
+        f(x) = \left\{ \begin{array}{lr} \textbf{function 1}, \amp  \text{ if }  x \in \text{ Domain 1 } \\ \textbf{function 2}, \amp  \text{ if }   x \in \text{ Domain 2 }  \\ \textbf{function 3}, \amp  \text{ if }   x \in \text{ Domain 3 }  \end{array} \right\}
+      </men>
+    </p>
+    <example>
+      <statement>
+        <p>
+          The examples of piecewise-defined functions involve absolute value functions,
+          floor, and ceiling functions.
+        </p>
+        <p>
+          <em>Absolute value function</em>
+          The absolute value function is a function of the form
+          <me>
+            f(x)=|x|
+          </me>
+        </p>
+        <p>
+          In 1806, Jean-Robert Argand introduced the term module,
+          meaning unit of measure in French,
+          specifically for the complex absolute value,
+          and it was borrowed into English in 1866 as the Latin equivalent of modulus.
+          The term absolute value has been used in this sense from at least 1806 in French and 1857 in English.
+          The notation <m>|x|</m>,
+          with a vertical bar on each side,
+          was introduced by Karl Weierstrass in 1841.
+          Other names for absolute value include numerical value and magnitude.
+          <me>
+            f(x) = \begin{cases}-x \amp  \ x \lt  0 \\\ x \amp  x\geq 0 \end{cases}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-3:3,samples=50,smooth,red] {abs(x)};
+\legend{\(f(x)=|x|\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <p>
+      <em>Floor and ceiling functions</em>
+      In mathematics and computer science,
+      the floor function is the function that takes as input a real number <m>x</m> and gives as output the greatest integer less than or equal to <m>x</m>,
+      denoted <m>\lfloor x \rfloor</m> or
+      <em>floor</em><m>(x)</m>.
+      Similarly, the ceiling function maps <m>x</m> to the least integer greater than or equal to <m>x</m>,
+      denoted <m>\lceil x \rceil</m> or
+      <em>ceil</em><m>(x)</m>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Floor function
+          <me>
+            f(x)=floor(x)+4
+          </me>
+        </p>
+      </statement>
+    </example>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=middle,
+xmin=-5,
+xmax=5,
+ymin=-7,
+ymax=10,
+enlarge y limits={abs=.6pt},
+]
+\addplot [
+jump mark mid,
+domain=-3 - 1/6:3 + 1/6,
+samples=20,
+very thick, red
+] {floor(x)+4};
+\addlegendentry{\(f(x)=floor(x)+4\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <p>
+      Every break in this graph is a point of the jump.
+      You can remember this by imagining yourself walking along on top of the first segment of the graph.
+      To continue, you'd have to jump up to the second segment.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Evaluate <m>f(0.9999)</m> and <m>f(1.00001)</m> when
+          <me>
+            f(x)=floor(x)+4
+          </me>
+          <me>
+            f(0.9999)=4
+          </me>
+          <me>
+            f(1.00001)=5
+          </me>
+        </p>
+        <p>
+          Here we notice that from the left of <m>x=1</m> to the right of <m>x=1</m>,
+          the function jumps from <m>4</m> to <m>5</m>.
+        </p>
+      </statement>
+    </example>
+    <activity>
+      <p>
+        A bicycle rental in a park costs 10 dollars for the first <m>2</m> hours.
+        If you exceed this time there will be a payment of <m>2</m> dollars per hour.
+        Use <m>r(t)</m> to represent the bicycle rent when rented for <m>t</m> hours.
+        <me>
+          r(t) = \begin{cases}10 \amp  0\lt t\lt  2 \\ 10+2(t-2) \amp  t\geq2 \end{cases}
+        </me>
+      </p>
+      <p>
+        Find and interpret <m>r(1)</m> and <m>r(5)</m>.
+      </p>
+    </activity>
+  </subsection>
+  <subsection>
+    <title>Functions of several variables</title>
+    <p>
+      So far you have studied the functions of the single independent variable.
+      Many quantities in science, business, and technology,
+      however, are the functions of two or more variables.
+    </p>
+    <p>
+      The graph of a function of functions of two variables can be represented graphically as a surface in space by letting <m>z=f(x,y)</m>
+    </p>
+    <p>
+      Graphs of the function of two variables
+    </p>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+\addplot3[
+surf,
+]
+{(x^2-y^2-4)*x};
+\addlegendentry{\(f(x,y)=x(x^2-y^2-4)\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <activity>
+      <p>
+        Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women and is given by the function
+        <me>
+          BMI=\frac{703w}{h^2}
+        </me>
+      </p>
+      <p>
+        Where <m>w</m> is the weight of a person in pounds and <m>h</m> is the height in inches.
+      </p>
+      <p>
+        Use this formula to find the BMI of a 72-inch tall person who weighs 280 pounds.
+      </p>
+    </activity>
+    <remark>
+      <p>
+        Calculus I and Calculus II, are single-variable calculus.
+        This means we mostly deal with the functions of only one variable.
+        However, in some applications,
+        we come across functions of two variables.
+        Since we only know how to differentiate and integrate the functions of a single variable,
+        we need to convert the functions of two variables into the functions of a single variable.
+      </p>
+    </remark>
+    <activity>
+      <p>
+        Suppose the area of a rectangle is 10 square meters.
+        The length and width of the rectangle are represented by the variables <m>x</m> and <m>y</m> respectively.
+        Write the perimeter function <m>p(x,y)</m> that is the function of two variables,
+        and then convert it to <m>p(x)</m> which is a function of a single variable by assuming that the width of the rectangle is twice its length.
+      </p>
+    </activity>
+    <p>
+      .use demos to graph the function
+    </p>
+    <p>
+      \end{enumerate}
+    </p>
+  </subsection>
+  <subsection>
+    <title>Special features and attributes of functions</title>
+    <introduction>
+      <p>
+        Have you ever thought about why roller coasters are so fascinating?
+        From the first Russian ice slides in the 17th century to the modern-day steel coasters,
+        the thrill of the ride has captivated people of all ages.
+        To accurately model every component of roller coaster design,
+        calculus is needed.
+        Calculus helps engineers understand the rate of change,
+        analyze curves, loops,
+        and twists along the roller coaster track,
+        and optimize the ride experience.
+        The designers can create curves, twists,
+        and turns that maximize the thrill while maintaining rider safety.
+        It also helps with slope calculations and finds the maximum and minimum points along the track.
+      </p>
+      <p>
+        Here we will discuss some special features of functions.
+        The features like where the functions increase and decrease,
+        have maxima,
+        and minima,
+        are concave up, and concave down,
+        and have inflection points.
+      </p>
+      <p>
+        Now we will understand and discuss some special features of the functions like the intervals where functions increase and decrease,
+        concave up, and concave down,
+        the points where functions have maxima and minima, and inflection points.
+        We will approximate these features by graphing utility or by algebra.
+      </p>
+      <p>
+        Later in calculus,
+        we will find all these special features by the methods of calculus.
+      </p>
+    </introduction>
+    <subsubsection>
+      <title>Intercepts</title>
+      <p>
+        The points where the line or curve crosses the axis of the graph are called intercepts.
+        <m>x</m>-intercept is the point where the graph of the function crosses the <m>x</m>-axis.
+        Similarly, the <m>y</m>-intercept is the point where the graph of the function crosses the <m>y</m>-axis.
+      </p>
+      <activity>
+        <p>
+          Find the intercepts of the following line and the parabola
+          <me>
+            5x+3y=15
+          </me>
+          <me>
+            f(x)=2x^2-3x+1
+          </me>
+        </p>
+        <p>
+          Write the answers in an ordered pair form.
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Symmetry</title>
+      <p>
+        If a function <m>f</m> satisfies
+        <m>f(-x)=f(x)</m> for every number <m>x</m> in its domain,
+        then <m>f</m> is called an even function.
+        For instance, the function <m>f(x)=x^2</m> is even because
+        <me>
+          f(-x)=(-x)^2=x^2=f(x)
+        </me>
+      </p>
+      <p>
+        The geometrical significance of an even function is that its graph is symmetrical with respect to the <m>y</m> axis.
+      </p>
+      <p>
+        If a function <m>f</m> satisfies
+        <m>f(-x)=-f(x)</m> for every number <m>x</m> in its domain,
+        then <m>f</m> is called an odd function.
+        For instance, the function <m>f(x)=x^3</m> is even because
+        <me>
+          f(-x)=(-x)^3=-x^3=-f(x)
+        </me>
+      </p>
+      <p>
+        The geometrical significance of an even function is that its graph is symmetrical with respect to the origin.
+      </p>
+      <p>
+        Some functions are neither even nor odd.
+        For instance For instance, the function <m>f(x)=x-x^2</m> because
+        <me>
+          f(-x)=(-x-(-x^2))=-x-x^2
+        </me>
+      </p>
+      <p>
+        Since <m>f(-x) \neq f(x)</m> and <m>f(-x) \neq -f(x)</m>.
+      </p>
+      <remark>
+        <p>
+          In calculus, the concept of symmetry makes our lives easier.
+        </p>
+        <example>
+          <statement>
+            <p>
+              Finding the area under the curve of an odd function
+              <me>
+                f(x)=x^3
+              </me>
+              between <m>[-4,4]</m> Since the graph goes below the x-axis between <m>[-4,0]</m> above the x-axis between <m>[0,4]</m>.
+              The area above and below the x-axis is equal to the net area in <m>[-4,4]</m> is zero.
+            </p>
+          </statement>
+        </example>
+        <example>
+          <statement>
+            <p>
+              Finding the area under the curve of an even function
+              <me>
+                f(x)=x^2
+              </me>
+              between <m>[-4,4]</m> The area between <m>[-4,0]</m> and between <m>[0,4]</m> is equal.
+              The total area is twice the one-sided area.
+            </p>
+          </statement>
+        </example>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=center,
+grid=major,
+ymin=-100,
+no marks,
+]
+\addplot+[smooth,blue,name path=A] {x*x*x};
+\addplot+[draw=none,name path=B] {0};
+\addplot+[green] fill between[of=A and B,soft clip={domain=-4:4}];
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+        </image>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=center,
+grid=major,
+ymin=-5,
+no marks,
+]
+\addplot+[smooth,red,name path=A] {x*x};
+\addplot+[draw=none,name path=B] {0};
+\addplot+[green] fill between[of=A and B,soft clip={domain=-4:4}];
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+        </image>
+      </remark>
+    </subsubsection>
+    <subsubsection>
+      <title>Periodicity</title>
+      <p>
+        Many phenomena in life display a recurring type of behavior:
+        from breathing to the beating of the heart to the cycling of female reproduction hormones and malaria fever Such phenomena are referred to as periodic.
+        To describe such a process mathematically we need functions that display this behavior.
+      </p>
+      <definition>
+        <statement>
+          <p>
+            Periodic function is a function that repeats itself at regular intervals.
+            The period of a function is an important characteristic of periodic functions,
+            which helps to define a function.
+            A periodic function <m>y = f(x)</m>,
+            having a period <m>T</m>, can be represented as <m>f(x + T) = f(x)</m>.
+          </p>
+          <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+clip=false,
+xmin=0,xmax=6.5*pi,
+xlabel= \(t\),
+ylabel=\(f(t)\),
+ymin=-2.5,ymax=2.5,
+axis lines=middle,
+xtick={},
+xticklabels={,,},
+xtick style={draw=none}
+]
+\addplot[domain=0:6*pi,samples=200,purple]{cos(deg(11*x)) - cos(deg(12*x))}
+node[below right,pos=1,font=]{\(f(t)=\cos(11t) - \cos(12t)\)};
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </statement>
+      </definition>
+    </subsubsection>
+    <subsubsection>
+      <title>Monotonicity</title>
+      <p>
+        When you study calculus, the terms increasing, decreasing,
+        constant,
+        and oscillating refer to the behavior of a function as its input values change.
+        Understanding these concepts is crucial for solving a variety of calculus problems,
+        from finding maximum and minimum values to understanding the behavior of graphs.
+      </p>
+      <definition>
+        <statement>
+          <p>
+            <em>Increasing functions</em>:
+          </p>
+          <p>
+            An increasing function is a type of function where with increasing input
+            (or the independent variable),
+            the output value
+            (or the value of the function)
+            increases.
+          </p>
+          <p>
+            To define an increasing function formally let us consider <m>I</m> to be an interval that presents in the domain of a real-valued function <m>f</m>,
+            then the function <m>f</m> is increasing on <m>I</m>.
+          </p>
+          <p>
+            If <m>a \lt b</m> then <m>f(a)\leq f(b)</m> for every <m>a</m> and <m>b</m> in <m>I</m>.
+          </p>
+          <p>
+            If we have two real numbers <m>b</m> and <m>a</m> such that <m>a \lt b</m>,
+            and if <m>f</m> is a strictly increasing function,
+            then <m>f(a) \lt f(b)</m>.
+          </p>
+        </statement>
+      </definition>
+      <definition>
+        <statement>
+          <p>
+            <em>Decreasing functions</em>:
+          </p>
+          <p>
+            A decreasing function is a function where with increasing input
+            (or the independent variable),
+            the output value(or the value of the function) decreases.
+            To define a decreasing function formally let us consider <m>I</m> to be an interval that presents in the domain of a real-valued function <m>f</m>,
+            then the function <m>f</m> is decreasing on <m>I</m>
+          </p>
+          <p>
+            If <m>a \lt b</m> then <m>f(a)\geq f(b)</m> If we have two real numbers <m>b</m> and <m>a</m> such that <m>b \lt a</m>,
+            and if <m>f</m> is a strictly decreasing function,
+            then <m>f(b) \lt f(a)</m> for every <m>a</m> and <m>b</m> in <m>I</m>.
+          </p>
+        </statement>
+      </definition>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-1:3,samples=50,smooth,red] {x)};
+\addlegendentry{Increasing Function}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-1:3,samples=50,smooth,blue] {-x};
+\addlegendentry{Decreasing Function}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-1:3,samples=50,smooth,green] {0.5};
+\addlegendentry{Constant Function}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-1:3,samples=50,smooth,violet] {cos(deg(pi*x))};
+\addlegendentry{Oscillating Function}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </subsubsection>
+    <subsubsection>
+      <title>Extremum</title>
+      <p>
+        Some functions have "hills and valleys": places where they reach a minimum or maximum value.
+        Maxima and minima are known as the extrema of a function within the given set of ranges.
+        For a function, under the entire range,
+        the maximum value of the function is known as the absolute maxima,
+        and the minimum value is known as the absolute minima when we are considering the entire domain of the function.
+      </p>
+      <p>
+        There are other maxima and minima of a function,
+        that are not the absolute maxima and minima of the function and are known as local maxima and local minima.
+        Let us learn more about local maxima and minima,
+        absolute maxima and minima,
+        and how to find them by using the graphing utility.
+        Later on, we will find them by using calculus methods.
+      </p>
+      <definition>
+        <statement>
+          <p>
+            <em>Absolute maximum of functions </em>
+          </p>
+          <p>
+            Let <m>c</m> be a number in the domain of <m>f(x)</m>,
+            then <m>f(c)</m> is the absolute maximum value of <m>f(x)</m> if the function is defined and if
+            <m>f(c)\geq f(x)</m> for all <m>x</m> in the domain of <m>f(x)</m>.
+          </p>
+        </statement>
+      </definition>
+      <definition>
+        <statement>
+          <p>
+            <em>Absolute minima of functions </em>
+            Let <m>c</m> be a number in the domain of <m>f(x)</m>,
+            then <m>f(c)</m> is the absolute minimum value of <m>f(x)</m> if the function is defined and if
+            <m>f(c)\leq f(x)</m> for all <m>x</m> in the domain of <m>f(x)</m>.
+          </p>
+        </statement>
+      </definition>
+      <definition>
+        <statement>
+          <p>
+            <em>Local maximum of functions</em>
+          </p>
+          <p>
+            Let <m>c</m> be a number in the domain of <m>f(x)</m>,
+            then <m>f(c)</m> is the local maximum value of <m>f(x)</m> if the function is defined and if
+            <m>f(c)>f(x)</m> when <m>x</m> is in the close neighborhood <m>c</m>.
+          </p>
+        </statement>
+      </definition>
+      <definition>
+        <statement>
+          <p>
+            <em>Local minimum of functions</em>
+          </p>
+          <p>
+            Let <m>c</m> be a number in the domain of <m>f(x)</m>,
+            then <m>f(c)</m> is the local minimum value of <m>f(x)</m> if the function is defined and if
+            <m>f(c)\lt f(x)</m> when <m>x</m> is in the close neighborhood <m>c</m>.
+          </p>
+        </statement>
+      </definition>
+      <p>
+        MISSING MATERIAL. SEE LATEX SOURCE.
+      </p>
+    </subsubsection>
+    <subsubsection>
+      <title>Concavity</title>
+      <definition>
+        <statement>
+          <p>
+            <em>Concave up and concave down</em>
+            <ol>
+              <li>
+                <p>
+                  A function <m>f(x)</m> is concave up on an interval <m>I</m> if it
+                  <q>opens</q>
+                  up and when the slope continually increases.
+                </p>
+              </li>
+              <li>
+                <p>
+                  A function <m>f(x)</m> is concave down on an interval <m>I</m> if it
+                  <q>opens</q>
+                  down and when the slope continually decreases.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The point in the domain of the function where the function changes its concavity is called the inflection point.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </definition>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-2:2,samples=50,smooth,red] {x^3-x+1};
+\addlegendentry{Concave up/concave down function}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        The graph of <m>f(x)=x^3-x+1</m> is concave down from
+        <m>(-\infty,0)</m> and concave up from <m>(0, \infty)</m>.
+        The inflection point is <m>(0,1)</m> because the function changes from concave down to concave up at <m>x=0</m>.
+      </p>
+      <activity>
+        <p>
+          Graph the function <m>f(x) = 5x^3 + 2x^2 - 3x</m> on Desmos to find the interval(s) where this function increases,
+          decreases, concave up, and concave down.
+          Also find the points where the function has a local maximum,
+          minimum, and inflection point.
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Sharp corners, cusps, and vertical tangents</title>
+      <p>
+        Sharp corners and cusps in a graph are the sharp turning points.
+        The slopes on either side of the sharp corners do not equal each other.
+        A vertical tangent line has no sharp corners,
+        but the slopes on either side approach infinity or negative infinity.
+        The tangent line exists, but it is vertical.
+        A cusp is a point where two branches of the curve meet and the tangents of each branch are equal.
+      </p>
+      <p>
+        <em>Sharp corner</em>: Sharp corners at <m>x=-2,2</m>
+        <me>
+          f(x)=|x^2-4|
+        </me>
+      </p>
+      <p>
+        Two sharp corners at <m>x=-2, 2</m> at the graph of <m>f(x)=|x^2-4|</m>.
+        The slope of the curve on either side of sharp corners does not equal each other.
+        <em>Cusp</em>: A cusp at <m>x=0</m>
+        <me>
+          f(x)=\sqrt[3]{x^2}
+        </me>
+      </p>
+      <p>
+        The slope on either side of the cusp does not equal each other.
+        <em>Vertical Tangent</em>: A vertical tangent line at <m>x=0</m>
+        <me>
+          f(x)=\sqrt[3]{x}
+        </me>
+      </p>
+      <p>
+        Corner at the cube root function.
+        They work the same way, they are sharp turns.
+        The slope of a tangent line at <m>x=0</m> is undefined since there is a vertical tangent line at that point.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-3:3,samples=50,smooth,red] {abs(x^2-4)};
+\legend{Sharp corners}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-.2:.2,samples=50,smooth,blue] {abs(x)^(2/3)};
+\legend{Cusp}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}
+[grid=both,
+minor tick num=4,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+axis lines=middle,
+enlargelimits={abs=0.2}
+]
+\addplot[domain=-.2:.2,samples=50,smooth,blue] {x/abs(x)*abs(x)^(1/3)};
+\legend{Vertical Tangent}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </subsubsection>
+    <subsubsection>
+      <title>Holes and asymptotes</title>
+      <p>
+        <em>Holes</em>:
+      </p>
+      <p>
+        A hole in a rational function is a result of it sharing common factors by numerator and denominator.
+        This is a coordinate that the function passes through but is not part of the function's domain and range.
+      </p>
+      <remark>
+        <p>
+          The point at which we get
+          <me>
+            f(x)=\frac{0}{0}
+          </me>,
+          is the point where a hole in the graph occurs.
+        </p>
+      </remark>
+      <example>
+        <statement>
+          <p>
+            Consider a function <m>f(x)</m>
+            <me>
+              f(x)=\frac{x-2}{x^2-4}
+            </me>
+            <me>
+              f(x)=\frac{x-2}{(x+2)(x-2)}
+            </me>
+          </p>
+          <p>
+            Here the common factor is <m>x-2</m> for <m>x=2</m> we get
+            <me>
+              f(x)=\frac{0}{0}
+            </me>
+          </p>
+          <p>
+            So at <m>x=2</m>, there is a hole in the graph of the function.
+          </p>
+        </statement>
+      </example>
+      <p>
+        <em>Asymptote</em>: The word asymptote is derived from the Greek (asumptōtos) which means "not falling together".The term was introduced by Apollonius of Perga in his work on conic sections.
+        An asymptote of a curve is a line such that the distance between the curve and the line approaches zero as one or both of the <m>x</m> or <m>y</m> coordinates tend to infinity.
+      </p>
+      <p>
+        Asymptotes have a variety of applications,
+        they are simple approximations to complex equations,
+        and they are useful for graphing rational functions.
+      </p>
+      <remark>
+        <p>
+          The point at which we get
+          <me>
+            f(x)=\frac{a}{0}
+          </me>
+          where <m>a</m> is a non-zero number.
+          It is the point at which a vertical asymptote in the graph occurs.
+        </p>
+      </remark>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[axis equal image,
+xmin=-8, xmax=8,
+ymin=-7, ymax=7,
+axis lines=middle,
+restrict y to domain=-10:10,
+enlargelimits={abs=1cm},
+axis line style={-latex},
+ytick=,
+xtick={-3},
+]
+\addplot[domain=-10:10,samples=1000]
+{(x^2+5*x+6)/(x^2+2*x-3)};
+\addplot[dashed, purple, latex-latex]
+coordinates{(1,-6) (1,6)};
+\addlegendentry{vertical asymptote}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+xmin=-6,xmax=6,
+ymin=-4,ymax=12,
+axis x line=middle,
+axis y line=middle,
+axis line style=<->,
+xlabel={\(x\)},
+ylabel={\(y\)},
+]
+\addplot[no marks,black]{(5/2)*x)};
+\addlegendentry{Hole}
+\draw[fill=white](axis cs:2,5)circle(1mm);
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <example>
+        <statement>
+          <me>
+            f(x)=\frac{x+2}{x^2-4}
+          </me>
+          <p>
+            for <m>x=2</m> we get
+            <me>
+              f(x)=\frac{4}{0}
+            </me>
+          </p>
+          <p>
+            So at <m>x=2</m>,
+            there is a vertical asymptote in the graph of the function.
+          </p>
+        </statement>
+      </example>
+      <p>
+        <em>Types of asymptotes</em>
+      </p>
+      <p>
+        There are three types of asymptotes:
+        horizontal, vertical, or oblique.
+        These are the lines whose distance from the graph of a function keeps decreasing and approaches zero but never gets there.
+      </p>
+      <definition>
+        <statement>
+          <p>
+            <em>Horizontal Asymptote</em>
+          </p>
+          <p>
+            A horizontal asymptote is a horizontal line that the graph of a function approaches as <m>x</m> approaches towards infinity
+            (or <m>-\infty</m>).
+            It is not part of the graph of the function.
+            Rather, it helps describe the behavior of a function as x gets very small or large.
+          </p>
+        </statement>
+      </definition>
+      <definition>
+        <statement>
+          <p>
+            <em>Vertical asymptote</em>
+          </p>
+          <p>
+            A vertical asymptote is a vertical line that the graph of a function approaches as <m>x</m> approaches some constant value <m>c</m>
+            (from the left or right)
+            then the curve goes towards infinity
+            (or <m>-\infty</m>).
+          </p>
+        </statement>
+      </definition>
+      <p>
+        For example look at the graph of the function
+        <me>
+          f(x)=\frac{x+2}{x-1}
+        </me>
+      </p>
+      <p>
+        Here the vertical asymptote is
+        <me>
+          x=1
+        </me>
+        and the horizontal asymptote is
+        <me>
+          y=1
+        </me>
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[width=4in,axis equal image,
+axis lines=middle,
+xmin=-15,xmax=15,
+xlabel=\(x\),ylabel=\(y\),
+ymin=-10,ymax=10,
+restrict y to domain=-12:12,
+enlargelimits={abs=1cm},
+axis line style={latex-latex},
+ticklabel style={font=\tiny,fill=white},
+xtick={-3},
+every axis y label/.style=
+{at={(ticklabel cs:1.02,-12pt)},rotate=0,anchor=west},
+every axis x label/.style={
+at={(xticklabel cs:1.02,-8pt)},anchor=south},
+]
+/pgfplots/xlabel shift={10pt};
+\addplot[samples=250,domain=-15:15] {(x+2)/(x-1)};
+\draw[dashed,shorten &lt;=2ex, shorten >=2ex,latex-latex] ({{1,0}}|-{{axis description cs:1,1}}) -- ({{1,0}}|-{{axis description cs:1,0}})node[right,pos=0.95]{\(x=1\)};
+\draw [fill=red] (-3,0.25) circle [radius=1.5pt] node[left]{};
+\addplot[samples=200,dashed,latex-latex,domain=-17:17] {1}node[above,pos=0]{\(y=1\)};
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        <em>Horizontal vs. vertical asymptotes</em>
+        While both horizontal and vertical asymptotes help describe the behavior of a function at its extremities,
+        it is worth noting that they do have some differences.
+        One of the key differences is that a function can only have a maximum of 2 horizontal asymptotes.
+        We can see why by considering how we find horizontal asymptotes by examining the limit of a function as it approaches infinity
+        (or <m>-\infty</m>).
+        Since there are only two directions we can consider, infinity
+        (or <m>-\infty</m> ),
+        there can only be, at maximum, 2 horizontal asymptotes.
+        In contrast,
+        a function can have any number of vertical asymptotes.
+        The tangent function, for example,
+        has an infinite number of vertical asymptotes.
+      </p>
+      <definition>
+        <statement>
+          <p>
+            <em>Oblique asymptote</em>
+          </p>
+          <p>
+            Oblique asymptotes are also known as slanted asymptotes.
+            That's because of its slanted form representing a linear function graph,
+            <me>
+              y=mx+b
+            </me>
+          </p>
+          <p>
+            A rational function may only contain an oblique asymptote when its numerator's degree is exactly one degree higher than its denominator's degree.
+          </p>
+          <p>
+            Oblique asymptotes are the linear functions that we can use to predict a rational function's end behavior,
+            as shown by our example below.
+          </p>
+          <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=middle,
+grid=major,
+xmin=-3.1,xmax=3.9,
+ymin=-4.1,ymax=3.9,
+restrict y to domain=-4:4,
+xlabel=\(x\),
+ylabel=\(y\),
+clip=false]
+\addplot[color=red,domain=-3:3,samples=100] {x+1/x} node[right] {\(y =1+\frac{1}{x}\)};
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </statement>
+      </definition>
+      <example>
+        <statement>
+          <p>
+            Consider a function
+            <me>
+              y=f(x)=\frac{3x^2-4x+3}{6x^2-47x-8}
+            </me>
+            <ol>
+              <li>
+                <p>
+                  First we will learn how to find the horizontal asymptote of a function.
+                  <ul>
+                    <li>
+                      <p>
+                        Divide each term of this function by the highest power term of the denominator.
+                        Here that term is <m>6x^2</m>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        We get
+                        <me>
+                          y=\frac{\frac{3x^2}{6x^2}-\frac{4x}{6x^2}+\frac{3}{6x^2}}{\frac{6x^2}{6x^2}-\frac{47x}{6x^2}-\frac{8}{6x^2}}
+                        </me>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Which simplifies to
+                        <me>
+                          y=\frac{\frac{1}{2}-\frac{2}{3x}+\frac{1}{2x^2}}{1-\frac{47}{6x}-\frac{4}{3x^2}}
+                        </me>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Use Desmos to make a table as <m>x</m> gets closeer to <m>\infty</m> for the expressions
+                        <m>\frac{2}{3x},\frac{1}{2x^2},\frac{47}{6x}, \frac{4}{3x^2}</m> and you will see they all become zero.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        So the horizontal asymptote of the given function is <m>y=\frac{1}{2}</m>
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Now we will learn how to find the vertical asymptotes of the function.
+                  To find the vertical asymptote of a rational function
+                  <me>
+                    R(x)=\frac{f(x)}{g(x)}
+                  </me>
+                  We let <m>g(x)=0</m> and solve for <m>x</m>.
+                  Say we get <m>x=a</m>.
+                  That of the vertical asymptote of the function.
+                  Here set the denominator equal to zero.
+                  <me>
+                    6x^2-47x-8=0
+                  </me>
+                  <me>
+                    (6x+1)(x-8)=0
+                  </me>
+                  Either
+                  <me>
+                    6x+1=0
+                  </me>
+                  or
+                  <me>
+                    x-8=0
+                  </me>
+                  <m>x=-\frac{1}{6}</m>  and  <m>x=8</m> are the vertical asymptotes of the given function.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Graph the function in Desmos to check your answers.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Find the horizontal,
+          and vertical asymptotes of the following functions algebraically.
+          Confirm your answers using Desmos by graphing the functions.
+          <ol>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{e^x}{e^x-2}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{3x^2-4x+3}{x-8}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{3x-1}{x-2}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{3x-1}{x^2-4}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{3x^3-1}{x^2+4}
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Continuity</title>
+      <p>
+        Continuity was introduced by Cauchy in 1821 in his famous textbook Cours d'Analyse.
+        A continuous function is one whose values change smoothly,
+        with no jumps or gaps in the graph.
+        We'll explore the idea first,
+        and arrive at a mathematical definition soon.
+        In easy words,
+        we can just say that a function is continuous at a fixed point if we can draw the graph of the function around that point without lifting the pen from the paper's plane.
+      </p>
+      <p>
+        You will be learning a more formal definition of the continuity of a function in calculus.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=middle,
+grid=major,
+xmin=-3.1,xmax=3.9,
+ymin=-4.1,ymax=3.9,
+restrict y to domain=-4:4,
+xlabel=\(x\),
+ylabel=\(y\),
+clip=false]
+\addplot[color=blue,domain=-3:3,samples=100] {x};
+\addlegendentry{Continuous function}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=middle,
+grid=major,
+xmin=-3.1,xmax=3.9,
+ymin=-4.1,ymax=3.9,
+restrict y to domain=-4:4,
+xlabel=\(x\),
+ylabel=\(y\),
+clip=false]
+\addplot[color=purple,domain=-3:3,samples=100] {1/(x-2)};
+\addlegendentry{Discontinuous function}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis x line=middle, axis y line=middle,
+ymin=-5, ymax=5, ytick={-5,...,5}, ylabel=\(y\),
+xmin=-5, xmax=5, xtick={-5,...,5}, xlabel=\(x\),
+domain=-pi:pi,samples=101,
+]
+\addplot [black,thin] {func(\x)};
+\addlegendentry{Discontinuous function}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=middle,
+grid=major,
+xmin=-6,xmax=6,
+ymin=0,ymax=10,
+restrict y to domain=-1:10,
+xlabel=\(x\),
+ylabel=\(y\),
+clip=false
+]
+\addplot[no marks,purple]{(5/2)*x)};
+\addlegendentry{Discontinuous function}
+\draw[fill=white](axis cs:2,5)circle(1mm);
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        The following functions are continuous in their domain
+        <ul>
+          <li>
+            <p>
+              Polynomial function
+            </p>
+          </li>
+          <li>
+            <p>
+              Root functions
+            </p>
+          </li>
+          <li>
+            <p>
+              Rational functions
+            </p>
+          </li>
+          <li>
+            <p>
+              Trigonometric functions
+            </p>
+          </li>
+          <li>
+            <p>
+              Exponential functions
+            </p>
+          </li>
+          <li>
+            <p>
+              logarithmic functions
+            </p>
+          </li>
+        </ul>
+      </p>
+      <example>
+        <statement>
+          <p>
+            Use Desmos to make a table for various values of <m>x</m> for the following functions to check for discontinuity at <m>x=3</m>.
+            <ol>
+              <li>
+                <p>
+                  <me>
+                    f(x)=\frac{1}{x-3}
+                  </me>
+                  <image width="73%" source="images/C.png"/>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <me>
+                    f(x) = \begin{cases}-1 \amp  \ x \lt  3 \\\ 1 \amp  x\geq 3 \end{cases}
+                  </me>
+                  <image width="92.5%" source="images/D.png"/>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Determine by graphing or making a table for various values of <m>x</m> if the following functions are continuous or discontinuous at <m>x=2</m>.
+          Why or why not?
+          <ul>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{x+1}{x-2}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{x-2}{x^2-4}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=x+5
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\sqrt{3-x}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x) = \begin{cases}-x+2 \amp  \ x \lt  2 \\\ -x-2 \amp  x\geq 2 \end{cases}
+                </me>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>End behavior</title>
+      <p>
+        The end behavior of a function <m>f(x)</m> refers to how the function behaves when the variable <m>x</m> increases or decreases without bounds.
+        Which means <m>x</m> is approaching to the <m>\infty</m> or -<m>\infty</m>.
+        The study of the end behavior which is also called the steady state of a system or the long-time behavior of a function has tremendous applications in real-life situations.
+      </p>
+      <example>
+        <statement>
+          <p>
+            Use Desmos to check the graph of the exponential growth function
+            <m>f(x)=e^x</m> as <m>x</m> approaches <m>\infty</m>.
+          </p>
+          <p>
+            The function <m>f(x)=e^x</m> goes to <m>\infty</m> as <m>x</m> approaches <m>\infty</m> and the function goes to zero as <m>x</m> approaches <m>-\infty</m>.
+          </p>
+          <p>
+            However, the graph of the exponential decay function
+            <m>f(x)=e^{-x}</m> as <m>x</m> approaches <m>\infty</m> the function goes to zero,
+            and as <m>x</m> approaches <m>-\infty</m> the function goes to <m>\infty</m>.
+          </p>
+        </statement>
+      </example>
+      <ol>
+        <li>
+          <p>
+            <em>Power functions</em> We will show the behavior of power function <m>x^n</m>,
+            especially the end-behavior that is what happens when <m>x</m> goes to <m>\infty</m> or <m>-\infty</m>.
+            The degree and the sign of the leading coefficient of a power function determine the end behavior of the graph.
+            Refer to figures of power function.
+            <tabular>
+              { | >{\arraybackslash}m{5cm} | >{\arraybackslash}m{5cm} | >{\arraybackslash}m{5cm} | } \hline <m>f(x) = kx^n</m> &amp; <m>n</m> Even &amp; <m>n</m> Odd \hline <m>k > 0</m> &amp;
+              <image>
+                 <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[ title={\(\begin{gathered} x \to -\infty, f(x) \to \infty \\ \text{ and } x \to \infty, f(x) \to \infty \end{gathered}\)}, domain=-2:2, samples=100, xmin=-2, xmax=2, ymin=-2, ymax=2, xtick=, ytick=, axis lines=middle, scale=0.5 ] \addplot[ blue, thick, postaction={ decorate, decoration={ markings, mark=at position 0.99 with {\arrow{>}} } } ] {x^2}; \end{axis}\end{tikzpicture}]]> </latex-image>
+              </image>
+              &amp;
+              <image>
+                 <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[ title={\(\begin{gathered} x \to -\infty, f(x) \to -\infty \\ \text{ and } x \to \infty, f(x) \to \infty \end{gathered}\)}, domain=-2:2, samples=100, xmin=-2, xmax=2, ymin=-2, ymax=2, xtick=, ytick=, axis lines=middle, scale=0.5 ] \addplot[blue, thick,->] {x^3}; \end{axis}\end{tikzpicture}]]> </latex-image>
+              </image>
+              \hline <m>k \lt 0</m> &amp;
+              <image>
+                 <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[ title={\(\begin{gathered} x \to -\infty, f(x) \to -\infty \\ \text{ and } x \to \infty, f(x) \to -\infty \end{gathered}\)}, domain=-2:2, samples=100, xmin=-2, xmax=2, ymin=-2, ymax=2, xtick=, ytick=, axis lines=middle, scale=0.5 ] \addplot[blue, thick,->] {-x^2}; \end{axis}\end{tikzpicture}]]> </latex-image>
+              </image>
+              &amp;
+              <image>
+                 <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[ title={\(\begin{gathered} x \to -\infty, f(x) \to \infty \\ \text{ and } x \to \infty, f(x) \to -\infty \end{gathered}\)}, domain=-2:2, samples=100, xmin=-2, xmax=2, ymin=-2, ymax=2, xtick=, ytick=, axis lines=middle, scale=0.5 ] \addplot[blue, thick,->] {-x^3}; \end{axis}\end{tikzpicture}]]> </latex-image>
+              </image>
+              \hline
+            </tabular>
+            <em>Power functions</em> The degree and the sign of the leading coefficient of a polynomial function determine the end behavior of the graph.
+            Refer to figures of power function.
+            <em>Rational functions</em> The end behavior of rational functions can be determined by finding the horizontal asymptotes.
+            The horizontal asymptote can be found by comparing the degrees of the numerator and denominator.
+            <ol>
+              <li>
+                <p>
+                  If the degree of the denominator is higher than the degree of the numerator,
+                  then there is a horizontal asymptote <m>y=0</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If the degree of the denominator is the same as the degree of the numerator,
+                  there is a horizontal asymptote of <m>y=\frac{a}{b}</m>, where
+                  <m>a,
+                  b</m> are the leading coefficients of the numerator and denominator respectively.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If the degree of the denominator is higher than the degree of the numerator,
+                  then there is an oblique asymptote <m>y=q(x)</m> which provides the end behavior of the function.
+                </p>
+              </li>
+            </ol>
+          </p>
+          <activity>
+            <p>
+              Describe the end behavior of the following functions.
+              Use Desmos to graph the functions and make a table of function values as <m>x</m> approaches <m>\infty</m> or -<m>\infty</m>
+              <ol>
+                <li>
+                  <p>
+                    The drug concentration of a medicine in millimeters,
+                    <m>t</m> hours after injecting is given by
+                    <me>
+                      C(t)=\frac{5t}{t^2+1}
+                    </me>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Construct a table of values for <m>C(t)</m> for <m>t=1, 2, 5, 10</m> and <m>50</m>.
+                    Round the values to the nearest tenth.
+                    Interpret your results.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    When is the drug concentration maximum and what is the maximum drug concentration?
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Determine the time intervals where the drug concentration is increasing,
+                    and when is it decreasing.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    What is the drug concentration in the long run?
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <me>
+                      g(x)=\frac{1}{x-5}+7
+                    </me>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <me>
+                      f(x)=x^5+9x^3-3
+                    </me>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <me>
+                      f(x)=\frac{12}{2+e^{-x}}
+                    </me>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </activity>
+          <activity>
+            <p>
+              In the 1930s the biologist G. F. Gause experimented with the protozoan Paramecium.
+              He modeled the data with a function
+              <me>
+                P(t)=30(2-e^{-0.05t})
+              </me>
+              where <m>P(t)</m> represents the protozoan population,
+              <m>t</m> days after starting a colony.
+              <ol>
+                <li>
+                  <p>
+                    Find the initial population.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Find the long-term behavior of the bacteria population.
+                    What does it mean in the context of this problem?
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </activity>
+          <activity>
+            <p>
+              From the given graph answer the following questions
+            </p>
+            <image>
+               <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[ axis lines=middle, grid=major, xmin=-3.1,xmax=3.9, ymin=-4.1,ymax=3.9, restrict y to domain=-4:4, xlabel=\(x\), ylabel=\(y\), clip=false] \addplot[color=red,domain=-3:3,samples=100] {1+(1/x)} node[right] {\(y = \frac{x+1}{x}\)}; \end{axis}\end{tikzpicture}]]> </latex-image>
+            </image>
+            <ol>
+              <li>
+                <p>
+                  Describe the behavior of a function when <m>x</m> approaches zero from the left.
+                  What about from the right?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Describe the behavior of a function when <m>x</m> approaches to <m>\infty</m>.
+                  What about when <m>x</m> approaches to <m>-\infty</m>?
+                </p>
+              </li>
+              <li>
+                <p>
+                  In which intervals function increasing?
+                  What about decreasing?
+                </p>
+              </li>
+              <li>
+                <p>
+                  In which intervals function is concave up?
+                  What about concave down?
+                </p>
+              </li>
+              <li>
+                <p>
+                  The point at which the function changes its concavity is called an inflection point as long as this point is in the domain of the function.
+                  Does this function have an inflection point?
+                  Why or why not?
+                </p>
+              </li>
+            </ol>
+          </activity>
+        </li>
+      </ol>
+    </subsubsection>
+  </subsection>
+</section>

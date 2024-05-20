@@ -1,0 +1,561 @@
+<section>
+  <title>Calculus</title>
+  <subsection>
+    <title>Introduction</title>
+    <p>
+      As you are transitioning from algebra to calculus,
+      we would like you to understand what calculus is,
+      how it was developed by various mathematicians,
+      and how calculus problems differ from algebra problems.
+      Introduction and understanding of the terms infinity and infinitesimal will help you understand the key concept of calculus.
+      We will end this chapter by looking at some of the applications of calculus in daily life that you will explore in more detail in calculus.
+    </p>
+    <p>
+      \begin{motivatebox}[Motivating Questions]
+      <ul>
+        <li>
+          <p>
+            What is calculus and how did historical events shape the development of calculus?
+          </p>
+        </li>
+        <li>
+          <p>
+            In what ways does calculus differ from algebra and why does it matter?
+          </p>
+        </li>
+        <li>
+          <p>
+            What do the terms infinity and infinitesimal mean?
+          </p>
+        </li>
+        <li>
+          <p>
+            How does calculus apply to real-world phenomena and everyday experiences?
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      \end{motivatebox}
+    </p>
+  </subsection>
+  <subsection>
+    <title>What is calculus?</title>
+    <p>
+      Calculus is a branch of mathematics that deals with the rate of change.
+      The word calculus means ‘small pebble' in Latin,
+      and is named after the rocks used by the Romans for counting because it is like understanding something very small pieces.
+      Calculus has two main branches:
+      differential calculus, and integral calculus.
+      One branch, differential calculus cuts something into small pieces to find how it changes:
+      the other branch integral calculus,
+      joins the small pieces together to find how much total there is.
+      These two branches are connected by the fundamental theorem of calculus.
+    </p>
+  </subsection>
+  <subsection>
+    <title>A glimpse into calculus</title>
+    <p>
+      Suppose we are driving a car.
+      Let <m>v(t)</m> represent the car's velocity in miles per hour,
+      and <m>s(t)</m> represent the total distance traveled by the vehicle in miles,
+      where <m>t</m> is the time in hours.
+      Now we have two questions about the relationship between the total distance traveled by the car and the velocity of the vehicle.
+      <ol>
+        <li>
+          <p>
+            How to find the velocity of the car at any time if we know the total distance traveled by the car at various times?
+          </p>
+        </li>
+        <li>
+          <p>
+            How to find the total distance traveled by car if we know the velocity of the car?
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Let's consider a scenario.
+      Suppose that the velocity of the car is a constant and positive <m>20</m> mph so <m>v(t)=20</m>.
+    </p>
+    <p>
+      As we know the velocity is the rate of change of distance.
+      If velocity is constant,
+      that means the rate of change of distance is constant.
+      So the distance is changing linearly at a constant rate of <m>20</m> miles per hour and can be represented by the function
+      <me>
+        s(t)=20t
+      </me>
+      and the graph of the distance function <m>s(t)</m> will be a line with the slope 20.
+    </p>
+    <p>
+      The opposite is also true.
+      When the distance increases linearly, velocity is constant.
+    </p>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines = left,
+xlabel = \(t\),
+ylabel = {\(v(t)\)},
+]
+\fill [green, domain=2:8, variable=\t]
+(2,0)
+-- plot ({\t}, {20})
+-- (8, 0)
+-- cycle;
+\addplot [
+domain=0:10,
+samples=100,
+color=blue,
+]
+{20};
+\addlegendentry{Velocity function, \(v(t)=20\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines = left,
+xlabel = \(t\),
+ylabel = {\(s(t)\)},
+]
+\addplot[
+domain=0:10,
+samples=100,
+color=blue,
+]
+{20*x};
+\addlegendentry{Distance function, \(s(t)=20t\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <p>
+      The area under the velocity curve over an interval of time tells us the total distance the car traveled.
+      Why?
+      Because when the velocity is constant,
+      the region under the graph is a rectangle.
+      Its height is <m>v</m>, its width is <m>t</m>, and so its area is
+      <me>
+        A=vt
+      </me>
+    </p>
+    <p>
+      In this problem <m>v=20</m> and <m>t=8-2=6</m>.
+      The area under the velocity curve between <m>t=2</m> and <m>t=8</m> is
+      <me>
+        A=20\enspace\frac{\mbox{miles} }{\mbox{\cancel{hour}} }\cdot\enspace{6} \enspace\mbox{\cancel{hour}} =120 \enspace\mbox{miles}
+      </me>
+    </p>
+    <p>
+      So we found the total distance travelled by the car using the velocity function.
+    </p>
+    <p>
+      Now let's look at the graph of the distance function, it is a straight line.
+    </p>
+    <p>
+      As we know the slope of a line is equal to the change in <m>y</m> divided by the change in <m>x</m>,
+      or rise over run.
+      <me>
+        \mbox{The slope of this line}  =\frac{\mbox{change in \(y\)} }{\mbox{change in \(x\)} }= \frac{\mbox{change in distance} }{\mbox{change in time} }
+      </me>
+      <me>
+        \mbox{Slope} =\frac{v \cancel{t}}{\cancel{t}}=v
+      </me>
+    </p>
+    <p>
+      In addition, we observe that the total distance traveled
+      <me>
+        s(t)=20t
+      </me>
+    </p>
+    <p>
+      \mbox{between} <m>t=2</m> \mbox{and} <m>t=8</m> \mbox{is}
+      <me>
+        s(8)-s(2)=160-40=120
+      </me>
+      miles Now you try,
+    </p>
+    <p>
+      https://www.desmos.com/calculator/ima2wusvt9
+    </p>
+    <p>
+      Geometrically, the velocity is the slope of the distance graph.
+      Next, we make the conjecture:
+      <ol>
+        <li>
+          <p>
+            The slope of the distance graph gives the velocity.
+          </p>
+        </li>
+        <li>
+          <p>
+            The area under the velocity graph gives the distance.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <remark>
+      <p>
+        We were able to find the velocity from the distance and vice versa easily by using geometry.
+      </p>
+    </remark>
+    <remark>
+      <p>
+        If the velocity is negative,
+        a moving object is traveling in the opposite direction or backtracking.
+        To determine the distance traveled,
+        we have to compute the distance separately on intervals where velocity is positive or negative and account for the change in position on each such interval.
+      </p>
+    </remark>
+  </subsection>
+  <subsection>
+    <title>Why do we need calculus?</title>
+    <p>
+      In the above problem, what if the velocity is not constant?
+      Then the area under the velocity curve is not a rectangle or other familiar figure that we can find the area of,
+      and the graph of the distance is not a straight line, so what is its slope?
+      How do we find the velocity from the distance and vice versa?
+      For example, take a look at the picture below.
+    </p>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines = left, xlabel = \(t\),
+ylabel = {\(v(t)\)},
+]
+\fill [green, domain=2:8, variable=\t]
+(2,0)
+-- plot ({\t}, {\t^2})
+--(8,0)
+-- cycle;
+\addplot [
+domain=0:10,
+samples=100,
+color=red,
+]
+{x^2};
+\addlegendentry{Velocity function, \(v(t)=t^2\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+xlabel=\(t\),
+ylabel={\(y\)},
+grid=major,
+axis lines=middle,
+xmin=-2, xmax=6,
+ymin=-10, ymax=150,
+legend pos=north west
+]
+\addplot[domain=-2:5, samples=100, smooth, thick, blue] {x^3};
+\addlegendentry{\(y = t^3\)}
+\addplot[domain=3:5, samples=2, smooth, thick, red, dashed] {48*(x - 4) + 64};
+\addlegendentry{Tangent at \(x=4\)}
+\addplot[mark=*, green] coordinates {(4,64)};
+\addlegendentry{Point of Tangency (4,64)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+    </image>
+    <p>
+      To answer these questions we need more tools and we need to develop new skills,
+      and that is what calculus does.
+    </p>
+    <p>
+      The study says each year many students are enrolled in college-level calculus courses in the United States.
+      Now the question is why all these students need to take calculus.
+      To understand this we need to go back a little in history.
+    </p>
+    <p>
+      It provides a way for us to construct relatively simple quantitative models of change,
+      and to deduce their consequences.
+    </p>
+    <p>
+      Before calculus was invented,
+      all mathematics was static.
+      It could only help calculate objects that were perfectly still.
+      But the universe is constantly moving and changing.
+      No objects<ndash/>from the stars in space to subatomic particles or cells in the body<ndash/>are always at rest.
+      Indeed, just about everything in the universe is constantly moving.
+      Also, it is understood that all measurable phenomena can be represented by curves.
+      Calculus helps us to study and analyze the properties of those curves and in turn determine how phenomena like particles, stars,
+      and matter move and change in real time.
+    </p>
+    <p>
+      Besides many ideas,
+      calculus models how objects fall under the forces of gravity and wind resistance,
+      explains how to compute areas and volumes of interesting shapes,
+      enables us to work rigorously with infinitely small and infinitely large quantities,
+      and connects the varying rates at which quantities change to the total change in the quantities themselves.
+    </p>
+  </subsection>
+  <subsection>
+    <title>A brief history and development of calculus</title>
+    <p>
+      Calculus, also known in its early history,
+      as infinitesimal calculus, developed over a long period.
+    </p>
+    <p>
+      Many elements of calculus appeared in ancient Egypt and Babylonia, Greece,
+      then in China and the Middle East,
+      and still later again in medieval Europe and India.
+    </p>
+    <p>
+      The development of calculus and its uses within the sciences have continued to the present day.
+    </p>
+    <p>
+      We will include the history of calculus and the contributions of other mathematicians to it throughout this book.
+    </p>
+    <figure>
+      <title>History of Calculus Timeline</title>
+      <sidebyside>
+        \color{gray}
+        \rule{\linewidth}{1pt}
+        \ytl{2nd BCE}{Ancient Greek mathematicians like Eudoxus and Archimedes started to explore concepts that later influenced calculus, such as the method of exhaustion and the volume of spheres.}
+        \ytl{4th  BCE}{Civilizations in Egypt and Mesopotamia developed early geometry for practical applications in areas, volumes, and astronomy.}
+        \ytl{17th century}{Descartes and Fermat develop analytical geometry; focus on tangents and the precursors to differential calculus.}
+        \ytl{17th century}{Cavalieri, Newton, and Leibniz developed foundational concepts of differential and integral calculus, significantly contributing to physics and mathematics.}
+        \ytl{18th century}{Euler, Lagrange, and Laplace advance the field of differential equations and mechanics.}
+        \ytl{16th to 17th century}{Galileo, Copernicus, Kepler, and Newton revolutionized the understanding of planetary motion.}
+        \ytl{19th century}{Gauss, Cauchy, and Weierstrass further develop complex and modern analysis, focusing on limits and continuity.}
+        \ytl{20th century}{Development of axiomatic approaches, advancements in quantum mechanics, differential geometry, harmonic analysis, and the integration of calculus into the educational curriculum.}
+        \rule{\linewidth}{1pt}
+      </sidebyside>
+    </figure>
+  </subsection>
+  <subsection>
+    <title>Calculus versus algebra</title>
+    <p>
+      The word "algebra" is derived from the Arabic word al-jabr,
+      and this comes from the treatise written in the year 830 by the medieval Persian mathematician., Al-Khwārizmī.
+    </p>
+    <p>
+      Mathematics is an activity of investigation and exploration.
+      Two of its branches algebra and calculus are important tools for understanding the world.
+      While both branches provide powerful tools for studying mathematics they serve very different purposes.
+      Whether it is shopping smarter or predicting trends with artificial intelligence,
+      that's why we believe understanding the difference between algebra and calculus is key.
+      <ul>
+        <li>
+          <p>
+            Algebra is the study of equations,
+            inequalities, and functions.
+            It focuses on manipulating numbers.
+            Calculus is the study of continuous change and is used to analyze and model complex systems.
+          </p>
+        </li>
+        <li>
+          <p>
+            Algebra is a branch of mathematics that typically uses mathematical statements to represent relationships between various things,
+            such as a relationship between the supply of an object and its price and calculus is a branch of mathematics that focuses on understanding how this relationship changes over time.
+          </p>
+        </li>
+        <li>
+          <p>
+            Algebra finds the value of a function at a point,
+            the slope of a line, the average rate of change between two points,
+            the height of a function at a certain point,
+            and the direction of motion along a line.
+            Calculus finds the value of a function as the independent variable approaches a certain point,
+            the slope of a curve, the instantaneous rate of change at a point,
+            the maximum height on an interval,
+            and the direction of motion along any curve.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Infinity and infinitesimal</title>
+    <p>
+      There are some notions in calculus that anyone who studies it will learn about which are <em>infinity</em>
+      and <em>infinitesimals</em>.
+    </p>
+    <p>
+      In mathematics,
+      infinity and infinitesimal are often used to describe the behavior of functions.
+      For example, what is the end behavior of the function?
+      What happens to a graph when it gets close to a certain point?
+    </p>
+    <p>
+      An infinitesimal refers to a very small quantity but not zero! while infinity refers to a number bigger than any real number.
+      The choice between these terms often depends on the specific problem being solved.
+    </p>
+    <p>
+      For example,
+      when calculating the slope of a tangent line of a function,
+      an infinitesimal is often used to describe the change in the function as the independent variable approaches zero.
+      On the other hand, when describing the end behavior of a function,
+      infinity is often used to describe the value that the function approaches as the independent variable approaches positive or negative infinity.
+    </p>
+    <p>
+      The infinity symbol <m>\infty</m> was introduced by mathematician John Wallis in 1655.
+      The word "infinity" comes from the Latin word infinitas,
+      which means "boundless". Infinitesimals were introduced by Isaac Newton as a means of
+      <q>explaining</q>
+      his procedures in calculus.
+      Before the behavior of the function near a certain point had been formally introduced and understood,
+      it was not clear how to explain it or even if it worked.
+      In essence, Newton treated an infinitesimal as a smaller positive number,
+      somehow, than any positive real number.
+    </p>
+    <p>
+      Many early attempts to explain calculus were based on questionable reasoning about infinitesimals.
+      As a consequence,
+      infinitesimal calculus was originally applied to differential and integral calculus.
+      As rigorous definitions of limit, continuity,
+      and real numbers were established,
+      this terminology faded away.
+      The infinitesimals of John Wallis differ from the indivisible in that he decomposes geometric figures into infinitely thin building blocks that are of the same dimension as that of the figure and prepares the basis of general methods of integral computations.
+      Archimedes used infinitesimals which eventually came to be called the indivisible method to identify areas of regions and solid volumes by the method of exhaustion.
+    </p>
+    <p>
+      The insight with the use of infinitesimals was that,
+      although these entities were infinitely small,
+      they could still retain certain specific properties such as angle or slope.
+      Infinitesimals are a key ingredient in Leibniz's infinitesimal calculus procedures.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Calculus in daily life</title>
+    <ol>
+      <li>
+        <p>
+          <em>Engineering:</em> Real-life applications of calculus are incredibly prevalent in the field of engineering.
+          Let's discuss a few of its applications below:
+          <ul>
+            <li>
+              <p>
+                Civil Engineering: Using calculus,
+                we can determine the amount of force acting on the beam including the weight of pedestrians,
+                the weight of vehicles,
+                and the amount of traffic anticipated on that bridge.
+              </p>
+            </li>
+            <li>
+              <p>
+                Electrical Engineering: Calculus is crucial for calculating voltage or current through a capacitor and calculating the exact length of a power cable necessary for connecting substations that are miles apart from each other. are designed using the principles of calculus.
+              </p>
+            </li>
+            <li>
+              <p>
+                Space flight Engineering: Before launching a rocket or exploratory probe,
+                engineers must use calculus to figure out the gravitational pulls of the sun and moon to know how to launch a probe or hit the velocity needed to orbit the earth.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Medicine:</em> Applications of calculus in medical science include:
+          <ul>
+            <li>
+              <p>
+                Cancer: Calculus is used to determine the growth or shrinkage and the number of cells of cancerous tumors.
+                Calculus is also crucial in medical tests used for measuring cardiac output,
+                blood flow, and tumor growth.
+              </p>
+            </li>
+            <li>
+              <p>
+                Surgical control of red blood cells: Calculus is used for computing the volume of red blood cells so the proper amount of saline solution can be given to the patients during surgery.
+              </p>
+            </li>
+            <li>
+              <p>
+                Pharmacology: The side effects of a drug,
+                brought about by factors like body temperature change,
+                can be computed through integral calculus.
+                Pharmacologists can make a kidney a changing function in the calculus-based Cockcroft-Gault equation and determine the creatinine levels in the blood to assess the kidney's functionality.
+                Using these results,
+                the dosage of drugs for treatment can be finalized.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Business:</em> Modern business also benefits from the application of calculus.
+          Some of its uses include:
+          <ul>
+            <li>
+              <p>
+                Credit card payments: Calculus is used for setting payment structures and the minimum due amount by the credit card company.
+              </p>
+            </li>
+            <li>
+              <p>
+                Real estate: In real estate,
+                calculus is utilized to analyze and predict the growth of property values.
+                Such analysis helps in making informed investment decisions,
+                understanding market trends, and strategies for sales or purchases.
+                This
+                <url href="https://map.reventure.app/dashboard?query=21704">website</url>
+                likely provides valuable insights into these trends,
+                aiding stakeholders in navigating the dynamic real estate market.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Music:</em> Some applications of calculus include:
+          <ul>
+            <li>
+              <p>
+                Harmonics: Calculus is used to anticipate the motions of sound to make the proper adjustments and provide the best musical experience to the listeners.
+                Through calculus,
+                we can also make improvements in acoustics and improve the listener's experience.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Research Analytics:</em> The application of calculus in research and development has paved the way for manufacturing,
+          data management, gaming,
+          and other service industries to grow exponentially.
+          These applications include:
+          <ul>
+            <li>
+              <p>
+                Variables in manufacturing: Research analysts use calculus while observing different processes,
+                which improves the industry's quality and revenue.
+                Calculus allows them to make accurate predictions,
+                which helps their decision-making process.
+              </p>
+            </li>
+            <li>
+              <p>
+                Simulation for video games: Graphic designers use calculus to understand 3D models.
+                Based on the results derived from calculus, video games,
+                and animated movies are made with a real-world perspective.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Artificial Intelligence</em> Calculus,
+          the branch of mathematics that deals with rates of change and accumulation,
+          is a powerful tool in the field of artificial intelligence,
+          like neural networks, and gradient descent.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Meteorology:</em> Meteorologists use calculus equations to predict the effects of varying weather conditions on the atmosphere with respect to temperature,
+          humidity, and pressure changes.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

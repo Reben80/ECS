@@ -1,0 +1,4187 @@
+<section>
+  <title>Calculus Toolkit: Essential skills and concepts you need</title>
+  <subsection>
+    <title>Introduction</title>
+    <p>
+      A course in calculus isn't just a list of rules for derivatives and integrals.
+      It covers many related topics and a lot of them are built on algebra,
+      analytical geometry, and trigonometry.
+      The skills and knowledge gained in those classes are presumed in the study of calculus.
+      You need to have mastered that content to succeed in calculus.
+    </p>
+    <p>
+      Since most of the mistakes students make in calculus are algebraic and trigonometric,
+      it will be beneficial for you to see some examples of common algebraic and trigonometric mistakes that students make in calculus.
+      Besides that,
+      we will provide you with a toolkit to enable you to succeed in calculus.
+      This toolkit contains miscellaneous topics from algebra,
+      geometry, and trigonometry.
+    </p>
+    <p>
+      \begin{motivatebox}[Motivating Questions]
+      <ul>
+        <li>
+          <p>
+            Why is a good foundation in algebra, trigonometry,
+            and geometry of great importance in studying calculus?
+          </p>
+        </li>
+        <li>
+          <p>
+            Is it possible for some functions that fail for the horizontal line test to have an inverse?
+          </p>
+        </li>
+        <li>
+          <p>
+            Why do we need a good strategy to solve math problems?
+          </p>
+        </li>
+        <li>
+          <p>
+            What are the common algebraic and trigonometric mistakes students make in calculus?
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      \end{motivatebox}
+    </p>
+  </subsection>
+  <subsection>
+    <title>Miscellaneous algebra skills</title>
+    <subsubsection>
+      <title>Algebraic simplification and manipulation</title>
+      <p>
+        Quite often you will need to do some algebraic simplification in calculus problems like factoring,
+        simplifying, distributing, expanding the polynomials,
+        and making the denominator the same to reduce the expressions to the lowest term.
+        Let's work on some examples of these types.
+      </p>
+      <activity>
+        <p>
+          Simplify the following algebraic expressions.
+          <ol>
+            <li>
+              <p>
+                <me>
+                  (\sqrt{x}+2)(\sqrt{x}+2)
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  (\sqrt{a}+\sqrt{b})(\sqrt{a}-\sqrt{b})
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  (3x-1)(2x+1)^5(x^2-x+1)^3-(x^2+x-1)^4(2x+1)^4
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \frac{(3+h)^2-9}{h}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \frac{x-2}{x^2-4}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  9(\frac{2x+1}{x-1})^8 \cdot \frac{2x+1-2(x-2)}{(2x+1)^2}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  x^{\frac{3}{5}}(-1)+\frac{3}{5}x^{-\frac{2}{5}}(4-x)
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \frac{\frac{y}{x}-\frac{x}{y}}{{\frac{1}{y}-\frac{1}{x}}}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  [(3-x) (x + 2) + (-x + 4) (7x + 2)-(x - y) (2x-y)]- (3x^2 - 7x + 5)
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Rationalize the numerator and denominator</title>
+      <p>
+        Sometimes we need to rationalize the numerator or denominator to reduce the expressions to the lowest term as a part of algebraic simplification.
+        Before we start with examples,
+        we will discuss what the conjugate of a radical expression means.
+      </p>
+      <definition>
+        <statement>
+          <p>
+            A conjugate is a pair of binomials with opposite arithmetic operators in the middle of the terms.
+            The conjugate can help you multiply,
+            simplify, and rationalize fractions and square roots.
+            It can help us move a square root from the bottom of a fraction
+            (the denominator)
+            to the top, or vice versa.
+          </p>
+        </statement>
+      </definition>
+      <example>
+        <statement>
+          <p>
+            The conjugate of <m>(\sqrt{a}+ \sqrt{b})</m> is <m>(\sqrt{a}- \sqrt{b})</m>
+          </p>
+        </statement>
+      </example>
+      <example>
+        <statement>
+          <p>
+            Rationalize the numerator of the expressions like
+            <me>
+              \frac{\sqrt{x+h}-\sqrt{x}}{h}
+            </me>
+          </p>
+          <p>
+            <em>Step 1</em>: In these types of problems we multiply the numerator and the denominator by the conjugate of the numerator.
+          </p>
+          <p>
+            <em>Step 2</em>: We get <m>\frac{\sqrt{x+h}-\sqrt{x}}{h}</m> <m>\frac{\sqrt{x+h}+\sqrt{x}}{\sqrt{x+h}+\sqrt{x}}</m>
+          </p>
+          <p>
+            <em>Step 3</em> Simplify We get
+            <me>
+              \frac{x+h-x}{h({\sqrt{x+h}+\sqrt{x}})}
+            </me>
+            <me>
+              \frac{\cancel{x}+h-\cancel{x}}{h({\sqrt{x+h}+\sqrt{x}})}
+            </me>
+            <me>
+              \frac{\cancel{h}}{{\cancel{h}}({\sqrt{x+h}+\sqrt{x}})}
+            </me>
+          </p>
+          <p>
+            Which simplifies to become
+            <me>
+              \frac{1}{{\sqrt{x+h}+\sqrt{x}}}
+            </me>
+          </p>
+          <p>
+            So now the numerator is a rational expression.
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Rationalize the denominator of the expression
+          <me>
+            \frac{x-9}{\sqrt{x}-3}
+          </me>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Rationalize the numerator of the expression
+          <me>
+            \frac{\sqrt{x^2+9}-3}{x^2}
+          </me>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Find the domain of the following functions.
+          <ol>
+            <li>
+              <p>
+                <me>
+                  f(x)=\sqrt{3-2x}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\sqrt[3]{2x-5}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{x}{\sqrt{x+3}}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{x}{\sqrt{x^2+3}}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=x^2+3x-5
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=e^x+2
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\log(x-4)
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Solving the linear, quadratic, and rational equations</title>
+      <p>
+        <em>To solve the linear equations</em>: Isolate <m>x</m> on one side and the numbers on the other.
+      </p>
+      <activity>
+        <p>
+          Solve the following equations.
+          <ol>
+            <li>
+              <p>
+                <me>
+                  2(x-5) + 8 = 3x - 7(x+4)
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \frac{2x}{x+1}= \frac{2x-1}{x}
+                </me>
+                Hint: Cross multiply.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <p>
+        <em>To solve the quadratic equations</em>:
+      </p>
+      <p>
+        First, try factoring the trinomial.
+        Then solve for <m>x</m> by using the zero product principle.
+        If the trinomial is prime, use the quadratic formula to solve the equations.
+      </p>
+      <p>
+        <em>Quadratic formula</em>: The first attempts to find a more general formula to solve quadratic equations can be tracked back to geometry
+        (and trigonometry)
+        top-bananas Pythagoras (500 BC in Croton, Italy) and Euclid (300 BC in Alexandria, Egypt),
+        who used a strictly geometric approach,
+        and found a general procedure to solve the quadratic equation.
+        Let a, b, and c be real numbers.
+        The solutions of the quadratic equation
+        <me>
+          ax^2+bx+c=0
+        </me>
+        are
+        <me>
+          x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
+        </me>
+      </p>
+      <activity>
+        <p>
+          Solve the following quadratic equation:
+          <me>
+            3x^2 + 11x - 20 = 0
+          </me>
+          <ol>
+            <li>
+              <p>
+                First try factoring the given trinomial.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the zero product principle.
+                Set both factors to zero.
+              </p>
+            </li>
+            <li>
+              <p>
+                Solve for <m>x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If the trinomial is prime, use the quadratic formula to solve the equation.
+                Let a, b, and c be real numbers.
+                The solutions of <m>ax^2+bx+c=0</m> are
+                <me>
+                  x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
+                </me>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <p>
+        The solutions of the equations can also be found by finding the point of intersections of both curves from the left and right sides of the equation by Desmos or any such graphing utility.
+        The <m>x</m> coordinate of the points of the intersection of the curves is a solution of the equation.
+      </p>
+      <activity>
+        <me>
+          \cos{x}=x
+        </me>
+        <p>
+          correct to four decimal places.
+          <image width="73%" source="images/G.png"/>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Given a function
+          <me>
+            f(x)=354(x-1)^2(x^2+1)(x+7)^5(x-10)
+          </me>
+          <ol>
+            <li>
+              <p>
+                Find the degree and the leading coefficient of the polynomial function without actually expanding it.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write out the factors of the function.
+                Find all the zeros of the given function by setting the factors equal to zero and then solving for <m>x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                What can you tell about the sign of the factor <m>(x^2+1)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Construct a sign chart for the function by using the zeros you identified by analyzing the sign of each factor of the function.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          After alcohol is fully absorbed into the body,
+          it is absorbed into the body,
+          it is metabolized with a half-life of about <m>1.5</m> hours.
+          Suppose a person's blood alcohol level is <m>0.5</m> mg per ml.
+          The Exponential decay for the blood alcohol concentration <m>t</m> hours after midnight is given by the model
+          <me>
+            C(t)=0.5e^{-0.46t}
+          </me>
+        </p>
+        <p>
+          Graph the function to determine when the person should be able to drive if the legal limit is 0.08 mg/ml.
+        </p>
+      </activity>
+      <example>
+        <statement>
+          <p>
+            For what value of <m>x</m> is the following rational expression equal to <m>0</m> and for what value of <m>x</m> the following rational expression does not exist?
+            <me>
+              f(x)=\frac{12-8x}{x-1}
+            </me>
+          </p>
+          <p>
+            To find the value of <m>x</m> for which the following rational expression is equal to <m>0</m> set the expression in the numerator equal to <m>0</m> and solve for <m>x</m>
+            <me>
+              12-8x=0
+            </me>
+          </p>
+          <p>
+            We get
+            <me>
+              x=\frac{3}{2}
+            </me>
+          </p>
+          <p>
+            To find the value of <m>x</m> for which the following rational expression does not exist,
+            set the expression in the denominator equal to <m>0</m> and solve for <m>x</m>
+            <me>
+              x-1=0
+            </me>
+          </p>
+          <p>
+            We get
+            <me>
+              x=1
+            </me>
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          For what value of <m>x</m> are the following rational functions equal to <m>0</m> and for what value of <m>x</m> the following rational expression does not exist?
+          <ol>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{x^2-2x}{(x^2+x+1)^2}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\frac{lnx-2}{(x-1)^3}
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Solving linear, quadratic, and rational inequalities</title>
+      <p>
+        One of the basic tools for analyzing graphs in calculus is a special line graph called a sign chart.
+        We will make extensive use of this type of chart in calculus.
+        Here are the steps to solve linear inequalities of the form
+        <me>
+          ax+b\leq0
+        </me>
+        or
+        <me>
+          ax+b\geq0
+        </me>
+        or
+        <me>
+          ax+b\lt  0
+        </me>
+        or
+        <me>
+          ax+b> 0
+        </me>
+      </p>
+      <activity>
+        <ol>
+          <li>
+            <p>
+              Let
+              <me>
+                f(x)=ax+b=0
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Set
+              <me>
+                f(x)=0
+              </me>
+              Then solve for <m>x</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              This value of <m>x</m> is called the partition number.
+              The partition number divides the number line into two intervals.
+            </p>
+          </li>
+          <li>
+            <p>
+              Pick a test number in each interval and plug it into the function <m>f(x)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The sign of the value of the function at the test number will be the same for each number in the entire interval.
+              This sign decides the solution of the given inequality.
+            </p>
+          </li>
+        </ol>
+      </activity>
+      <example>
+        <statement>
+          <p>
+            Solve the following linear inequality
+            <me>
+              3x-15\lt 0
+            </me>
+            <ol>
+              <li>
+                <p>
+                  Let
+                  <me>
+                    f(x)=3x-15
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Set
+                  <me>
+                    f(x)=0
+                  </me>
+                  Then solve for <m>x</m>
+                  <me>
+                    3x-15=0
+                  </me>
+                  we get
+                  <me>
+                    x=5
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  This value <m>x=5</m> is called the partition number and divides the number line into two intervals,
+                  <m>(-\infty,5)</m> and <m>(5,\infty)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Pick a test number in each interval and plug it into the function <m>f(x)</m> to check the sign of <m>f(x)</m>.
+                  We pick the number <m>0</m> in the interval
+                  <m>(-\infty,5)</m>  and the number <m>10</m> in the interval
+                  <m>(5,\infty)</m>  When we plug <m>0</m> in the
+                  <me>
+                    f(x)=3x-15
+                  </me>
+                  we see that <m>f(x)</m> is negative and plugging <m>10</m> makes the function <m>f(x)</m> positive.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If the value of the function at the test number is negative,
+                  then these values of <m>x</m> are the solution of the given inequality.  so the solution to the inequality
+                  <me>
+                    3x-15\lt 0
+                  </me>
+                  is all the values of <m>x</m> in the interval  <m>(-\infty,5)</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Here are the steps to solve quadratic inequalities of the form
+          <me>
+            ax^2+bx+c\leq0
+          </me>
+          or
+          <me>
+            ax^2+bx+c\geq0
+          </me>
+          or
+          <me>
+            ax^2+bx+c\lt  0
+          </me>
+          or
+          <me>
+            ax^2+bx+c> 0
+          </me>
+          <ol>
+            <li>
+              <p>
+                Let
+                <me>
+                  ax^2+bx+c=0
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Set <m>f(x)=0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Solve for <m>x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                These values of <m>x</m> are called the partition numbers.These numbers divide the number line into three intervals.
+              </p>
+            </li>
+            <li>
+              <p>
+                Pick a test number in each interval and plug it into the function <m>f(x)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If the value of the function at the test number is negative,
+                then these values of <m>x</m> are the solution of the given inequality.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <me>
+          x^2-2x-15\geq0
+        </me>
+      </activity>
+      <activity>
+        <me>
+          x^2+3x-10\leq0
+        </me>
+      </activity>
+      <activity>
+        <me>
+          x(x-1)(x+2)\leq0
+        </me>
+      </activity>
+      <p>
+        <em>Solving the rational inequalities</em>
+      </p>
+      <p>
+        Here are the steps to solve the linear inequalities of the form
+        <me>
+          \frac{ax+b}{cx+d}\leq0
+        </me>
+        or
+        <me>
+          \frac{ax+b}{cx+d}\geq0
+        </me>
+        or
+        <me>
+          \frac{ax+b}{cx+d}\lt  0
+        </me>
+        or
+        <me>
+          \frac{ax+b}{cx+d}> 0
+        </me>
+        <ol>
+          <li>
+            <p>
+              Let <m>f(x)=ax+b</m> and <m>g(x)=cx+d</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Set <m>f(x)=0</m> and <m>g(x)=0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Solve for <m>x</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              These values of <m>x</m> are called the partition numbers and divide the number line into three intervals.
+            </p>
+          </li>
+          <li>
+            <p>
+              Pick a test number in each interval and plug it into the function <m>f(x)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              If the value of the function at the test number is negative,
+              then these values of <m>x</m> are the solution of the given inequality.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <activity>
+        <p>
+          Solve the rational inequality
+          <me>
+            \frac{x-5}{x+7}\geq 0
+          </me>
+          <ol>
+            <li>
+              <p>
+                Let <m>f(x)=x-5</m> and <m>g(x)=x+7</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Set <m>f(x)=0</m> and <m>g(x)=0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Solve for <m>x</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                These values of <m>x</m> are called the partition numbers and divide the number line into three intervals.
+              </p>
+            </li>
+            <li>
+              <p>
+                Pick a test number in each interval and plug it into the function <m>f(x)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If the value of the function at the test number is negative,
+                then these values of <m>x</m> are the solution of the given inequality.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <p>
+        <em> Solve the absolute value inequalities </em>
+        The property of absolute value inequality
+        <me>
+          |ax+b|\lt c
+        </me>
+        means
+        <me>
+          -c\lt ax+b\lt c
+        </me>
+      </p>
+      <example>
+        <statement>
+          <p>
+            Solve the absolute value inequalities
+            <me>
+              |5-3x|\lt 17
+            </me>
+            <ol>
+              <li>
+                <p>
+                  Applying the properties of the absolute value inequality.
+                  The absolute value inequality
+                  <me>
+                    |5-3x|\lt 17
+                  </me>
+                  changes to a three-sided inequality called a compound inequality
+                  <me>
+                    -17\lt 5-3x\lt 17
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  This is a three-sided inequality also called compound inequality.
+                  Isolate <m>x</m> in the middle, we get
+                  <me>
+                    -17-5\lt -3x\lt 17-5
+                  </me>
+                  <me>
+                    \frac{-22}{-3}>x>\frac{12}{-3}
+                  </me>
+                  <me>
+                    -4\lt x\lt \frac{22}{3}
+                  </me>
+                  The solution of the given compound inequality is all the values of <m>x</m> in the interval <m>(-4, \frac{22}{3})</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <example>
+        <statement>
+          <p>
+            Solve the absolute value inequalities
+            <me>
+              |5-3x|>17
+            </me>
+            <ol>
+              <li>
+                <p>
+                  Apply the property of absolute value inequality
+                  <me>
+                    |ax+b|>c
+                  </me>
+                  means either
+                  <me>
+                    ax+b\lt -c
+                  </me>
+                  or
+                  <me>
+                    ax+b>c
+                  </me>
+                  The inequality
+                  <me>
+                    |5-3x|>17
+                  </me>
+                  changes into either
+                  <me>
+                    5-3x\lt -17
+                  </me>
+                  or
+                  <me>
+                    5-3x>17
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Isolate <m>x</m> on the left for both the inequalities, we get
+                  <me>
+                    x>\frac{22}{3}
+                  </me>
+                  or
+                  <me>
+                    x\lt -4
+                  </me>
+                  The solution of the given compound inequality is all the values of <m>x</m> in the interval
+                  <m>(\frac{22}{3},\infty)</m>  and <m>(-\infty,-4)</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Solve the following inequalities.
+          Write the solutions in an interval notation form.
+          <ol>
+            <li>
+              <p>
+                <me>
+                  |7-2x|>3
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  |4-7x|\lt -10
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \frac{2x-4}{x-3}\geq 0
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Use of Binomial theorem and Pascal's triangle</title>
+      <p>
+        According to the Binomial theorem,
+        it is possible to expand any non-negative integer power of <m>x + y</m> into a sum.
+        This will be used in calculus.
+      </p>
+      <p>
+        The binomial coefficient, <m>\binom{n}{k}</m>,
+        is defined by the expression
+        <me>
+          \binom{n}{k} = \frac{n!}{k!(n-k)!}
+        </me>
+      </p>
+      <figure xml:id="tab_pascals_triangle">
+        <title>Pascal's Triangle</title>
+        <me>
+          \begin{array}{ccccccccccccccc}
+          \amp \amp \amp \amp \amp \amp \amp 1\amp \amp \amp \amp \amp \amp \amp  \\
+          \amp \amp \amp \amp \amp \amp 1\amp \amp 1\amp \amp \amp \amp \amp \amp  \\
+          \amp \amp \amp \amp \amp 1\amp \amp 2\amp \amp 1\amp \amp \amp \amp \amp  \\
+          \amp \amp \amp \amp 1\amp \amp 3\amp \amp 3\amp \amp 1\amp \amp \amp \amp  \\
+          \amp \amp \amp 1\amp \amp 4\amp \amp 6\amp \amp 4\amp \amp 1\amp \amp \amp  \\
+          \amp \amp 1\amp \amp 5\amp \amp 10\amp \amp 10\amp \amp 5\amp \amp 1\amp \amp  \\
+          \amp 1\amp \amp 6\amp \amp 15\amp \amp 20\amp \amp 15\amp \amp 6\amp \amp 1\amp
+          \end{array}
+        </me>
+      </figure>
+      <figure xml:id="tab_binomial_expansion">
+        <title>Binomial expansion of <m>(a+b)^4</m></title>
+        <me>
+          \begin{array}{lc}
+          (a+b)^0= \amp  {\color{red}\boldsymbol{1}} \\
+          (a+b)^1= \amp  {\color{red}\boldsymbol{1}}a+{\color{red}\boldsymbol{1}}b \\
+          (a+b)^2= \amp  {\color{red}\boldsymbol{1}}a^2+{\color{red}\boldsymbol{2}}ab+{\color{red}\boldsymbol{1}}b^2 \\
+          (a+b)^3= \amp  {\color{red}\boldsymbol{1}}a^3+{\color{red}\boldsymbol{3}}a^2b+{\color{red}\boldsymbol{3}}ab^2+{\color{red}\boldsymbol{1}}b^3 \\
+          (a+b)^4= \amp  {\color{red}\boldsymbol{1}}a^4+{\color{red}\boldsymbol{4}}a^3b+{\color{red}\boldsymbol{6}}a^2b^2+{\color{red}\boldsymbol{4}}ab^3+ {\color{red}\boldsymbol{1}}b^4
+          \end{array}
+        </me>
+      </figure>
+      <example>
+        <statement>
+          <p>
+            Expand
+            <me>
+              (x+h)^3
+            </me>
+            using the binomial coefficient and Pascal's triangle.
+          </p>
+        </statement>
+      </example>
+      <p>
+        Referring to the Pascal triangle we see
+        <me>
+          (x+h)^3=x^3+3x^2h+3xh^2+h^3
+        </me>
+      </p>
+      <activity>
+        <p>
+          Expand
+          <me>
+            (x+h)^4
+          </me>
+          using the binomial coefficient and Pascal's triangle.
+        </p>
+      </activity>
+    </subsubsection>
+  </subsection>
+  <subsection>
+    <title>Analytical geometry theorems and  formulas</title>
+    <introduction>
+      <p>
+        In the early <m>17^ {\text {th}}</m> century,
+        an important development in geometry,
+        was the creation of analytic geometry,
+        or geometry with coordinates and equations,
+        by Ren&#xe9; Descartes and Pierre de Fermat.
+        <ol>
+          <li>
+            <p>
+              Pythagorean theorem
+            </p>
+          </li>
+          <li>
+            <p>
+              Geometric formulas
+            </p>
+          </li>
+          <li>
+            <p>
+              Writing and graphing equations of various functions
+            </p>
+          </li>
+          <li>
+            <p>
+              Similar triangles
+            </p>
+          </li>
+          <li>
+            <p>
+              Equation of circles, distance between two points,
+              middle point of an interval
+            </p>
+          </li>
+        </ol>
+      </p>
+    </introduction>
+    <subsubsection>
+      <title>Pythagorean theorem</title>
+      <p>
+        The Pythagorean theorem,
+        also known as Pythagoras' theorem,
+        or the hypotenuse theorem,
+        is largely credited to the Greek mathematician, Pythagoras of Samos (570-495 B.C.).
+      </p>
+      <p>
+        The Pythagorean theorem is a fundamental relation in Euclidean geometry between the three sides of a right triangle.
+        It states that the area of the square whose side is the hypotenuse
+        (the side opposite the right angle)
+        is equal to the sum of the areas of the squares on the other two sides.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw
+(0, 0) coordinate (A) node[left] {\(A\)}
+-- (2,0) coordinate (C) node[right] {\(C\)}
+node[midway, below]{b
+}
+-- (2,2) coordinate (B) node[above right] {\(B\)}
+node[midway, right]{a}
+-- cycle
+node[midway, above, sloped]{c}
+pic ["\(\theta\)",  angle eccentricity=-.5, blue] {right angle=B--A--C}
+pic ["\(90^\circ\)",  angle eccentricity=-.5, red] {right angle=A--C--B}
+;\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw
+(0, 0) coordinate (A) node[left] {\(A\)}
+-- (2,0) coordinate (C) node[right] {\(C\)}
+node[midway, below]{5
+}
+-- (2,2) coordinate (B) node[above right] {\(B\)}
+node[midway, right]{a}
+-- cycle
+node[midway, above, sloped]{3}
+pic ["\(\theta\)",  angle eccentricity=-.5, blue] {right angle=B--A--C}
+pic ["\(90^\circ\)",  angle eccentricity=-.5, red] {right angle=A--C--B}
+;\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        The theorem can be written as an equation relating the lengths of the sides <m>a</m>,
+        <m>b</m>,
+        and the hypotenuse <m>c</m>, sometimes called the Pythagorean equation:
+        <me>
+          a^2+b^2=c^2
+        </me>
+      </p>
+      <activity>
+        <p>
+          In the above right triangle
+          (on the right)
+          find the side <m>a</m>.
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Similar triangles</title>
+      <p>
+        Similar triangles are triangles that have corresponding sides in proportion to each other and corresponding angles equal to each other.
+        Similar triangles look the same but the sizes can be different.
+      </p>
+      <figure>
+        <caption>Similar Triangles</caption>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw   (0,0) coordinate[label= left:A] (a) --
+(3,0) coordinate[label=right:B] (b) --
+(1,2) coordinate[label=above:C] (c) -- cycle;
+\pic [myangles]     {angle = b--a--c};
+\pic [myangles]     {angle = a--c--b};
+\pic [myangles=5]   {angle = a--c--b};
+\pic [myangles]     {angle = c--b--a};
+\pic [myangles=5]   {angle = c--b--a};
+\pic [myangles=6]   {angle = c--b--a};
+\begin{scope}[xshift=44mm, scale=2]
+\draw   (0,0) coordinate[label= left:D] (a) --
+(3,0) coordinate[label=right:E] (b) --
+(1,2) coordinate[label=above:F] (c) -- cycle;
+\pic [myangles]     {angle = b--a--c};
+\pic [myangles]     {angle = a--c--b};
+\pic [myangles=5]   {angle = a--c--b};
+\pic [myangles]     {angle = c--b--a};
+\pic [myangles=5]   {angle = c--b--a};
+\pic [myangles=6]   {angle = c--b--a};
+\end{scope}\end{tikzpicture}]]>
+</latex-image>
+        </image>
+      </figure>
+      <example>
+        <statement>
+          <p>
+            In similar triangles below
+            <me>
+              \frac{h}{r}=\frac{y}{x}
+            </me>
+          </p>
+          <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\fill[
+top color=gray!50,
+bottom color=gray!10,
+shading=axis,
+opacity=0.25
+]
+(0,0) circle (2cm and 0.5cm);
+\fill[
+left color=gray!50!black,
+right color=gray!50!black,
+middle color=gray!50,
+shading=axis,
+opacity=0.25
+]
+(2,0) -- (0,6) -- (-2,0) arc (180:360:2cm and 0.5cm);
+\draw
+(-2,0) arc (180:360:2cm and 0.5cm) -- (0,6) -- cycle;
+\draw[dashed]
+(-2,0) arc (180:0:2cm and 0.5cm);
+\draw[dashed]
+(2,0) -- node[below] {\(r\)} (0,0) -- node[left] {h} (0,6) ;
+\draw
+(0,8pt) -- ++(8pt,0) -- (8pt,0);\end{tikzpicture}]]>
+</latex-image>
+          </image>
+          <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\fill[
+top color=gray!50,
+bottom color=gray!10,
+shading=axis,
+opacity=0.25
+]
+(0,0) circle (1cm and 0.5cm);
+\fill[
+left color=gray!50!black,
+right color=gray!50!black,
+middle color=gray!50,
+shading=axis,
+opacity=0.25
+]
+(1,0) -- (0,3) -- (-1,0) arc (180:360:1cm and 0.5cm);
+(1,0) -- (0,3) -- (-1,0) arc (180:360:1cm and 0.5cm);
+\draw
+(-1,0) arc (180:360:1cm and 0.5cm) -- (0,3) -- cycle;
+\draw[dashed]
+(-1,0) arc (180:0:1cm and 0.5cm);
+\draw[dashed]
+(1,0) -- node[below] {\(x\)} (0,0) -- node[left] {y} (0,3) ;
+\draw
+(0,4pt) -- ++(4pt,0) -- (4pt,0);\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </statement>
+      </example>
+    </subsubsection>
+    <subsubsection>
+      <title>Basic geometric formulas</title>
+      <p>
+        <em>The distance formula</em> The Distance <m>d</m> between two points
+        <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m> is given by
+        <me>
+          d = \sqrt {(x_1 - x_2)^2 +(y_1 - y_2)^2}
+        </me>
+      </p>
+      <p>
+        <em>The middle point formula</em>
+        The midpoint of two points
+        <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m> is given by
+        <me>
+          (x,y)=(\frac{x_1 +x_2}{2}, \frac{y_1 +y_2}{2})
+        </me>
+      </p>
+      <p>
+        <em>The slope formula and equation of line</em>
+        The slope of a line passing through points
+        <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m> is given by
+        <me>
+          m=\frac{y_2 -y_1}{x_2 -x_1}
+        </me>
+      </p>
+      <p>
+        Equation of line
+        <me>
+          y-y_1=m(x-x_1)
+        </me>
+      </p>
+      <p>
+        <em>The equation of circle</em>
+        The equation of a Circle with center <m>(h,k)</m> and radius <m>r</m> is given by
+        <me>
+          (x-h)^2 + (y-k)^2=r^2
+        </me>
+      </p>
+      <p>
+        <em>Equation of ellipse</em> Analytically,
+        the equation of a standard ellipse centered at the origin with width <m>2a</m> and height <m>2b</m> is
+        <me>
+          \frac {x^{2}}{a^{2}}+\frac {y^{2}}{b^{2}}=1
+        </me>
+      </p>
+      <example>
+        <statement>
+          <p>
+            Given two points A <m>(2,-1)</m> and B <m>(-3,5)</m>
+            <ol>
+              <li>
+                <p>
+                  Find the distance between A and B.  So
+                  <me>
+                    d = \sqrt {(2+3)^2 +(-1 - 5)^2}
+                  </me>
+                  <me>
+                    d = \sqrt{25+36}=\sqrt{61}
+                  </me>
+                  <me>
+                    d = \sqrt{61}
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the Midpoint of A and B  The Midpoint of A and B is
+                  <me>
+                    (x,y)=(\frac{2-3}{2}, \frac{-1 +5}{2})
+                  </me>
+                  <me>
+                    (x,y)=(-\frac{1}{2}, 2)
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the equation of the line passing through the points A and B
+                  <me>
+                    m=\frac{5 +1}{-3 +2}=-3
+                  </me>
+                  Equation of line
+                  <me>
+                    y+3=-3(x-2)
+                  </me>
+                  Equation of line is
+                  <me>
+                    y=-3x+5
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the equation of a circle with radius <m>2</m> and center A <m>(2,-1)</m>  The equation of a circle with radius <m>2</m> and center <m>(2,-1)</m> is
+                  <me>
+                    (x-2)^2 + (y+1)^2=2^2
+                  </me>
+                  <me>
+                    x^2-2x+4+y^2+2y+1=4
+                  </me>
+                  <me>
+                    x^2+y^2-2x+2y=-1
+                  </me>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Repeat the above example if A is <m>(1,-3)</m> and B is <m>(3,4)</m>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Find the center and the radius of the circle
+          <me>
+            x^2+y^2-2x+4y=7
+          </me>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Graph the circle <m>y=-\sqrt{4-x^2}</m>.
+          <ol>
+            <li>
+              <p>
+                Recall the equation of Circle
+                <me>
+                  (x-h)^2 + (y-k)^2=r^2
+                </me>
+                Where <m>(h,k)</m> is the center and <m>r</m> is the radius of circle
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the given equation of circle in the standard equation of circle form.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the area of the circle using the area formula <m>A=\pi r^2</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <p>
+        Here are formulas for area <m>A</m>,
+        perimeter <m>P</m> circumference <m>C</m>, and volume <m>V</m>.
+        <ol>
+          <li>
+            <p>
+              Triangle  The area of a triangle of base <m>b</m>  and height <m>h</m> is given by
+              <me>
+                A=\frac{bh}{2}
+              </me>;
+            </p>
+          </li>
+          <li>
+            <p>
+              Square  The area of a square of side length <m>s</m> is
+              <me>
+                A=s^2
+              </me>
+              Its perimeter <m>P</m> is
+              <me>
+                P=4 s
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Rectangle   The area of a rectangle of length <m>L</m> and width <m>W</m> is
+              <me>
+                A=L W
+              </me>
+              Its perimeter <m>P</m> is
+              <me>
+                P=2(L+W)
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Trapezoid  The area of a Trapezoid of the length of parallel sides <m>a</m> and <m>b</m> and the height <m>h</m> is
+              <me>
+                A=\frac{(a+b)h}{2}
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Circle
+              <me>
+                C=2 \pi r
+              </me>
+              <me>
+                V=\pi r^2
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Length <m>s</m> of the arc of a circle which subtends angle <m>\theta</m> at the center of the circle is
+              <me>
+                s=r\theta
+              </me>
+              where <m>\theta</m>  is in radians.
+              Area <m>A</m> of sector of a circle is
+              <me>
+                A=\frac{r^2 \theta}{2}
+              </me>
+              <me>
+                A=\frac{\theta}{360} r^2  \theta
+              </me>
+              When the angle of the sector <m>\theta</m> is the angle subtended measured in degrees.
+            </p>
+          </li>
+          <li>
+            <p>
+              Sphere
+              <me>
+                A=4 \pi r^2
+              </me>
+              <me>
+                V=\frac{4 \pi r^3}{3}
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Cylinder
+              <me>
+                V= \pi r^2 h
+              </me>
+              <me>
+                A= 2\pi r h
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Cone
+              <me>
+                V=\frac{ \pi r^2 h}{3}
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Rectangular box Volume of a rectangular box length <m>l</m>,
+              width <m>w</m>, and the height <m>h</m> is given by
+              <me>
+                V=l w h
+              </me>
+              Surface area <m>A</m> is given by
+              <me>
+                V=2(lw+ wh+ lh)
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Cube  The volume of a cube of side length <m>l</m>
+              <me>
+                V=l^3
+              </me>
+              Surface area <m>A</m> is given by
+              <me>
+                V=6a
+              </me>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <activity>
+        <p>
+          A box with an open top is constructed from a rectangular piece of cardboard with dimensions <m>10</m> inches by <m>18</m> inches by cutting out equal squares of side <m>x</m> at each corner and then folding up the sides.
+          <ol>
+            <li>
+              <p>
+                Draw a rectangular cardboard and label all the dimensions
+              </p>
+            </li>
+            <li>
+              <p>
+                Express the volume <m>V</m> of the box as a function of <m>x</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          A box with a closed top is constructed from a rectangular piece of cardboard with a length of <m>l</m> inches,
+          a width of <m>w</m>, and a height of <m>h</m> inches.
+          <ol>
+            <li>
+              <p>
+                Draw a rectangular solid.
+                Label its length, width, and height.
+              </p>
+            </li>
+            <li>
+              <p>
+                Express the surface area <m>A</m> of the box as a function of <m>w</m>,
+                and <m>h</m> when the length is twice its width.
+              </p>
+            </li>
+            <li>
+              <p>
+                Express the volume <m>v</m> of the box as an equation in <m>w</m>,
+                and <m>h</m> when it is given that the volume of the solid is 100 cuin.
+              </p>
+            </li>
+            <li>
+              <p>
+                Solve the above equation in <m>h</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Plug this value of <m>h</m> in the surface area function.
+              </p>
+            </li>
+            <li>
+              <p>
+                Simplify the above expression to its lowest term by combining the like terms.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+  </subsection>
+  <subsection>
+    <title>Review of trigonometry</title>
+    <introduction>
+      <p>
+        Trigonometry is important in calculus for a multitude of reasons.
+        <ol>
+          <li>
+            <p>
+              For geometric proofs
+            </p>
+          </li>
+          <li>
+            <p>
+              Polar coordinates
+            </p>
+          </li>
+          <li>
+            <p>
+              Methods of integration
+            </p>
+          </li>
+          <li>
+            <p>
+              Many application problems in calculus involve analyzing trigonometric functions and solving trigonometric equations.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </introduction>
+    <subsubsection>
+      <title>Trigonometry of a right triangle</title>
+      <p>
+        Trigonometry begins with a right triangle.
+        We focus on one particular angle let's call it <m>\theta</m> and on the ratio of three sides <m>x</m>,
+        <m>y</m>,
+        and <m>r</m>.
+      </p>
+      <p>
+        These three sides give six ratios,
+        which are the basic functions of trigonometry.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw
+(0, 0) coordinate (A) node[left] {\(A\)}
+-- (2,0) coordinate (C) node[right] {\(C\)}
+node[midway, below]{adjecent
+}
+-- (2,2) coordinate (B) node[above right] {\(B\)}
+node[midway, right]{opposite}
+-- cycle
+node[midway, above, sloped]{hypotenuse}
+pic ["\(\theta\)",  angle eccentricity=-.5, blue] {right angle=B--A--C}
+pic ["\(90^\circ\)",  angle eccentricity=-.5, red] {right angle=A--C--B}
+;\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw
+(0, 0) coordinate (A) node[left] {\(A\)}
+-- (2,0) coordinate (C) node[right] {\(C\)}
+node[midway, below]{\(x\)
+}
+-- (2,2) coordinate (B) node[above right] {\(B\)}
+node[midway, right]{\(y\)}
+-- cycle
+node[midway, above, sloped]{\(r\)}
+pic ["\(\theta\)",  angle eccentricity=-.5, blue] {right angle=B--A--C}
+pic ["\(90^\circ\)",  angle eccentricity=-.5, red] {right angle=A--C--B}
+;\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        \begin{enumerate} \item {Formula for Basic trigonometric function }
+        <me>
+          \sin\theta=\frac{y}{r}=\frac{\mbox{opposite} }{\mbox{hypotenuse} }\tag{1}
+        </me>
+        <me>
+          \cos\theta=\frac{x}{r}=\frac{\mbox{adjacent} }{\mbox{hypotenuse} }\tag{2}
+        </me>
+        <me>
+          \tan\theta=\frac{y}{x}=\frac{\mbox{opposite} }{\mbox{adjacent} }\tag{3}
+        </me>
+      </p>
+      <remark>
+        <p>
+          Remember that the "tangent of <m>\theta</m>" and "tangent line to a graph" are different uses of the same word.
+        </p>
+      </remark>
+      <p>
+        \item Reciprocal trigonometric functions
+        <me>
+          \csc\theta = \frac{1}{\sin\theta}\tag{1}
+        </me>
+        <me>
+          \sec\theta = \frac{1}{\cos\theta}\tag{2}
+        </me>
+        <me>
+          \cot\theta = \frac{1}{\tan\theta}\tag{3}
+        </me>
+      </p>
+      <p>
+        \item Relation between sine, cosine, tangent, and cotangent
+        <me>
+          \sin(\frac{\pi}{2}-\theta)=\cos\theta\tag{1}
+        </me>
+        <me>
+          \cos(\frac{\pi}{2}-\theta)=\sin\theta\tag{2}
+        </me>
+        <me>
+          \tan(\frac{\pi}{2}-\theta)=\cot\theta\tag{3}
+        </me>
+        <me>
+          \tan\theta=\frac{\sin\theta}{\cos\theta}\tag{4}
+        </me>
+      </p>
+      <me>
+        \cot\theta=\frac{\cos\theta}{\sin\theta}\tag{5}
+      </me>
+      <p>
+        \item Right triangle to a circle
+      </p>
+      <p>
+        Since
+        <me>
+          \tan\theta=\frac{\sin\theta}{\cos\theta}
+        </me>
+      </p>
+      <p>
+        When <m>cos \theta</m> goes to zero,
+        the <m>tan \theta</m><nbsp/>goes to infinity,
+        the side <m>x</m> becomes zero,
+        <m>\theta</m> approaches <m>90^{\circ}</m>,
+        and the triangle is infinitely steep.
+        <me>
+          \sin 90^{\circ}=\frac{y}{r}=1
+        </me>
+      </p>
+      <p>
+        Triangles have a limitation.
+        They are excellent for angles up to
+        <m>90^{\circ}</m> and they are okay up to <m>180^{\circ}</m>,
+        but after that, they fail.
+        We cannot put a <m>240^{\circ}</m> angle into a triangle.
+        Therefore we change now to a circle.
+      </p>
+      <p>
+        Angles are measured from the positive <m>x</m>-axis
+        (counterclockwise).
+        Thus <m>90^{\circ}</m> is straight up,
+        <m>180^{\circ}</m> is to the left,
+        and <m>360^{\circ}</m> is in the same direction as <m>0^{\circ}</m>. (Then
+        <m>450^{\circ}</m> is the same as <m>90^{\circ}</m>).
+        Each angle yields a point on the circle of radius <m>r</m>.
+        The coordinates <m>x</m> and <m>y</m> of that point can be negative
+        (but never <m>r</m>).
+      </p>
+      <p>
+        As the point goes around the circle, the six ratios
+        <me>
+          \sin\theta,\;\cos\theta,\;\tan\theta, \; \csc\theta,\;\sec\theta,\;\cot\theta
+        </me>
+        trace out six graphs.
+        The cosine waveform is the same as the sine waveform- just shifted by <m>90^{\circ}</m>.
+      </p>
+      <p>
+        One more change comes with the move to a circle which is degrees are replaced by radians.
+      </p>
+      <p>
+        The distance around the whole circle is <m>2\pi r</m>.
+        The distance around other points is <m>\theta r</m>.
+      </p>
+      <p>
+        We measure the angle by that multiple <m>\theta</m>.
+        For a half-circle, the distance is <m>\pi r</m>.
+      </p>
+      <p>
+        so the angle is <em><m>\pi</m> radians- is <m>180^{\circ}</m></em>
+      </p>
+      <p>
+        A quarter-circle is <m>\frac{\pi}{2}</m> radians or <m>90^{\circ}</m>
+      </p>
+      <p>
+        The distance around to angle <m>\theta</m> is <m>r\theta</m>.When <m>r = 1</m>,
+        the distance is <m>\theta</m>.
+      </p>
+      <p>
+        A <m>45^{\circ}</m> angle is <m>\frac{1}{4}</m> of a circle and
+        <m>\frac{2\pi}{8}</m> radians and the length of the circular arc is <m>\frac{2\pi}{8}</m>.
+      </p>
+      <p>
+        Similarly for <m>1^{\circ}</m>:
+        <m>360^{\circ} = 2\pi</m> radians.
+      </p>
+      <p>
+        <m>1^{\circ} = \frac{2\pi}{360}</m> radians and <m>1</m> radian = <m>\frac{360}{2\pi}</m> degrees.
+      </p>
+      <p>
+        An angle going clockwise is negative.
+        The angle <m>-\frac{\pi}{2}</m> is <m>90^{\circ}</m> and takes us
+        <m>\frac{1}{4}</m> of the clockwise around the circle.
+      </p>
+      <p>
+        What is the effect on the six functions?
+      </p>
+      <p>
+        Certainly, the radius <m>r</m> is not changed when we go to -<m>\theta</m>.
+        Also, <m>x</m> is not changed,
+        but <m>y</m> reverses the sign because <m>-\theta</m> is below the axis when <m>\theta</m> is above.
+      </p>
+      <p>
+        This change in <m>y</m> affects <m>\frac{y}{r}</m> and
+        <m>\frac{y}{x}</m> but not <m>\frac{x}{r}</m>.
+        The same point is <m>\frac{5}{6}</m> of the clockwise around.
+        Therefore <m>\frac{5}{6}</m> of <m>2\pi</m> radians
+        (or <m>300^{\circ}</m>)
+        gives the same direction as
+        <m>-\frac{\pi}{3}</m> radians or -<m>60^{\circ}</m>.
+        A difference of <m>\pi</m> makes no difference to <m>x</m>,
+        <m>y</m>,
+        and <m>r</m>.
+      </p>
+      <p>
+        Thus <m>\sin\theta</m> and
+        <m>\cos\theta</m> and the other four functions have period <m>2\pi</m>.
+        We can go five times or a hundred times around the circle,
+        adding <m>10\pi</m> or <m>200\pi</m> to the angle and the six functions repeat themselves.
+      </p>
+      <p>
+        \item Even and odd trigonometric functions
+      </p>
+      <p>
+        Even functions <m>f(-x)=f(x)</m>
+      </p>
+      <example>
+        <statement>
+          <me>
+            \cos(-\theta)=\cos(\theta)\tag{1}
+          </me>
+          <p>
+            The cosine is an even function.
+          </p>
+          <p>
+            Odd functions <m>f(-x)=-f(x)</m>
+            <me>
+              \sin(-\theta)=-\sin(\theta)\tag{2}
+            </me>
+            <me>
+              \tan(-\theta)=-\tan(\theta)\tag{3}
+            </me>
+          </p>
+          <p>
+            The sine and tangent are odd functions.
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Evaluate the trigonometric functions at
+          <me>
+            \frac{2\pi}{3}
+          </me>
+        </p>
+        <p>
+          Here <m>x=-1</m><m>,r=2</m>, hence <m>y=\sqrt{3}</m>
+        </p>
+      </activity>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw   (0,0) coordinate[label=below\(:A\)] (a) --
+(4,0) coordinate[label=below\(:C\)] (c) --
+(-4,4) coordinate[label=above\(:B\)] (b) -- cycle;
+\pic[my angle, \(x={\frac{2*\pi}{3}}{\radian}\)] {angle = c--a--b};\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </subsubsection>
+    <subsubsection>
+      <title>Trigonometric identities</title>
+      <p>
+        \item Pythagorean Identities
+        <me>
+          \sin^2\theta + \cos^2\theta = 1\tag{1}
+        </me>
+        <me>
+          \tan^2\theta + 1 = \sec^2\theta\tag{2}
+        </me>
+        <me>
+          1 + \cot^2\theta = \csc^2\theta\tag{3}
+        </me>
+      </p>
+      <p>
+        \item Double Angle Formula
+        <me>
+          \sin 2\theta = 2\sin\theta\cos\theta\tag{1}
+        </me>
+        <me>
+          \cos 2\theta = \cos(2\theta)- \sin(2\theta)\tag{2}
+        </me>
+        <me>
+          \sin^2\theta = \frac{1 - \cos(2\theta)}{2}\tag{3}
+        </me>
+        <me>
+          \cos^2\theta = \frac{1 + \cos(2\theta)}{2}\tag{4}
+        </me>
+      </p>
+      <me>
+        \tan^2\theta = \frac{1 - \cos(2\theta)}{1 + \cos(2\theta)}\tag{5}
+      </me>
+      <p>
+        \item Sum and difference formula
+        <me>
+          \color{black}{\mathrm{\sin}(\alpha+\beta)=\mathrm{\sin}\alpha\mathrm{\cos}\beta+\mathrm{\cos}\alpha\mathrm{\sin}\beta} \tag{1}
+        </me>
+        <me>
+          \color{black}{\sin(\alpha-\beta)=\sin\alpha\cos\beta-\cos\alpha\sin\beta} \tag{2}
+        </me>
+        <me>
+          \color{black}{\operatorname{\cos}(\alpha+\beta)=\operatorname{\cos}\alpha\operatorname{\cos}\beta-\operatorname{\sin}\alpha\operatorname{\sin}\beta} \tag{3}
+        </me>
+        <me>
+          \color{black}{\operatorname{\cos}(\alpha-\beta)=\operatorname{\cos}\alpha\operatorname{\cos}\beta+\operatorname{\sin}\alpha\operatorname{\sin}\beta} \tag{4}
+        </me>
+      </p>
+      <p>
+        \end{enumerate}
+      </p>
+    </subsubsection>
+    <subsubsection>
+      <title>Trigonometric and inverse trigonometric functions</title>
+      <p>
+        <em>Trigonometric functions</em>: Trigonometric functions also known as circular Functions can be defined as the functions of an angle of a triangle.
+        It means that the relationship between the angles and sides of a triangle is given by these trig functions.
+        The basic trigonometric functions are sine, cosine,
+        and tangent and their reciprocal trig functions are cotangent, secant,
+        and cosecant.
+      </p>
+      <p>
+        <em>Inverse trigonometric functions</em>: To use inverse trigonometric functions,
+        we need to understand that an inverse trigonometric function
+        <q>undoes</q>
+        what the original trigonometric function
+        <q>does,</q>
+        as is the case with any other function and its inverse.
+        They are also termed arcus functions,
+        antitrigonometric functions, or cyclometric functions.
+        These inverse functions in trigonometry are used to obtain an angle from any of the angle's trigonometric ratios.
+      </p>
+      <p>
+        <em>Restricted domain</em>: The sine, cosine,
+        and tangent functions are not one-to-one functions.
+        The graph of each function would fail the horizontal line test.
+        We will need to restrict the domain of each function to yield a new function that is one-to-one.
+        Once this is done,
+        the domain of the inverse function is the range of the original function,
+        and the range of the inverse function is the restricted domain of the original function.
+        The trigonometric and inverse trigonometric functions have major applications in the fields of engineering,
+        physics, geometry, and navigation.
+      </p>
+      <p>
+        Let's now discuss the three basic trigonometric functions,
+        their reciprocal, and inverse functions.
+        <ol>
+          <li>
+            <p>
+              <m>f(x)=\cos x</m>.
+              It is a periodic function.
+              <ul>
+                <li>
+                  <p>
+                    Period is <m>2\pi</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Domain (<m>-\infty,\infty)</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Range <m>[-1,1]</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(x)=\arccos x=\cos^{-1}(x)</m>
+              <ul>
+                <li>
+                  <p>
+                    Domain <m>[-1,1]</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Range <m>(0,\pi)</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+            <em>Graphs of cosine and arc cosine functions</em>
+            \pgfplotsset{ axis lines = middle,
+            xlabel = <m>x</m>, ylabel = <m>y</m>, no markers, samples=50,
+            grid = both, trig format plots=rad, enlargelimits = false,
+            axis line style = {line width=0.5pt}, every axis plot/.append style={ line width = 1.25pt,
+            smooth, }, halves/.style={ xtick = {-12.5664, -10.9956, -9.42478, -7.85398, -6.28319, -4.71239, -3.14159, -1.5708, 0, 1.5708, 3.14159, 4.71239, 6.28319, 7.85398, 9.42478, 10.9956, 12.5664, 14.1372, 15.708, 17.2788, 18.8496, 20.4204, 21.9911, 23.5619, 25.1327}, xticklabels = {<m>-4\pi
+            <me>
+              ,-\frac{7\pi}{2}
+            </me>,
+            -3\pi
+            <me>
+              ,-\frac{5\pi}{2}
+            </me>,
+            -2\pi
+            <me>
+              ,-\frac{3\pi}{2}
+            </me>,
+            -\pi
+            <me>
+              ,-\frac{\pi}{2}
+            </me>,
+            0
+            <me>
+              ,\frac{\pi}{2}
+            </me>,
+            \pi
+            <me>
+              ,\frac{3\pi}{2}
+            </me>,
+            2\pi
+            <me>
+              ,\frac{5\pi}{2}
+            </me>,
+            3\pi
+            <me>
+              ,\frac{7\pi}{2}
+            </me>,
+            4\pi
+            <me>
+              ,\frac{9\pi}{2}
+            </me>,
+            5\pi
+            <me>
+              ,\frac{11\pi}{2}
+            </me>,
+            6\pi
+            <me>
+              ,\frac{13\pi}{2}
+            </me>,
+            7\pi
+            <me>
+              ,\frac{15\pi}{2}
+            </me>,
+            8\pi</m>} }, wholes/.style={ xtick = {-12.5664, -9.42478, -6.28319, -3.14159, 0., 3.14159, 6.28319, 9.42478, 12.5664, 15.708, 18.8496, 21.9911, 25.1327}, xticklabels = {<m>-4\pi
+            <me>
+              ,-3\pi
+            </me>,
+            -2\pi
+            <me>
+              ,-\pi
+            </me>,
+            0
+            <me>
+              ,\pi
+            </me>,
+            2\pi
+            <me>
+              ,3\pi
+            </me>,
+            4\pi
+            <me>
+              ,5\pi
+            </me>,
+            6\pi
+            <me>
+              ,7\pi
+            </me>,
+            8\pi</m>} } }
+            <image>
+               <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[wholes,domain=-2*pi:2*pi,ymin=-2,ymax=+4,minor tick num = 1] \addplot {cos(x)}; \legend{\(\cos(x)\)} \end{axis}\end{tikzpicture}]]> </latex-image>
+            </image>
+            <image>
+               <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[domain = -1:1, samples = 500] \addplot[color =blue]  {acos(x)}; \legend{\(\arccos(x)\)} \end{axis}\end{tikzpicture}]]> </latex-image>
+            </image>
+          </li>
+          <li>
+            <p>
+              <m>f(x)=\sin x</m>.
+              It is a periodic function.
+              <ul>
+                <li>
+                  <p>
+                    Period is <m>2\pi</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Domain (<m>-\infty,\infty)</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Range <m>[-1,1]</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(x)=\arcsin x=\sin^{-1}(x)</m>
+              <ul>
+                <li>
+                  <p>
+                    Domain <m>[-1,1]</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Range <m>[-\frac{\pi}{2},\frac{\pi}{2}]</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+            <em>Graphs of sin and arcsin functions</em>
+            <image>
+               <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[wholes,domain=-2*pi:2*pi,ymin=-2,ymax=+4,minor tick num = 1] \addplot[purple] {sin(x)}; \legend{\(\sin(x)\)} \end{axis}\end{tikzpicture}]]> </latex-image>
+            </image>
+            <image>
+               <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[domain = -1:1, samples = 500] \addplot[color =purple] {asin(x)}; \legend{\(\arcsin(x)\)} \end{axis}\end{tikzpicture}]]> </latex-image>
+            </image>
+          </li>
+          <li>
+            <p>
+              <m>f(x)=\tan x</m>.
+              It is a periodic function.
+              <ul>
+                <li>
+                  <p>
+                    Period is <m>\pi</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Domain (<m>-\infty,\infty)</m> except the odd multiples of <m>\frac{\pi}{2}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Range (<m>-\infty,\infty)</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(x)=\arctan x=\tan^{-1}(x)</m>
+              <ul>
+                <li>
+                  <p>
+                    Domain (<m>-\infty,\infty)</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Range Range <m>[-\frac{\pi}{2},\frac{\pi}{2}]</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+            <em>Graphs of tangent and arctangent functions</em>
+            <image>
+               <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[halves,domain=-pi:pi,ymin=-2,ymax=+4,minor tick num = 1] \addplot[green] {tan(x)}; \legend{\(\tan(x)\)} \end{axis}\end{tikzpicture}]]> </latex-image>
+            </image>
+            <image>
+               <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[halves,domain=-pi:pi,ymin=-2,ymax=+4,minor tick num = 1] \addplot[green] {atan(x)}; \legend{\(\arctan(x)\)} \end{axis}\end{tikzpicture}]]> </latex-image>
+            </image>
+          </li>
+        </ol>
+      </p>
+    </subsubsection>
+    <subsubsection>
+      <title>Unit circle</title>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {\(x\)};
+\draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {\(y\)};
+\draw[thick] (0cm,0cm) circle(1cm);
+\foreach \x in {0,30,...,360} {
+\draw[gray] (0cm,0cm) -- (\x:1cm);
+\filldraw[black] (\x:1cm) circle(0.4pt);
+\draw (\x:0.6cm) node[fill=white] {\(\x^\circ\)};
+}
+\foreach \x/\xtext in {
+30/\frac{\pi}{6},
+45/\frac{\pi}{4},
+60/\frac{\pi}{3},
+90/\frac{\pi}{2},
+120/\frac{2\pi}{3},
+135/\frac{3\pi}{4},
+150/\frac{5\pi}{6},
+180/\pi,
+210/\frac{7\pi}{6},
+225/\frac{5\pi}{4},
+240/\frac{4\pi}{3},
+270/\frac{3\pi}{2},
+300/\frac{5\pi}{3},
+315/\frac{7\pi}{4},
+330/\frac{11\pi}{6},
+360/2\pi}
+\draw (\x:0.85cm) node[fill=white] {\(\xtext\)};
+\foreach \x/\xtext/\y in {
+30/\frac{\sqrt{3}}{2}/\frac{1}{2},
+45/\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+60/\frac{1}{2}/\frac{\sqrt{3}}{2},
+150/-\frac{\sqrt{3}}{2}/\frac{1}{2},
+135/-\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+120/-\frac{1}{2}/\frac{\sqrt{3}}{2},
+210/-\frac{\sqrt{3}}{2}/-\frac{1}{2},
+225/-\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+240/-\frac{1}{2}/-\frac{\sqrt{3}}{2},
+330/\frac{\sqrt{3}}{2}/-\frac{1}{2},
+315/\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+300/\frac{1}{2}/-\frac{\sqrt{3}}{2}}
+\draw (\x:1.25cm) node[fill=white] {\(\left(\xtext,\y\right)\)};
+\draw (-1.25cm,0cm) node[above=1pt] {\((-1,0)\)}
+(1.25cm,0cm)  node[above=1pt] {\((1,0)\)}
+(0cm,-1.25cm) node[fill=white] {\((0,-1)\)}
+(0cm,1.25cm)  node[fill=white] {\((0,1)\)};\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        How do you convert angle measure from degree to radian and radian to degree? and the degree to radians?
+        <me>
+          Degree*\frac{\pi}{180}=Radian
+        </me>
+        <me>
+          Radian*\frac{180}{\pi}=Degree
+        </me>
+      </p>
+      <activity>
+        <p>
+          Describe the behavior of the following trigonometric functions
+          <ol>
+            <li>
+              <p>
+                <m>f(x)=\sin x</m> As <m>x</m> approaches to <m>\infty</m> and -<m>\infty</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\cos x</m> As <m>x</m> approaches to <m>\infty</m> and -<m>\infty</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\tan x</m> As <m>x</m> approaches to
+                <m>\frac{\pi}{2}</m> from the left and from the right
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          If <m>\cos\theta=0.7065</m> and if the angle <m>\theta</m> is in the third quadrant,
+          find <m>cos\theta, \sin\theta</m>, and <m>\tan\theta</m>.
+          <ol>
+            <li>
+              <p>
+                Draw the four quadrants
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the signs of all three trig functions in all the quadrants
+              </p>
+            </li>
+            <li>
+              <p>
+                Solve the given problem by using the following trig facts If<m>\theta</m> is a reference angle in quadrant I then
+                <ul>
+                  <li>
+                    <p>
+                      In quadrant II it is <m>\pi-\theta</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      In quadrant II it is <m>\pi+\theta</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      In quadrant II it is <m>2\pi-\theta</m>
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          If <m>\sin\theta=\frac{3}{2}</m> and <m>\theta</m> is in the third quadrant find the rest of the five trig functions.
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Find the average rate of change of functions <m>\sin\theta</m> and
+          <m>\cos\theta</m> in the interval <m>[a, a+h]</m>
+          <ol>
+            <li>
+              <p>
+                First use the average rate of change formula
+                <me>
+                  \frac{f(a+h)-f(a)}{h}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Apply the sum of two angles identity for the sine function,
+                to the expression <m>\sin(a + h)</m>.
+                <me>
+                  \sin(x+y) =\sin(x) \cos(y) + \cos(x) \sin(y)
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Simplify the expression.
+                After simplification, it should look like this Average rate of change=
+                <me>
+                  \sin(a)\frac{\cos(h)-1}{h} -\ \cos(a)\frac{\sin(h)}{h}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                In calculus we switch from average rate of change to instantaneous rate of change by letting <m>h</m> close to <m>0</m>.
+                Using Desmos and keeping the angle measure in radian mode,
+                make a table of values and show that <m>\frac{\cos(h)-1}{h} =0</m> and
+                <m>\frac{\sin(h)}{h}=1</m> when <m>h</m> gets closer to 0.
+              </p>
+            </li>
+            <li>
+              <p>
+                What does this tell us about the average rate of change for the sine and cosine functions as <m>h</m> approaches <m>0</m>?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Convert the following angle measure from radian to degree.
+          <ol>
+            <li>
+              <p>
+                <me>
+                  \frac{2\pi}{3}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \frac{3\pi}{4}
+                </me>
+                \item
+                <me>
+                  \frac{11\pi}{6}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \frac{7\pi}{3}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  1 radian
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Evaluate all the six trigonometric functions for <m>\frac{5\pi}{6}</m>.
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Solve the following trigonometric equations:
+          <ol>
+            <li>
+              <p>
+                <me>
+                  \sin\theta = \frac{1}{2}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \cos\theta = \frac{1}{2}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  \tan\theta = -1
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          \item Solve the trigonometric equation
+          <me>
+            \sin^2{x}-\cos^2{x}=3
+          </me>
+          in <m>[0,2\pi]</m>
+          <ol>
+            <li>
+              <p>
+                Rewrite the term <m>\cos^2{x}</m> in terms of
+                <m>\sin^2{x}</m> using the Pythagorean identity.
+              </p>
+            </li>
+            <li>
+              <p>
+                Combine the like terms.
+              </p>
+            </li>
+            <li>
+              <p>
+                Solve for <m>\sin^2{x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Extract the root of both sides
+              </p>
+            </li>
+            <li>
+              <p>
+                Refer to the unit circle to write the solution of the equation.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          <m>2\sin^2{x}-1=0</m> in <m>[0,2\pi]</m>
+          <ol>
+            <li>
+              <p>
+                Solve for <m>\sin^2{x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Extract the root of both sides
+              </p>
+            </li>
+            <li>
+              <p>
+                Refer to the unit circle to write the solution of the equation.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          If <m>\sin x=x</m>,
+          find the expressions for <m>\cos x</m> and <m>\tan x</m>.
+          <ol>
+            <li>
+              <p>
+                Draw a right triangle
+              </p>
+            </li>
+            <li>
+              <p>
+                Recall the formula for <m>\sin x=\frac{\mbox{Opposite} }{\mbox{Hypotenuse} }</m>.
+                Label all the angles and sides of the triangle.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the missing side.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the expressions for <m>\cos x</m> and <m>\tan x</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Recall the formula to covert angle from the Degree measure to the radian measure is
+          <me>
+            Radian=Degree*\frac{\pi}{180}
+          </me>
+          <ol>
+            <li>
+              <p>
+                <m>45^{\circ}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>120^{\circ}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>150^{\circ}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Use the special points on the unit circle to determine the exact values of each of the following numerical expressions without using the graphing utility.
+          <ol>
+            <li>
+              <p>
+                <m>\arccos{(\frac{1}{2})}</m> \item<m>\arccos{\frac{(\sqrt{2}}{2})}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\arccos{-\frac{(\sqrt{2}}{2})}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\arcsin{-\frac{(\sqrt{3}}{2})}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\arccos{(0)}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\arccos{(-1)}</m> \item<m>\arccos{(-\frac{1}{2})}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\arcsin{\frac{1}{2}}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\arctan{(-1)}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\arccos({\sin{\frac{\pi}{3}}})</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\arctan{{\tan{\frac{7\pi}{4}}}}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Which of the following problems is a calculus problem versus a precalculus problem?
+          <ol>
+            <li>
+              <p>
+                The slope of a line or the slope of a tangent line to a point on a curve.
+              </p>
+            </li>
+            <li>
+              <p>
+                The area of geometric shapes or the area under a curve.
+              </p>
+            </li>
+            <li>
+              <p>
+                Volume of geometrical solid or Volume of interesting shapes called solids of revolution.
+              </p>
+            </li>
+            <li>
+              <p>
+                Objects moving with constant velocities or objects moving with acceleration.
+              </p>
+            </li>
+            <li>
+              <p>
+                Study functions or study changes to functions.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>y</m> changes at a constant rate or <m>y</m> changes at a varying rate.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+  </subsection>
+  <subsection>
+    <title>Mathematical models and strategies to solve them</title>
+    <p>
+      <em>What is a mathematical model?</em>
+      A mathematical model is a mathematical description
+      (often using a function or an equation)
+      of a real-life phenomenon,
+      such as the size of a population,
+      the speed of a falling object,
+      or the concentration of a medicine in a patient's bloodstream.
+      The purpose of the model is to understand the phenomenon and perhaps to make predictions for behavior.
+      Now we will discuss the process of mathematical modeling.
+      <ol>
+        <li>
+          <p>
+            Reading the problem carefully and making sense of it.
+          </p>
+        </li>
+        <li>
+          <p>
+            If there is a function given in the problem then first figure out what the variables stand for along with the units.
+          </p>
+        </li>
+        <li>
+          <p>
+            Define variables as appropriate.
+          </p>
+        </li>
+        <li>
+          <p>
+            Converting the words into algebraic equations.
+          </p>
+        </li>
+        <li>
+          <p>
+            Choosing algebraic operations.
+          </p>
+        </li>
+        <li>
+          <p>
+            Highlight the question.
+          </p>
+        </li>
+        <li>
+          <p>
+            Eliminate extra information.
+          </p>
+        </li>
+        <li>
+          <p>
+            Drawing labeled pictures, make a table if needed.
+          </p>
+        </li>
+        <li>
+          <p>
+            Determine which quantity is to be maximized or minimized.
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the domain of the function.
+          </p>
+        </li>
+        <li>
+          <p>
+            Write a formula for the quantity to be maximized or minimized in terms of the variables.
+            This formula may involve more than one variable.
+          </p>
+        </li>
+        <li>
+          <p>
+            Solve the equation.
+          </p>
+        </li>
+        <li>
+          <p>
+            Interpret the solution in the context of the problem in a complete sentence
+          </p>
+        </li>
+      </ol>
+    </p>
+    <activity>
+      <p>
+        An open-top box is to be made from <m>20</m> inches by <m>30</m> inches pieces of cardboard by removing a square from each corner of the box and folding up the flaps on each side.
+        What size square should be cut out of each corner to get a box with the maximum volume?
+      </p>
+      <p>
+        Step 1: Let <m>x</m> be the side length of the square to be removed from each corner.
+        Then, the remaining four flaps can be folded up to form an open-top box.
+      </p>
+      <p>
+        Step 2: Let <m>V</m> be the volume of the resulting box.
+        We are trying to maximize the volume of a box.
+        Therefore, the problem is to maximize V.
+      </p>
+      <p>
+        Step 3: As mentioned in step 2, we are trying to maximize the volume of a box.
+        The volume of a box is
+        <me>
+          V=LWH
+        </me>
+        where <m>L</m><m>,W</m>,
+        and <m>H</m> are the length, width, and height, respectively.
+      </p>
+      <p>
+        Step 4: Let the height of the box be <m>x</m> inches,
+        the length be <m>30-2x</m> inches,
+        and the width be <m>20-2x</m> inches.
+      </p>
+      <p>
+        Therefore, the volume of the box is
+        <me>
+          V(x)=(30-2x)(20-2x)x=4x^3-100x^2+600x
+        </me>
+      </p>
+      <p>
+        Step 5: To determine the domain of the independent variable <m>x</m>, Certainly,
+        we certainly need <m>x>0</m>.
+        Furthermore,
+        the side length of the square cannot be greater than or equal to half the length of the shorter side, 2 inches otherwise,
+        one of the flaps would be completely cut off.
+        Therefore, we are trying to determine whether there is a maximum volume of the box for <m>x</m> over the open interval <m>(0,10)</m>.
+        Since <m>V</m> is a continuous function over the closed interval <m>[0,10]</m>,
+        we know <m>V</m> will have an absolute maximum over the closed interval.
+        Therefore, we consider <m>V</m> over the closed interval [0,10] and check whether the absolute maximum occurs at an interior point.
+      </p>
+      <p>
+        Step 6: Since <m>V(x)</m> is a continuous function over the closed,
+        bounded interval <m>[0,10]</m>,
+        <m>V</m> must have an absolute maximum
+        (and an absolute minimum).
+      </p>
+      <p>
+        Since <m>V(x)=0</m> at the endpoints and <m>V(x)>0</m> for
+        <m>0\lt x\lt 10</m> We will solve this problem in calculus in a smarter and faster way.
+        But for now, we will solve using algebra.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines = left,
+xlabel = \(x\),
+ylabel = {\(V(x)\)},
+]
+\addplot [
+domain=0:10,
+samples=100,
+color=red,
+]
+{4*x^3 - 100*x^2 +600*x};
+\addlegendentry{\(V(x)=4x^3 - 100x^2 +600x\)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        Step 7: Find the vertex of the graph using the graphing device.
+        We find that the maximum volume occurs when the height of the box is 4 inches and the maximum volume is <m>1056</m> cubic inches.
+      </p>
+    </activity>
+    <activity>
+      <p>
+        If the cost function of a hotdog truck is given by
+        <me>
+          C(x)=2500+5x
+        </me>
+        and the price demand function is given by
+        <me>
+          p(x)=3x-4
+        </me>
+        where <m>x</m> is the number of items and <m>p</m> is the price per item.
+        <ol>
+          <li>
+            <p>
+              Find and interpret <m>C(0)</m>, <m>C(10)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For what value of <m>x</m>, <m>C(x)=3500</m>?
+              Interpret your answer.
+            </p>
+          </li>
+          <li>
+            <p>
+              What does the value <m>5</m> in the function <m>C(x)=2500+5x</m> represent?
+            </p>
+          </li>
+          <li>
+            <p>
+              Find the revenue function <m>R(x)</m>.
+              The revenue function can be calculated by <m>R(x)=xp(x)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If the profit function is given by
+              <m>P(x)=C(x)-R(x)</m>, find the profit function.
+            </p>
+          </li>
+          <li>
+            <p>
+              For what values of <m>x</m> the owner of the hotdog truck will have profit?
+            </p>
+          </li>
+          <li>
+            <p>
+              For what value of <m>x</m> the owner will have the maximum profit.
+              Also, find the maximum profit.
+            </p>
+          </li>
+          <li>
+            <p>
+              For what value of <m>x</m> the owner will have the maximum revenue.
+              Find the maximum revenue.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find what should be the price of the hotdog to have the maximum revenue.
+              How about the maximum profit?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </activity>
+    <activity>
+      <p>
+        <em>Solve Geometry Applications</em>.
+        <ol>
+          <li>
+            <p>
+              Read the problem and make sure all the words and ideas are understood.
+              Draw the figure and label it with the given information.
+            </p>
+          </li>
+          <li>
+            <p>
+              Identify the information that we are looking for and label what we are looking for by choosing a variable to represent it.
+            </p>
+          </li>
+          <li>
+            <p>
+              Translate into an equation by writing the appropriate formula or model for the situation.
+              Substitute in the given information.
+            </p>
+          </li>
+          <li>
+            <p>
+              Solve the equation using good algebra techniques.
+            </p>
+          </li>
+          <li>
+            <p>
+              Check the answer by substituting it back into the equation solved in step 5 and by making sure it makes sense in the context of the problem.
+            </p>
+          </li>
+          <li>
+            <p>
+              Answer the question with a complete sentence.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </activity>
+    <activity>
+      <p>
+        The perimeter of a rectangular swimming pool is 100 feet.
+        The length is 10 feet more than twice the width.
+        Find the length and width which will make the area of the swimming pool maximum.
+      </p>
+      <p>
+        Step 1: Draw a picture of a rectangular swimming pool Step 2: Define the variables Let <m>x</m> be the width,
+        and the length be <m>y</m> and the area,
+        and our goal is to maximize the area is
+        <me>
+          A(x)=xy
+        </me>
+      </p>
+      <p>
+        Step 3: The perimeter is
+        <me>
+          P(x)=2x+2y=100
+        </me>
+      </p>
+      <p>
+        Step 3: Solve for <m>y</m>
+        <me>
+          y=50-x
+        </me>
+      </p>
+      <p>
+        Step 4: Plugging this value of <m>y</m> into the area function,
+        we get Step 5:
+        <me>
+          A(x)=x(50-x)
+        </me>
+      </p>
+      <p>
+        Step 6: We will solve this problem in a much faster and smarter way.
+        But for now,
+        we will find the maximum value by the grasping device.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines = left,
+xlabel = \(x\),
+ylabel = {\(A(x)\)},
+]
+\addplot [
+domain=0:100,
+samples=100,
+color=red,
+]
+{50*x-x^2)};
+\addlegendentry{A(x)=x(50-x)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        The maximum area occurs when the width of the pool is 25 inches,
+        the length 25 inches is and the maximum area is 625 square inches.
+      </p>
+    </activity>
+    <activity>
+      <p>
+        <em>Trigonometry problems</em>
+        <ol>
+          <li>
+            <p>
+              Look for a pattern that suggests an algebraic property,
+              such as the difference of squares or a factoring opportunity.
+            </p>
+          </li>
+          <li>
+            <p>
+              Substitute the trigonometric expression with a single variable,
+              such as <m>x</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Solve the equation the same way an algebraic equation would be solved.
+            </p>
+          </li>
+          <li>
+            <p>
+              Substitute the trigonometric expression back in for the variable in the resulting expressions.
+            </p>
+          </li>
+          <li>
+            <p>
+              Solve for the angle.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </activity>
+    <activity>
+      <p>
+        Solve the problem exactly:
+        <me>
+          2\sin^2\theta-1=0
+        </me>
+        in the interval
+      </p>
+      <p>
+        <m>0\leq\theta\leq 2\pi</m>
+      </p>
+      <p>
+        As this problem is not easily factored in,
+        we will solve it using the square root property.
+        First, we use algebra to isolate <m>\sin\theta</m>
+      </p>
+      <p>
+        Then we will find the angles.
+        <me>
+          2\sin^2\theta-1=0
+        </me>
+        <me>
+          2\sin^2\theta=1
+        </me>
+        <me>
+          \sin^2\theta=\frac{1}{2}
+        </me>
+        <me>
+          \sqrt{\sin^2\theta}=\pm\sqrt{\frac{1}{2}}
+        </me>
+      </p>
+      <me>
+        \sin\theta=\pm\frac{1}{\sqrt{2}}
+      </me>
+      <p>
+        So <m>\theta= \frac{\pi}{4}, \frac{3\pi}{4}, \frac{5\pi}{4}</m>,
+        and <m>\frac{7\pi}{4}</m>
+      </p>
+    </activity>
+  </subsection>
+  <subsection>
+    <title>The common algebra and trigonometry mistakes students make in calculus</title>
+    <p>
+      Do you know that the biggest struggle for calculus students is algebra…not calculus?
+      Being able to take a derivative is straightforward,
+      but knowing how to simplify is the key to getting the answer correct.
+      Algebra and trigonometry are extensively used in calculus and that's why it's an important skill so you need to brush up on your techniques and tools.
+      We will discuss common Algebra and Trigonometric mistakes students make while taking Calculus.
+    </p>
+    <p>
+      There are three main types of mistakes students make
+    </p>
+    <ul>
+      <li>
+        <p>
+          {Careless Mistakes}
+        </p>
+        <ul>
+          <li>
+            <p>
+              Not following the directions
+            </p>
+          </li>
+          <li>
+            <p>
+              Writing the wrong number
+            </p>
+          </li>
+          <li>
+            <p>
+              Dropping a negative sign
+            </p>
+          </li>
+          <li>
+            <p>
+              Forgotten parenthesis
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+          {Arithmetic Mistakes}
+          <ul>
+            <li>
+              <p>
+                Adding, subtracting, Multiplying and dividing incorrectly
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>
+          {Process Mistakes}
+          <ul>
+            <li>
+              <p>
+                Not following the rules of algebra
+              </p>
+            </li>
+            <li>
+              <p>
+                Failure to complete all the steps
+              </p>
+            </li>
+            <li>
+              <p>
+                Not showing thinking for each step
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+    </ul>
+    <example>
+      <statement>
+        <p>
+          Since calculus heavily relies on working with functions,
+          it's crucial to handle them accurately.
+          Any oversight in dealing with function properties, such as their domains,
+          can lead to significant errors in calculus computations.
+          Consider, for example, finding the domain of the function
+          <me>
+            f(x) = \frac{x}{x}
+          </me>
+        </p>
+        <p>
+          At first glance,
+          it might seem that this function can be simplified to
+          <me>
+            g(x) = 1
+          </me>
+        </p>
+        <p>
+          We conclude that the domain of <m>f(x)</m> is<m>\mathbb{R}</m>
+          (all real numbers)
+          However, while <m>f(x)</m> and <m>g(x)</m> are equivalent wherever <m>f(x)</m> is defined,
+          their domains differ.
+          The domain of <m>f(x)</m> is <m>\mathbb{R} \setminus \{0\}</m>
+          (all real numbers except zero),
+          whereas the domain of <m>g(x)</m> is <m>\mathbb{R}</m>
+          (all real numbers).
+          Thus, simplifying <m>f(x)</m> to <m>g(x)</m> without considering their domains can lead to inaccuracies.
+          To avoid such issues,
+          always determine the domain of a function before performing any algebraic simplifications.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Next, we will see another example of finding the domain of functions.
+    </p>
+    <example>
+      <statement>
+        <p>
+          A common mistake in calculus is to overlook the domain of a function when simplifying expressions.
+          Consider the function
+          <me>
+            h(x) = \sqrt{x^2}
+          </me>
+        </p>
+        <p>
+          It might be tempting to simplify this to
+          <me>
+            k(x) = x
+          </me>
+        </p>
+        <p>
+          However, this simplification does not hold for all <m>x</m> in the domain of <m>h(x)</m>.
+          The function <m>h(x)</m> is defined for all <m>x \in \mathbb{R}</m>,
+          and <m>\sqrt{x^2}</m> is always non-negative.
+          Therefore, the correct simplification is
+          <me>
+            k(x) = |x|
+          </me>
+          which takes into account that the square root of a squared number is the absolute value of the original number.
+          This example highlights the importance of carefully considering the domain and characteristics of a function before simplifying it.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Another place I have found that people tend to make mistakes in the domain is when they need to evaluate compositions.
+          For instance, consider the problem of finding the domain of
+          <me>
+            f(g(x))
+          </me>
+          when
+          <me>
+            f(x)=\sqrt{3x+1}
+          </me>
+        </p>
+        <p>
+          The domain of <m>f(x)</m> is <m>x\geq -\frac{1}{3}</m>
+          <me>
+            g(x)=\frac{x}{3}
+          </me>
+        </p>
+        <p>
+          The domain of <m>g(x)</m> is <m>x \in \mathbb{R}</m> So
+          <me>
+            f(g(x))=\sqrt{x+1}
+          </me>
+        </p>
+        <p>
+          The domain of <m>f(g(x))</m> is <m>x\geq1</m> However,
+          this is slightly wrong.
+          This is because you need to consider the domain of each of your initial functions as well,
+          which is something that people miss often.
+          The domain of the composite function is <m>x\geq -\frac{1}{3}</m>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Another common mistake in calculus is failing to follow the order of operation while simplifying the algebraic expressions.
+          Consider the expression
+          <me>
+            {3(2)^2}
+          </me>
+        </p>
+        <p>
+          Oftentimes students simplify this by not following the order of operation.
+          They multiply first and then raise it to the exponent and get
+          <me>
+            {(3*2)^2=36}
+          </me>
+        </p>
+        <p>
+          However, this is not the correct answer.
+        </p>
+        <p>
+          The correct order of operation is to first solve the exponent.
+          Which is <m>(2)^2</m>.
+          Once that is done then we multiply the result by multiplying by the <m>3</m>.
+          The correct answer is
+          <me>
+            {3*4=12}
+          </me>
+        </p>
+        <p>
+          Similarly, consider the following problem
+          <me>
+            {5-3(x-7)}
+          </me>
+        </p>
+        <p>
+          Students simplify this without following the order of operations;
+          that multiplication comes before subtraction.
+          <me>
+            5-3(x-7)=2(x-7)=2x-14
+          </me>
+        </p>
+        <p>
+          Which is not a correct answer.
+        </p>
+        <p>
+          However, the correct simplification is to first distribute the <m>-3</m> over the parenthesis before subtracting from <m>5</m>.
+          <me>
+            {5-3(x-7)=5-3x+21}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Sign error If
+          <me>
+            -x=6
+          </me>
+        </p>
+        <p>
+          What is <m>x</m>?
+        </p>
+      </statement>
+    </example>
+    <p>
+      Many times students ignore the negative sign and their answer is x=6.
+      However, to isolate <m>x</m> the equation needs to be multiplied or divided by <m>-1</m>.
+    </p>
+    <p>
+      So the correct answer is <m>x=-6</m>.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Getting confused between the notation of inverse function and the reciprocal function.
+          <me>
+            sin^{-1}(x) \neq \frac{1}{sinx}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          students often apply this addition rule indiscriminately
+          <me>
+            \sin(x+y)=\sin{x}+\sin{y}
+          </me>
+        </p>
+        <p>
+          The correct answer is
+          <me>
+            \sin(x+y)=\sin{x}\cos{y}+\sin{y}\cos{x}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Mistakes happen while trying to simplify when the exponent is zero.
+          Consider the expression
+          <me>
+            {3(x)^0}
+          </me>
+        </p>
+        <p>
+          Sometimes simplification is done like this without realizing the fact that exponent <m>0</m> is on <m>x</m> only and not on <m>3</m>.
+          <me>
+            3(x)^0=1\
+          </me>
+        </p>
+        <p>
+          The correct simplification is
+          <me>
+            {3(x)^0=3}
+          </me>
+        </p>
+        <p>
+          Also distributing the exponent over the parenthesis incorrectly
+          <me>
+            {(2x)^2=2x^2}
+          </me>
+        </p>
+        <p>
+          The correct answer is
+          <me>
+            (2x)^2=2^2x^2=4x^2
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Mistake while squaring a binomial
+          <me>
+            {(a+b)^2}
+          </me>
+        </p>
+        <p>
+          Sometimes we forget to foil the binomial and simplify it
+          <me>
+            {a^2+b^2}
+          </me>
+        </p>
+        <p>
+          The correct simplification is
+          <me>
+            {(a+b)(a+b)=a^2+2ab+b^2}
+          </me>
+        </p>
+        <p>
+          Similarly, a Mistake while cubing a binomial
+          <me>
+            {(a+b)^3}
+          </me>
+        </p>
+        <p>
+          Sometimes we forget to foil the binomial and simplify it as
+          <me>
+            {a^3+b^3}
+          </me>
+        </p>
+        <p>
+          The correct simplification is
+          <me>
+            {(a+b)(a+b)(a+b)=a^3+3a^2b+3ab^2+b^3}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Also simplifying the square root expressions wrong
+          <me>
+            \sqrt{a^2+4}
+          </me>
+        </p>
+        <p>
+          Mistake is
+          <me>
+            \sqrt{(a^2+4)}=\sqrt{a^2}+\sqrt{4}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          2^3*2^5
+        </me>
+        <p>
+          A very common mistake is students multiply the bases also along with the exponents.
+          <me>
+            4^8
+          </me>
+        </p>
+        <p>
+          Students try to multiply the bases with each other
+        </p>
+        <p>
+          The correct answer is
+          <me>
+            2^3*2^5=2^8
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Mistake while solving for <m>y</m>.
+        </p>
+        <p>
+          Solve the following equation for <m>y</m>
+          <me>
+            2x+3y=6
+          </me>
+        </p>
+        <p>
+          The next step is
+          <me>
+            3y=-2x + 6
+          </me>
+        </p>
+        <p>
+          The step after that is to divide all the terms by 3.
+          However, students forget to divide one of the terms.
+          <me>
+            y=-\frac{2}{3}x + 6
+          </me>
+        </p>
+        <p>
+          It is important to divide each term by 6.
+        </p>
+        <p>
+          The correct answer is
+          <me>
+            y=-\frac{2}{3}x + 2
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Solving an inequality Consider the following inequality
+          <me>
+            {-3x+5\lt 17}
+          </me>
+        </p>
+        <p>
+          We first subtract 5 from both sides.
+          So we get
+          <me>
+            {-3x\lt 12}
+          </me>
+        </p>
+        <p>
+          Now we will divide both sides of an inequality by <m>-3</m>
+          <me>
+            {x\lt -4}
+          </me>
+        </p>
+        <p>
+          Here quite often students forget that when we divide or multiply any inequality by a negative number,
+          the sign of inequality is reversed.
+          The correct simplification after dividing the inequality by <m>-3</m> is
+          <me>
+            {x>-4}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Mistake while applying the zero product principal
+        </p>
+        <p>
+          If
+          <me>
+            x(x-1)=2
+          </me>
+        </p>
+        <p>
+          The incorrect way to solve this equation is
+          <me>
+            x=2
+          </me>
+          <me>
+            x-1=2
+          </me>
+          <me>
+            x=3
+          </me>
+        </p>
+        <p>
+          The correct next step is
+          <me>
+            x^2-x-2=0
+          </me>
+          <me>
+            (x-2)(x+1)=0
+          </me>
+        </p>
+        <p>
+          Now applying the zero-product principle
+          <me>
+            x-2=0
+          </me>
+          <me>
+            x+1=0
+          </me>
+          <me>
+            x=2, -1
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          One of the biggest mistakes is forgetting to distribute the negative sign.
+        </p>
+        <p>
+          For example: Check the following expressions.
+          <me>
+            (2x^2-5x-6)-(-2x^2-8x-1)=2x^2-5x-6+2x^2-8x-1
+          </me>
+        </p>
+        <p>
+          The correct way is to not forget to distribute the negative sign over the second parenthesis.
+          So the correct answer is
+          <me>
+            (2x^2-5x-6)-(-2x^2-8x-1)=2x^2-5x-6+2x^2+8x+1
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Mistakes in factoring the polynomials.
+        </p>
+        <p>
+          Factor out the Greatest common factor
+          <me>
+            {6x+2}
+          </me>
+        </p>
+        <p>
+          Here the greatest common factor is <m>2</m>.
+          So when we factor out <m>2</m>, we get
+          <me>
+            {2(3x+1)}
+          </me>
+        </p>
+        <p>
+          Here is where students make mistakes.
+          When they factor out the <m>2</m>,
+          since the second term is <m>2</m>,
+          they think that <m>2</m> disappears or becomes <m>0</m>.
+          They get the answer as
+          <me>
+            {2(3x)}
+          </me>
+        </p>
+        <p>
+          Which is wrong.
+          It is a good habit to multiply the factors and check if we get the original function back.
+          This way we can check our answers.
+        </p>
+        <p>
+          Another common mistake is
+        </p>
+        <p>
+          Factor
+          <me>
+            {x^2-4}
+          </me>
+        </p>
+        <p>
+          Which is an example of factoring the difference of squares.
+          Which is The factor of
+          <me>
+            {a^2-b^2=(a+b)(a-b)}
+          </me>
+        </p>
+        <p>
+          So the answer is
+        </p>
+        <p>
+          Factor
+          <me>
+            {x^2-4=(x+2)(x-2)}
+          </me>
+        </p>
+        <p>
+          But when the example looks like this
+        </p>
+        <p>
+          Factor
+          <me>
+            {x^2+4}=(x+2)(x-2)
+          </me>
+        </p>
+        <p>
+          Students still think it's an example of the difference of squares.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Undistributed cancellation
+    </p>
+    <example>
+      <statement>
+        <p>
+          Crossing out the similar-looking expressions in the numerator and denominator,
+          without realizing that they are canceling the added terms.
+          <me>
+            \frac{\cancel{x} + 2}{\cancel{x}} =2
+          </me>
+        </p>
+        <p>
+          Here the <m>x</m> from the top and bottom are canceled despite of the top <m>x</m> is from the added term;
+          which is not correct.
+        </p>
+        <p>
+          The given expression may not be simplified.
+        </p>
+        <p>
+          Another example of a mistake in canceling the added term is
+          <me>
+            \frac{\cancel{4} +6}{\cancel{2}} = 2+6
+          </me>
+        </p>
+        <p>
+          Here student crossed 2 into 4 and wrote 2.
+          But it can easily be seen by,
+          combining the 4 and the 6 first and then dividing by 2
+          <me>
+            \frac{4+6}{2}=\frac{10}{2}=5
+          </me>
+          or
+          <me>
+            \frac{\cancel{2}(2+3)}{\cancel{2}} = 2+3=5
+          </me>
+        </p>
+        <p>
+          Similarly
+          <me>
+            \frac{\cancel{2} +4\sqrt{153}}{\cancel{2}} = 1+4\sqrt{153}
+          </me>
+        </p>
+        <p>
+          Here the 2 from the top and bottom are canceled despite of the top 2 is from the added term;
+          which is not correct.
+        </p>
+        <p>
+          The correct way is
+          <me>
+            \frac{\cancel{2} +4\sqrt{153}}{\cancel{2}} = 1+4\sqrt{153}
+          </me>
+          <me>
+            \frac{2+4\sqrt{153}}{2}=\frac{\cancel{2}(1+2\sqrt{153})}{\cancel{2}}=(1+2\sqrt{153})
+          </me>
+        </p>
+        <p>
+          Notice that to cancel the 2 out of the denominator we first factored a 2 out of the numerator.
+          You can only cancel something if it is multiplied by the WHOLE numerator and denominator,
+          or if it is the whole numerator or denominator
+          (as in the case of the denominator in our example).
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Simplifying the rational expressions wrong
+          <me>
+            \frac{x+2}{x^2-4}
+          </me>
+        </p>
+        <p>
+          Factoring the denominator
+          <me>
+            \frac{x+2}{(x-2)(x+2)}
+          </me>
+          <me>
+            \frac{\cancel{(x+2)}}{(x-2)\cancel{(x+2)}}
+          </me>
+        </p>
+        <p>
+          Quite often students forget that there is <m>1</m> left in the numerator after cancellation.
+        </p>
+        <p>
+          The wrong answer is
+          <me>
+            x-2
+          </me>
+        </p>
+        <p>
+          The correct answer is
+          <me>
+            \frac{1}{x-2}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Mistake is
+          <me>
+            \sqrt{(a^2+4)}=\sqrt{a^2}+\sqrt{4}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \frac{{x^2} -1}{{x^2} +x}
+        </me>
+        <p>
+          Wrong cancellation
+          <me>
+            \frac{\cancel{x^2} -{1}}{\cancel{x^2} +{x}} =\frac{-1}{x}
+          </me>
+        </p>
+        <p>
+          Here the <m>x^2</m> from the top and bottom are canceled despite the top and bottom <m>x^2</m> are from the added terms;
+          which is not correct.
+        </p>
+        <p>
+          The correct simplification is
+          <me>
+            \frac{{x^2} -1}{{x^2} +x} =\frac{\cancel{(x+1)}(x-1)}{x\cancel{(x+1)}}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <p>
+      Another example of a mistake in canceling the added term is
+      <me>
+        \frac{\cancel{4} +6}{\cancel{2}} = 2+6
+      </me>
+    </p>
+    <example>
+      <statement>
+        <p>
+          Dividing by a fraction
+          <me>
+            \frac{x}{\frac{a}{b}}
+          </me>
+        </p>
+        <p>
+          Here dividing by a fraction is the same as multiplying by its reciprocal.
+        </p>
+        <p>
+          The correct simplification is
+          <me>
+            x*\frac{b}{a}
+          </me>
+        </p>
+        <p>
+          Also solving the mixed fractions like
+          <me>
+            \frac{\frac{a}{b}}{\frac{c}{d}}
+          </me>
+        </p>
+        <p>
+          Is simplified as
+          <me>
+            \frac{a}{b}*{\frac{d}{c}}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Solving (Incorrect way)
+          <me>
+            3x^2=x
+          </me>
+        </p>
+        <p>
+          Oftentimes times students get used to just canceling things.
+          So, the biggest mistake in solving this kind of equation is to cancel an x from both sides to get,
+          <me>
+            3x=1
+          </me>
+          <me>
+            x=\frac{1}{3}
+          </me>
+        </p>
+        <p>
+          Solving (Correct way)
+          <me>
+            3x^2=x
+          </me>
+        </p>
+        <p>
+          Here's the correct way to solve this equation.
+          First, get everything on one side then factor.
+          <me>
+            3x^2-x=0
+          </me>
+          <me>
+            3x(x-1)=0
+          </me>
+        </p>
+        <p>
+          Now applying the zero-product principle
+        </p>
+        <p>
+          Either
+          <me>
+            3x=0
+          </me>
+          or
+          <me>
+            (x-1)=0
+          </me>
+        </p>
+        <p>
+          So the correct answers are
+          <me>
+            x=0, 1
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Mistakes in Addition, subtraction, multiplication,
+          and division of two signed numbers
+          <ol>
+            <li>
+              <p>
+                When both numbers have the same signs then add them and keep the sign of those numbers
+                <me>
+                  {-3-5=-8}
+                </me>
+                <me>
+                  {3+5=8}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                When both numbers have different signs then subtract the smaller number from the bigger number and keep the sign of the bigger number.
+                <me>
+                  {-3+5=2}
+                </me>
+                <me>
+                  {3-5=-2}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                When multiplying and dividing two signed numbers and both numbers have different signs the answer is negative however if both have the same signs the answer is positive.
+                <me>
+                  {(-3)(5)}=-15
+                </me>
+                <me>
+                  {(3)(-5)}=-15
+                </me>
+                <me>
+                  {(-3)(-5)}=15
+                </me>
+                <me>
+                  {(3)(5)}=15
+                </me>
+                <me>
+                  {\frac{15}{5}}=3
+                </me>
+                <me>
+                  {\frac{-15}{5}}=-3
+                </me>
+                <me>
+                  {\frac{15}{-5}}=-3
+                </me>
+                <me>
+                  {\frac{-15}{-5}}=3
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Adding the exponents while adding the like terms
+          <me>
+            {x^2+x^2=2x^4}\
+          </me>
+        </p>
+        <p>
+          The correct answer is we combine the coefficients of like terms,
+          not exponents.
+          <me>
+            {x^2+x^2=2x^2}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Dealing with the negative exponents incorrectly
+          <me>
+            {3^{-2}}
+          </me>
+        </p>
+        <p>
+          Incorrect way
+          <me>
+            {3^{-2}=-9}
+          </me>
+        </p>
+        <p>
+          To evaluate this we make the exponents positive by flipping the base
+          <me>
+            {\frac{1}{3^2}}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Unable to see the difference between squaring the negative numbers
+        </p>
+        <p>
+          Example
+          <me>
+            {(-3)^2=-9}
+          </me>
+        </p>
+        <p>
+          The correct way to do this is
+          <me>
+            {(-3)^2=(-3)(-3)=9}
+          </me>
+          another example
+          <me>
+            -3^2=9
+          </me>
+        </p>
+        <p>
+          The correct way to do this is
+          <me>
+            {-3^2=-(3)(3)=-9}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Getting mixed up between dividing a non-zero number by 0 and dividing 0 by a non-zero number.
+          When you divide zero by any number,
+          the result is 0 except if you are dividing 0 by 0 which is called an indeterminate form.
+          However, when you divide any number by 0 it is undefined.
+          <ul>
+            <li>
+              <p>
+                Dividing 0 by a number except 0
+                <me>
+                  \frac{0}{1}=\mbox{undefined}
+                </me>
+                The correct way
+                <me>
+                  {\frac{0}{1}=0}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Dividing a number except 0 by 0
+                <me>
+                  {\frac{1}{0}=0}
+                </me>
+                The correct way
+                <me>
+                  {\frac{1}{0}=\mbox{undefined} }
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Dividing and divide by 0
+                <me>
+                  {\frac{0}{0}}
+                </me>
+                The correct way
+                <me>
+                  {\frac{0}{0}= \mbox{Indeterminate form} }
+                </me>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Using the logarithmic properties incorrectly
+        </p>
+        <p>
+          Incorrect property
+          <me>
+            \ln \frac{x}{y}=\frac{\ln x}{\ln y}
+          </me>
+        </p>
+        <p>
+          The correct one is
+          <me>
+            \ln \frac{x}{y}=\ln x-\ln y
+          </me>
+        </p>
+        <p>
+          Incorrect property
+          <me>
+            \ln(xy)=\ln(x)\ln(y)
+          </me>
+        </p>
+        <p>
+          The correct one is
+          <me>
+            \ln{x}{y}=\ln x+\ln y
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          A square root mistake
+        </p>
+        <p>
+          Many students think
+          <me>
+            \sqrt{100}=\pm10
+          </me>
+        </p>
+        <p>
+          This is not correct, however.
+          Square roots are always positive or zero!
+          So the correct value is
+          <me>
+            \sqrt{100}=10
+          </me>
+        </p>
+        <p>
+          A mistake in solving quadratic equation by extracting the root method
+        </p>
+        <p>
+          Solve
+          <me>
+            x^2=100
+          </me>
+        </p>
+        <p>
+          Taking the square root of both sides, we get
+          <me>
+            x^2=\sqrt{100}
+          </me>
+        </p>
+        <p>
+          Here often students just write
+          <me>
+            x=10
+          </me>
+        </p>
+        <p>
+          But the correct way is
+          <me>
+            x=\pm\sqrt{100}
+          </me>
+        </p>
+        <p>
+          So
+          <me>
+            x=\pm10
+          </me>
+        </p>
+      </statement>
+    </example>
+    <p>
+      Now let's look at some common trigonometric mistakes.
+      These are some simple and easily corrected mistakes.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Completely ignoring the angle symbols like <m>x, \theta</m>.
+          For example
+          <me>
+            csc\theta=\frac{1}{sin}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Canceling the <m>x</m> from the numerator and the denominator in the following example.
+          <me>
+            \frac{sinx}{x}=sin
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Not realizing that
+          <me>
+            cos^2(x)
+          </me>
+          is just a short and convenient way to write
+          <me>
+            (cos x)^2
+          </me>
+          <me>
+            cos^2(x)
+          </me>
+          is not the same as writing
+          <me>
+            cos(x^2)
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Not being careful about the restricted domain and the range of Inverse trig functions.
+        </p>
+        <p>
+          For example, if we need to evaluate
+          <me>
+            sin^{-1}( \frac{1}{2})
+          </me>
+        </p>
+        <p>
+          This can be interpreted as looking for an angle <m>x</m> such that
+          <me>
+            sinx=\frac{1}{2}
+          </me>
+        </p>
+        <p>
+          In quadrant I,
+          <me>
+            x=\frac{\pi}{6}
+          </me>
+        </p>
+        <p>
+          In quadrant II,
+          <me>
+            x=\frac{5\pi}{6}
+          </me>
+        </p>
+        <p>
+          This is incorrect because although
+          <me>
+            \frac{\pi}{6}
+          </me>
+          and
+          <me>
+            \frac{5\pi}{6}
+          </me>
+          are angles for which
+          <me>
+            sin^{-1}( \frac{1}{2})=\frac{1}{2}
+          </me>
+        </p>
+        <p>
+          The angle
+          <me>
+            \frac{5\pi}{6}
+          </me>
+          is not within the allowed range of
+          <me>
+            f(x)=sin^{-1}(x)
+          </me>
+        </p>
+        <p>
+          Remember that the range of the inverse functions is restricted as follows
+          <ul>
+            <li>
+              <p>
+                <me>
+                  f(x)=sin^{-1}(x)
+                </me>
+                has a Domain
+                <me>
+                  [-1,1]
+                </me>
+                The Range is
+                <me>
+                  -\frac{\pi}{2}\leq x\leq \frac{\pi}{2}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\cos^{-1}(x)
+                </me>
+                has a Domain
+                <me>
+                  [-1,1]
+                </me>
+                Range is
+                <me>
+                  0\leq x\leq \pi
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <me>
+                  f(x)=\tan^{-1}(x)
+                </me>
+                has a Domain
+                <me>
+                  (-\infty,\infty)
+                </me>
+                Range is
+                <me>
+                  -\frac{\pi}{2}\leq x\leq \frac{\pi}{2}
+                </me>
+                So that means that
+                <me>
+                  \sin^{-1}(\frac{1}{2})=\frac{\pi}{6}
+                </me>
+                Since
+                <me>
+                  \sin{\frac{\pi}{6}}=\frac{1}{2}
+                </me>
+                Similarly
+                <me>
+                  \sin^{-1}(-\frac{1}{2})=-\frac{\pi}{6}
+                </me>
+                Since
+                <me>
+                  \sin{(-\frac{\pi}{6}})=\frac{1}{2}
+                </me>
+                because
+                <me>
+                  -\frac{\pi}{6}
+                </me>
+                is within the allowed range of
+                <me>
+                  f(x)=\sin^{-1}(x)
+                </me>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

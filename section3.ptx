@@ -1,0 +1,1675 @@
+<section>
+  <title>Four Main Problems of Calculus</title>
+  <subsection>
+    <title>Introduction</title>
+    <p>
+      In this chapter,
+      we will explore the four main problems of calculus,
+      including determining the slope of a tangent line from the slope of a secant line,
+      instantaneous velocity from the average velocity,
+      the concept of linear approximation,
+      estimating the area under the curve,
+      and optimization problems.
+    </p>
+    <p>
+      \begin{motivatebox}[Motivating Questions]
+      <ul>
+        <li>
+          <p>
+            How do we define and find the slope of a tangent line using the slope of a secant line at a point to a curve?
+          </p>
+        </li>
+        <li>
+          <p>
+            How do we study the variables that are constantly changing?
+          </p>
+        </li>
+        <li>
+          <p>
+            How do we define and calculate the instantaneous velocity of a moving particle and how it is related to the average velocity?
+          </p>
+        </li>
+        <li>
+          <p>
+            How do we find the area enclosed by a curve?
+          </p>
+        </li>
+        <li>
+          <p>
+            What is the linearization of a curve?
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      \end{motivatebox} Desmos to Descartes activity Desmos activity secant tangent
+    </p>
+  </subsection>
+  <subsection>
+    <title>Slope</title>
+    <introduction>
+      <p>
+        This section is about how to find the slope of a tangent line for any function at a given point... we start with some history.
+      </p>
+    </introduction>
+    <subsubsection>
+      <title>Rivals on the Rise: Fermat, Descartes, and the Battle for the Best Slope</title>
+      <p>
+        One of the main ideas in Calculus is to find the slope of a tangent line of a function at a given point,
+        if the function is a line then the slope will be the same at any given point,
+        but if the function is not a line then finding slope is not easy,
+        and historically many mathematicians tried to tackle this problem.
+        Not all of the attempts were successful meanwhile it is worth knowing about them since it gives us an idea of how mathematicians before the invention of Calculus were able to tackle this question even partially.
+      </p>
+      <p>
+        Before we go into historical examples let's know what we mean by secant and tangent lines since these are important notions and we will use them regularly.
+        The word tangent comes from the Latin tangens meaning "touching", since the line touches the curve,
+        whereas secant stems from Latin secans "cutting" since the line cuts the curve.
+        Secant Line A line that intersects a curve at two or more points.
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw[->,thick] (-0.5,0) -- (3,0) node[right] {\(x\)};
+\draw[->, thick] (0,-0.5) -- (0,6) node[above] {\(y\)};
+\draw[scale=1,domain=-1.5:2.5,smooth,variable=\y] plot ({\y},{\y*\y + \y});
+\draw[red,thick] (1,2) -- (2,6);
+\filldraw [black] (1,2) circle (2pt) node[anchor=south west] {(1,2)};
+\filldraw [black] (2,6) circle (2pt) node[anchor=west] {\((2, 6)\)};\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        <em>Tangent Line</em>: A line that touches a curve at exactly one point without intersecting it at that point,
+        is known as the tangent line.
+      </p>
+      <p>
+        <em>Normal Line</em>: The normal line is a straight line perpendicular to the tangent line at a particular point on the curve.
+      </p>
+      <example>
+        <statement>
+          <p>
+            The slope <m>m</m> of a line through points
+            <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m> is
+            <me>
+              m=\frac{y_2-y_1}{x_2-x_1}
+            </me>
+          </p>
+          <p>
+            For a secant line through the points <m>(60,60)</m> and <m>(80,83)</m>,
+            <me>
+              m_{sec}=\frac{83-60}{80-60}
+            </me>
+          </p>
+        </statement>
+      </example>
+      <p>
+        We will bring the story of Fermat and Descartes,
+        they lived in the same era and were both interested in finding slope and they both challenged the method the other one found.
+        Let's first look at the method that Fermat found. we will use an example to explain his method.
+      </p>
+    </subsubsection>
+    <subsubsection>
+      <title>Fermat Method</title>
+      <example>
+        <statement>
+          <p>
+            Consider the curve <m>y = x^2 + x</m>.
+            Our goal is to determine its slope at the point <m>(1,2)</m>.
+          </p>
+          <p>
+            According to Fermat's approach,
+            we take two closely spaced points on the curve.
+            Starting with our point (1,2),
+            we identify another point infinitesimally close to it.
+            By introducing a small increment <m>h</m>,
+            we obtain the point <m>(1+h, (1+h)^2+(1+h))</m>.
+            Let's illustrate this on the graph.
+          </p>
+          <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw[->,thick] (-0.5,0) -- (3,0) node[right] {\(x\)};
+\draw[->, thick] (0,-0.5) -- (0,6) node[above] {\(y\)};
+\draw[scale=1,domain=-1.5:2.5,smooth,variable=\y,shift={(0,0)}]  plot ({\y},{\y*\y + \y});
+\draw[red,thick] (1,2) -- (2,6);
+\filldraw [black] (1,2) circle (2pt) node[anchor=south west] {(1,2)};
+\filldraw [black] (2,6) circle (2pt) node[anchor=west] {\((1+h, f((1+h))\)};\end{tikzpicture}]]>
+</latex-image>
+          </image>
+        </statement>
+      </example>
+      <p>
+        To determine the slope of the secant line joining the points (1,2) and <m>(1+h, (1+h)^2+(1+h))</m>, we have:
+        <me>
+          \frac{(1 + h)^2 + (1 + h) - 2}{(1 + h) - 1} = 3 + h
+        </me>.
+      </p>
+      <p>
+        Letting <m>h</m> equal to 0, we find that the slope of the tangent line to the curve
+        <m>y = x^2 + x</m> at the point (1,2) is 3.
+      </p>
+      <p>
+        This methodology by Fermat sets the groundwork for the modern-day concept of derivatives in calculus. but sadly there was a logical flaw in his method,
+        as you can see at the beginning the method says <m>h\ne 0</m> but in the end,
+        it placed <m>h=0</m> even though the answer is correct but the logical flaw affects the methodology.
+      </p>
+    </subsubsection>
+    <subsubsection>
+      <title>Descartes' Method of Normals</title>
+      <p>
+        Descartes' method of normals is a geometric approach to finding the normal and tangent lines of a curve.
+        This method involves considering a family of circles that pass through a specific point on the curve and have their centers on a fixed axis,
+        typically the x-axis.
+        The goal is to find the circle that is tangent to the curve at the point of interest.
+      </p>
+      <example>
+        <statement>
+          <p>
+            Find the slope of the tangent line to the curve
+            <m>y = \sqrt{2x}</m> at the point <m>(2, 2)</m> using Descartes' Method of Normals.
+          </p>
+          <p>
+            <em>Step 1: Constructing the Circle</em>
+            <ol>
+              <li>
+                <p>
+                  <em>Center:</em> We consider a family of circles with centers on the x-axis that pass through the point <m>(2,2)</m>.
+                  Let the center of such a circle be <m>(a, 0)</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Radius:</em> The radius <m>r</m> is the distance from the point <m>(2,2)</m> to the center <m>(a, 0)</m>,
+                  calculated using the distance formula:
+                  <me>
+                    r = \sqrt{(2-a)^2 + 2^2}
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Equation of the Circle:</em>
+                  The general equation of the circle becomes:
+                  <me>
+                    (x-a)^2 + y^2 = r^2
+                  </me>
+                  Substituting the expression for <m>r</m>, we get:
+                  <me>
+                    (x-a)^2 + y^2 = (2-a)^2 + 4
+                  </me>
+                </p>
+              </li>
+            </ol>
+          </p>
+          <p>
+            <em>Step 2: Intersection with the Curve</em>
+            <ol>
+              <li>
+                <p>
+                  Substitute <m>y = \sqrt{2x}</m> into the circle's equation:
+                  <me>
+                    (x-a)^2 + 2x = (2-a)^2 + 4
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Expanding and rearranging, we get a quadratic equation in <m>x</m>:
+                  <me>
+                    x^2 - (2a - 2)x + (a^2 - 4a + 4) = 0
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  To find <m>a</m> such that the circle is tangent to the curve,
+                  set the discriminant of this equation to zero:
+                  <me>
+                    (2a - 2)^2 - 4(a^2 - 4a + 4) = 0
+                  </me>
+                  Solving for <m>a</m>, we find <m>a = 3</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+          <p>
+            <em>Step 3: Slope of the Normal Line</em>
+            <ol>
+              <li>
+                <p>
+                  The slope of the normal line is the slope of the line segment from <m>(3.5, 0)</m> to <m>(2, 2)</m>:
+                  <me>
+                    \text{ Slope of Normal }  = \frac{2 - 0}{2 - 3} = -2
+                  </me>.
+                  Hence  The slope of the normal line to
+                  <m>y = \sqrt{2x}</m> at <m>(2, 2)</m> is <m>-2</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The slope of the tangent line is the negative reciprocal of the normal line's slope.
+                  Thus, the slope of the tangent line at <m>(2, 2)</m> is -<m>\frac{1}{-2} = \frac{1}{2}</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+axis lines=middle,
+xlabel={\(x\)},
+ylabel={\(y\)},
+xmin=0, xmax=5,
+ymin=0, ymax=3,
+domain=0:5,
+samples=100,
+grid=both,
+grid style={line width=.1pt, draw=gray!10},
+major grid style={line width=.2pt,draw=gray!50},
+]
+\addplot [blue, thick] {sqrt(2*x)};
+\addlegendentry{\(y = \sqrt{2x}\)}
+\addplot [red, domain=1:3] {0.75*(x - 2) + 2};
+\addlegendentry{Tangent Line}
+\addplot [green, domain=1:4] {-1.33*(x - 2) + 2};
+\addlegendentry{Normal Line}
+\node[label={90:{\((2,2)\)}},circle,fill,inner sep=2pt] at (axis cs:2,2) {};
+\node[label={270:{\((3.5,0)\)}},circle,fill,inner sep=2pt] at (axis cs:3.5,0) {};
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <p>
+        Give Activity using Geogebra to find the slope of a tangent line using Descarte method
+      </p>
+      <p>
+        Descartes' method of finding the slope of tangent lines is robust and generally free of logical flaws,
+        surpassing Fermat's method in its rigorous geometric approach.
+        However, it's not universally applicable to all curves.
+        A notable example where Descartes' method falls short is the Folium of Descartes.
+        This particular curve, defined by its unique and intricate geometry,
+        poses challenges that make the application of Descartes' method impractical.
+        Below is a diagram illustrating the Folium of Descartes.
+      </p>
+      <p>
+        Give a Geogebra Activity that talks about Folium of Descartes
+      </p>
+      <figure>
+        <caption>Plot of the Folium of Descartes</caption>
+        <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw[red, samples=200, domain=125:-35] plot(\x:{9*sin(\x)*cos(\x)/(sin(\x)^3+cos(\x)^3)});
+\draw (-9,0) -- (9,0);
+\draw (0,-9) -- (0,9);\end{tikzpicture}]]>
+</latex-image>
+        </image>
+      </figure>
+      <p>
+        The tangent problem has given rise to the branch of calculus called differential calculus,
+        which was not invented until more than 2000 years after integral calculus.
+        The main ideas behind differential calculus are due to the French mathematician Pierre Fermat (1601–1665) and were developed by the English mathematician John Wallis (1616–1703), Isaac Barrow (1630–1677),
+        and Isaac Newton (1642–1727) and the German mathematician Gottfried Leibniz (1646–1716).
+      </p>
+    </subsubsection>
+    <subsubsection>
+      <title>Average rate of change versus the instantaneous rate of change</title>
+      <p>
+        https://www.geogebra.org/m/eXSgJ2gy
+      </p>
+      <p>
+        <em>Average rate of change</em>
+      </p>
+      <p>
+        We see changes around us everywhere.
+        When we throw a ball upwards,
+        its position changes with respect to time,
+        and its velocity changes as its position changes.
+        The height of a person changes with time.
+        The prices of stocks and options change with time.
+        The equilibrium price of a good changes with respect to demand and supply.
+        The surface area and the volume of a sphere change as its radius changes,
+        and the population changes with time.
+      </p>
+      <p>
+        These changes depend on many factors;
+        for example,
+        the body mass index of a human being depends upon its height and weight.
+        We shall be looking at cases where only one factor is varying and all others are fixed.
+        Then we can model our system as <m>y=f(x)</m>,
+        where <m>y</m> changes with respect to <m>x</m>.
+      </p>
+      <p>
+        Consider a function <m>y=f(x)</m> and if
+        <m>y_1=f(x_1)</m> and <m>y_2=f(x_2)</m>.
+        The average rate of change of <m>y</m> with respect to <m>x</m> in the interval
+        <m>[x_1, x_2]</m> tells you how <m>y</m> changes when <m>x</m> changes by one unit and is given by
+        <me>
+          \frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}
+        </me>
+      </p>
+      <p>
+        Where <m>\Delta y</m> and <m>\Delta x</m> represent the change in <m>y</m> and the change in <m>x</m> respectively.
+      </p>
+      <p>
+        <em>Instantaneous rate of change</em>
+      </p>
+      <p>
+        The average rate of change tells us at what rate <m>y</m> increases in an interval.
+        This just tells us the average and no information in between.
+        We have no idea how the function behaves in the interval.
+      </p>
+      <p>
+        If we make <m>\Delta x</m> smaller,
+        we get a more accurate representation of <m>y</m>;
+        as <m>\Delta x</m> tends to <m>0</m>,
+        the interval becomes smaller and smaller until it just becomes a point or an instant.
+        Then the rate of change is not an average, but of an instant.
+        It is the instantaneous rate of change of <m>y</m> with respect to <m>x</m>.
+      </p>
+      <p>
+        The average rate of function <m>f(x)</m> in an interval <m>[a,a+h]</m> is given by
+        <me>
+          AV_{[a,b]}=\frac{f(a+h)-f(a)}{h}
+        </me>
+      </p>
+      <p>
+        In calculus,
+        we move from an average rate of change to the instantaneous rate of change
+        <me>
+          IV_{x=a}
+        </me>
+        by making <m>h</m> approach <m>0</m>.
+      </p>
+      <example>
+        <statement>
+          <p>
+            For the function
+            <me>
+              f(x)=-3x+5
+            </me>
+          </p>
+          <p>
+            Evaluate
+            <me>
+              \frac{f(a+h)-f(a)}{h}
+            </me>
+          </p>
+          <p>
+            Here
+            <me>
+              f(x)=-3a+5
+            </me>
+            and
+            <me>
+              f(x+h)=-3(a+h)+5
+            </me>
+            <me>
+              f(x+h)-f(x)=-3a-3h+5+3a-5
+            </me>
+            <me>
+              f(x+h)-f(x)=\cancel{-3a}-{3h}+\cancel{5}+\cancel{3a}-\cancel{5}
+            </me>
+            <me>
+              f(x+h)-f(x)=-3h
+            </me>
+          </p>
+          <me>
+            \frac{f(x+h)-f(x)}{h}=\frac{-3\cancel{h}}{\cancel{h}}
+          </me>
+          <p>
+            Hence
+            <me>
+              \frac{f(x+h)-f(x)}{h}=-3
+            </me>
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          For the function
+          <me>
+            f(x)=3
+          </me>
+        </p>
+        <p>
+          Evaluate
+          <me>
+            \frac{f(a+h)-f(a)}{h}
+          </me>
+        </p>
+      </activity>
+      <remark>
+        <p>
+          The expression
+          <me>
+            \frac{f(a+h)-f(a)}{h}
+          </me>
+          is also called the difference quotient of a function and measures the average rate of change for a function <m>f(x)</m> given an interval,
+          <m>[a, a+h]</m>.
+          Also when <m>h</m> approaches zero the average rate of change becomes the instantaneous rate of change.
+          We will discuss this in more detail in Chapter 3 and Calculus.
+        </p>
+      </remark>
+      <activity>
+        <p>
+          For each of the following functions
+          <ul>
+            <li>
+              <p>
+                <m>f(x)=x^2-3x+5</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\frac{x+1}{x-2}</m>
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          Evaluate the following expressions.
+          Remember <m>x</m> is a variable and <m>a</m> is any real number.
+          <ol>
+            <li>
+              <p>
+                <m>f(a)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(a+h)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(a+h)-f(a)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\frac{f(a+h)-f(a)}{h}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x+h)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x+h)-f(x)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\frac{f(x+h)-f(x)}{h}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                What is the difference between the results of
+                <m>\frac{f(x+h)-f(x)}{h}</m> and <m>\frac{f(a+h)-f(a)}{h}</m>?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity>
+        <p>
+          Suppose <m>f(x)</m> is the number of occupied apartments and <m>x</m> is the monthly rent charged in dollars gives the rent of given a linear function
+          <me>
+            f(x)=700-4x
+          </me>
+          <ol>
+            <li>
+              <p>
+                Use the formula of average value
+                <me>
+                  AV_{[a,b]}=\frac{f(b)-f(a)}{b-a}
+                </me>
+                to find the average rate of function between the interval <m>[a,b]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the average rate for functions in the following four intervals <m>[0,2], [1,2], [2,3], [2,4]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Interpret your answer in particular if the average rate of change depends upon the interval it is found.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+      <activity xml:id="AV_of_lnx">
+        <p>
+          Find the average value of function
+          <m>f(x)=\ln(x)</m> in the interval <m>[a,a+h]</m>
+          <ol>
+            <li>
+              <p>
+                <me>
+                  AV_{[a,a+h]}=\frac{f(a+h)-f(a)}{h}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Simplify the above expression by using the property of logarithm and show all the work to make it look like
+                <me>
+                  \frac{1}{a} \ln(1+\frac{h}{a})^\frac{h}{a}
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Make a table in Desmos to show that the expression equals <m>1</m> when <m>h</m> approaches <m>0</m>
+                <me>
+                  \ln(1+\frac{h}{a})^\frac{h}{a}=e
+                </me>
+                So that the instantaneous value of function <m>f(x)=\ln(x)</m> is
+                <me>
+                  IV_{a}\approx \frac{1}{a}
+                </me>
+                at a point <m>x=a</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Average velocity versus instantaneous velocity</title>
+      <p>
+        One of the most important applications of calculus is the motion of a moving object.
+      </p>
+      <p>
+        When an object moves, its position changes with time.
+        To describe the motion of an object,
+        you must first be able to describe its position <m>s(t)</m>:
+        where it is at any particular time.
+        Let's talk about some important terminologies.
+        <ol>
+          <li>
+            <p>
+              <em>Difference between scalar and vector qualities</em>
+              The difference between a vector quantity and a scalar quantity is that vector quantities include magnitude and direction information;
+              scalar quantities are simply magnitude.
+              For example "work" is a scale quantity and " force" is a vector quantity.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em> Difference between distance and displacement</em>
+              Physicists use the initial and final position to calculate the displacement of an object,
+              which is just the shortest path from its initial position <m>a</m> to its final position <m>b</m> even if the object did not take this direct,
+              straight-line path to get there.
+              Displacement mathematically assumes that horizontal displacement is equal to the final position minus the initial position.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Difference between average speed and average velocity</em>
+              Average speed is distance divided by the time interval for the distance traveled.
+              Average velocity is displacement divided by the time interval of the displacement.
+              Speed is a scalar, and average velocity is a vector.
+              Average velocity indicates direction and can be represented as a negative number when the displacement is in the negative direction.
+              Average speed does not indicate direction and can only be positive or zero.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <example>
+        <statement>
+          <p>
+            Anything that moves about a fixed reference frame is covering distance.
+            A person pacing back and forth at 2 m/s waiting for a bus to arrive and continually returning to the same spot has a speed of 2 m/s but a velocity of 0.
+          </p>
+        </statement>
+      </example>
+      <p>
+        <em>Average Velocity</em>
+      </p>
+      <p>
+        Average velocity is a measure of the rate of change in an object's position with respect to time.
+        It's a vector quantity, incorporating both speed and direction.
+      </p>
+      <p>
+        If <m>x_1</m> and <m>x_2</m> are the positions of an object at times <m>t_1</m> and <m>t_2</m> , respectively, then
+      </p>
+      <p>
+        Average velocity=Displacement between two points divided by the time needed to make the displacements
+        <me>
+          AV_{[t_1,t_2]}=\frac{x_2-x_1}{t_2-t_1}
+        </me>
+      </p>
+      <example>
+        <statement>
+          <p>
+            A commuter train travels from city A to city B for 2 hours at 60 miles per hour and 3 hours at 70 miles per hour.
+            <ol>
+              <li>
+                <p>
+                  Find the average speed <m>v_{av}</m>.
+                  <m>av_{[t_1,t_2]}</m>=Total distance divided by Total time  We know that, Distance = Speed × Time  So, in 2 hours,
+                  distance covered = 2 × 60 = 120 miles  in the next 3 hours,
+                  distance covered = 3 × 70 = 210 miles  Total distance covered = 120 + 210 = 330 miles  Total time = 2 + 3 = 5 hrs
+                  <me>
+                    av_{[t_1,t_2]}=\frac{330}{5}=66
+                  </me>
+                  The average speed is <m>66</m> miles/hour
+                </p>
+              </li>
+              <li>
+                <p>
+                  What is the average velocity of a person who moves 10 inches in 4 seconds and 20 inches in 6 seconds along the <m>x</m>-axis?
+                  <me>
+                    AV_{[t_1,t_2]}=\frac{x_2-x_1}{t_2-t_1}
+                  </me>
+                  <me>
+                    AV_{[4,6]}=\frac{20-10}{6-4}=\frac{10}{2}=5
+                  </me>
+                  inches/sec
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <p>
+        <em>Instantaneous Velocity</em>
+        The quantity that tells us how fast an object is moving anywhere along its path is the instantaneous velocity,
+        usually called just the velocity.
+        It is the average velocity between two points on the path in the limit that the time
+        (and therefore the displacement)
+        between the two events approaches zero.
+        To illustrate this idea mathematically,
+        we need to express position <m>s(x)</m> as a continuous function of <m>t</m> denoted by <m>s(t)</m>.
+        The expression for the average velocity between two points using this notation is
+        <me>
+          AV_{[t_1,t_2]}=\frac{x_2-x_1}{t_2-t_1}
+        </me>
+      </p>
+      <p>
+        To find the instantaneous velocity at any position,
+        we let <m>x_2=s(x+h)</m>, <m>x_1=s(x)</m>,
+        <m>t_2=t+h</m>, <m>x_1=t</m>,
+      </p>
+      <p>
+        The instantaneous velocity approximately can be found by
+        <me>
+          IV_{x=t} \approx \frac{s(x+h)-s(x)}{t+h-t}
+        </me>
+        <me>
+          IV_{x=t} \approx \frac{s(x+h)-s(x)}{\cancel{t}+h-\cancel{t}}
+        </me>
+        <me>
+          IV_{x=t} \approx \frac{s(x+h)-s(x)}{h}
+        </me>
+      </p>
+      <p>
+        When <m>h</m> is an infinitesimally small number, close to zero.
+      </p>
+      <remark>
+        <p>
+          When you take Calculus I, you will learn how to find exact instantaneous velocity.
+          But now since we do not have enough tools then approximation is enough.
+        </p>
+      </remark>
+      <example>
+        <statement>
+          <p>
+            We saw in the previous section that the average value of the linear function does not depend upon the interval, Now we will investigate how is the average rate of change of the quadratic function representing the height on the selected interval.
+            Suppose a ball is thrown from the top of a tower which is at a height <m>h</m> meters at time <m>t</m> seconds and is modeled by a function
+            <me>
+              h(t)=16-4t^2
+            </me>
+            <ol>
+              <li>
+                <p>
+                  Consider the expression of the average velocity of the stone between <m>t=a</m> and <m>t=b</m>.
+                  <m>AV_{[a,b]}=\frac{h(b)-h(a)}{b-a}</m> Compute the average velocity of the stone between the intervals /textcolor{red}{Show this in desmos}
+                  <table>
+                    <title>Average velocity of the stone between the intervals</title>
+                    <tabular>
+                      <row bottom="minor">
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                      </row>
+                      <row>
+                        <cell><m>[a,b]</m></cell>
+                        <cell><m>AV_{[a,b]}</m></cell>
+                        <cell>(m/s)</cell>
+                      </row>
+                      <row bottom="minor">
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                      </row>
+                      <row>
+                        <cell>[2.9, 3]</cell>
+                        <cell><m>\frac{h(3)-h(2.9)}{3-2.9}</m></cell>
+                        <cell>-23.60</cell>
+                      </row>
+                      <row bottom="minor">
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                      </row>
+                      <row>
+                        <cell>[2.99, 3]</cell>
+                        <cell><m>\frac{h(3)-h(2.99)}{3-2.99}</m></cell>
+                        <cell>-23.96</cell>
+                      </row>
+                      <row bottom="minor">
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                      </row>
+                      <row>
+                        <cell>[2.999, 3]</cell>
+                        <cell><m>\frac{h(3)-h(2.999)}{3-2.999}</m></cell>
+                        <cell>-24.00</cell>
+                      </row>
+                      <row bottom="minor">
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                      </row>
+                      <row>
+                        <cell>[3, 3.01]</cell>
+                        <cell><m>\frac{h(3.01)-h(3)}{3.01-3}</m></cell>
+                        <cell>-24.04</cell>
+                      </row>
+                      <row bottom="minor">
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                      </row>
+                      <row>
+                        <cell>[3, 3.001]</cell>
+                        <cell><m>\frac{h(3.001)-h(3)}{3.001-3}</m></cell>
+                        <cell>-24.00</cell>
+                      </row>
+                      <row bottom="minor">
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                      </row>
+                      <row>
+                        <cell>[3, 3.0001]</cell>
+                        <cell><m>\frac{h(3.0001)-h(3)}{3.0001-3}</m></cell>
+                        <cell>-24.00</cell>
+                      </row>
+                      <row bottom="minor">
+                        <cell></cell>
+                        <cell></cell>
+                        <cell></cell>
+                      </row>
+                    </tabular>
+                  </table>
+                </p>
+              </li>
+              <li>
+                <p>
+                  If this trend continues what is the velocity of the stone at the instant <m>t=3</m>?
+                  If this trend continues the velocity at the instant <m>t=3</m> will be 24 meters/second.
+                </p>
+              </li>
+              <li>
+                <p>
+                  What does the negative sign mean The height of the ball is decreasing as time goes by.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the most simplified expression you can for the average velocity of the stone on the interval <m>[3,3+h]</m> by computing the expression <m>AV_{[3+h,3]}</m>.
+                  Compare this answer with the answer from the result found earlier.
+                  <me>
+                    AV_{[3+h,3]}=\frac{s(3+h)-s(3)}{(3+h)-(3)}
+                  </me>
+                  <me>
+                    =\frac{(16-4(3+h)^2)-(16-4(3)^2)}{(3+h)-(3)}
+                  </me>
+                  <me>
+                    =\frac{(16-4(9+6h+h^2)-(-20)}{h}
+                  </me>
+                  <me>
+                    =\frac{(16-36-24h-4h^2+20)}{h}
+                  </me>
+                  <me>
+                    =\frac{(-20-24h-4h^2+20)}{h}
+                  </me>
+                  <me>
+                    =\frac{(\cancel{-20}-24h-4h^2+\cancel{20})}{h}
+                  </me>
+                  <me>
+                    =\frac{-24h-4h^2}{h}
+                  </me>
+                  <me>
+                    =\frac{-24h}{h}-\frac{4h^2}{h}
+                  </me>
+                  <me>
+                    =\frac{-24\cancel{h}}{\cancel{h}}-\frac{4h\cancel{h}}{\cancel{h}}
+                  </me>
+                  <me>
+                    V=-24-4h
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Plug in <m>h=0</m> to find the instantaneous velocity at <m>t=3</m> When we plug <m>h=0</m> we get the instantaneous velocity equal to -24 m/s.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <p>
+        geogebra activity for average, instantaneous velocity
+      </p>
+      <activity>
+        <p>
+          The displacement
+          (in meters)
+          of a particle moving in a straight line is given by
+          <me>
+            s(t)=t^2-8t+16
+          </me>
+          where <m>t</m> is measured in seconds.
+          <ol>
+            <li>
+              <p>
+                Find the average velocity over each time interval:
+                <ul>
+                  <li>
+                    <p>
+                      <m>[3,4]</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>[3.5,4]</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>[4,5]</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>[4.5,5]</m>
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the instantaneous velocity when <m>t=4</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Draw the graph <m>s</m> as a function of <m>t</m> and draw the secant lines whose slopes are the average velocities in part (i) and the tangent line whose slope is the instantaneous velocity in part
+                (ii).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Approximating non-linear functions with linear functions</title>
+      <p>
+        Linear functions are simple and easy to deal with but the most useful functions in real-life applications are non-linear.
+        For example in economics,
+        a linear function cannot explain the relationship between variables.
+        In such cases, a non-linear function must be used.
+        Three non-linear functions commonly used in economics are the exponential,
+        quadratic function, and the logarithmic function.
+        One part of calculus can be viewed as approximating nonlinear functions by linear functions.
+      </p>
+      <p>
+        <em>Linear versus non-linear functions</em> For calculus purposes,
+        functions can be put into two groups,
+        <em>linear</em>and <em>non-linear</em>.
+      </p>
+      <table>
+        <title>Difference between linear and non-linear functions</title>
+        <tabular>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell><em>Linear Functions</em></cell>
+            <cell><em>Non-Linear Functions</em></cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>The degree is one</cell>
+            <cell>The degree is more than one or no degree</cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>A linear function is plotted as a straight line with no curves.</cell>
+            <cell>Non-linear functions are not plotted as straight lines; they have curves.</cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>Simple algebraic expressions</cell>
+            <cell>Potentially complex expressions</cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>Easy to graph</cell>
+            <cell>Can be hard to graph</cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>Has a constant rate of change, represented by the slope</cell>
+            <cell>The rate of change varies; there is no constant slope</cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell><m>y</m> changes at a constant rate</cell>
+            <cell><m>y</m> changes at a varying rate</cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+        </tabular>
+      </table>
+      <p>
+        <em>Linear approximation</em>: The principle of local linearity tells us that if we zoom in on a point on a function <m>y = f (x)</m>,
+        the function should become indistinguishable from its tangent line.
+        The microscopic view of a nonlinear function appears to be linear.
+        A nonlinear function can be approximated with a linear function in a certain operating point.
+        If it doesn't look like a line then calculus fails.
+        The process of linearization, in mathematics,
+        refers to the process of finding a linear approximation of a nonlinear function at a given point <m>(a,f(a))</m>.
+      </p>
+      <example>
+        <statement>
+          <p>
+            Graph a function <m>y=x^2</m>.
+            Zoom in the graph at a point <m>(1,1)</m> a few times.
+            What do you see?
+            Do you think we can approximate this function by a linear function?
+            What do you think this linear function would be?
+          </p>
+        </statement>
+      </example>
+      <p>
+        One idea that appears repeatedly is most functions ( or curves) locally behave like a linear line.
+        A better example of our modern life is St.
+        Regis Chicago is a building known for its striking architecture.
+        From a distance, this building presents a captivating curve,
+        a testament to modern architectural design.
+        However, a closer examination reveals something intriguing – when viewed up close,
+        these curves transform into nearly straight lines.
+      </p>
+      <p>
+        This observation serves as a perfect metaphor for understanding a fundamental concept in calculus:
+        local linearity.
+        Just as the curved facade of St.
+        Regis Chicago appears linear when closely observed,
+        so do smooth curves in mathematical functions.
+      </p>
+      <p>
+        In calculus,
+        when we zoom in on a small section of a smooth curve,
+        it resembles a straight line.
+        This phenomenon underpins the concept of a derivative.
+        The derivative at a point on a curve represents the slope of the tangent line to the curve at that point.
+        In essence, it tells us how the function is changing at that exact location.
+      </p>
+      <p>
+        Through this architectural analogy,
+        we can visualize how, at a sufficiently small scale,
+        the behavior of complex curves can be approximated by simple straight lines.
+        This idea is not just a cornerstone of calculus but also a testament to how mathematics can be found and understood in the world around us.
+      </p>
+      <figure xml:id="fig_enter-label">
+        <caption>The St. Regis Chicago</caption>
+        <image width="50%" source="images/The_St._Regis_Chicago.png"/>
+      </figure>
+      <p>
+        <image width="50%" source="images/r.png"/>
+      </p>
+      <p>
+        <em>Examples of linear approximation</em>
+        Linear approximations are often used in physics.
+        In analyzing the consequences of an equation,
+        a physicist sometimes needs to simplify a function by replacing it with its linear another example occurs in the theory of optics,
+        where light rays that arrive at small low angles relative to the optical axis are called paraxial rays.
+        In paraxial optics, both are replaced by their linearizations.
+        In other words,
+        the linear approximations <m>\sin\theta \approx \theta</m> and
+        <m>\cos\theta \approx 1</m> are used when <m>\theta</m> is close to <m>0</m>.
+        The results of calculations made with these approximations became the basic theoretical tool used to design lenses. approximation
+      </p>
+      <example>
+        <statement>
+          <p>
+            You will learn in calculus how the radical function which is a nonlinear function
+            <m>f(x)=\sqrt{x+8}</m> can be approximated by a linear function
+            <m>L(x)=\frac{x}{6}+\frac{17}{6}</m> near the point <m>x=1</m>.
+            <me>
+              \sqrt{x+8} \approx  \frac{x}{6}+\frac{17}{6}
+            </me>
+            near the point <m>x=1</m>.
+          </p>
+          <p>
+            The linear function <m>L(x)=\frac{x}{6}+\frac{17}{6}</m> is an equation of a tangent line to the non-linear function
+            <m>f(x)=\sqrt{x+8}</m> at <m>x=1</m> and can be used to approximates the non-linear function near the point of tangency.
+          </p>
+          <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+xlabel=\(x\),
+ylabel={\(y\)},
+grid=major,
+axis lines=middle,
+xmin=-10, xmax=10,
+ymin=0, ymax=5,
+legend pos=north west
+]
+\addplot[domain=-10:10, samples=100, smooth, thick, blue] {(x+8)^0.5};
+\addlegendentry{\(y = \sqrt{x+8}\)}
+\addplot[domain=-10:10, samples=2, smooth, thick, red, solid] {x/6+17/6};
+\addlegendentry{Tangent at \(x=1\)}
+\addplot[mark=*, green] coordinates {(1,3)};
+\addlegendentry{Point of Tangency (1,3)}
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+          </image>
+          <me>
+            \sqrt{x+8}\approx\frac{x}{6}+\frac{17}{6}
+          </me>
+          <p>
+            If you evaluate the function <m>f(x)</m> at points close to <m>x=1</m> say<m>x=0.98</m>.
+            We get
+            <me>
+              f(8.98)=\sqrt{0.98+8}=2.9967
+            </me>
+            and
+            <me>
+              L(8.98)=\frac{0.98}{6}+\frac{17}{6}=2.9967
+            </me>
+          </p>
+          <p>
+            Which is a good approximation.
+            However, if we choose a point far from <m>x=1</m> say <m>x=5</m>,
+            then we see that
+            <me>
+              f(13)=\sqrt{8+5}=3.6056
+            </me>
+            and
+            <me>
+              L(8)=\frac{8}{6}+\frac{17}{6}=3.6667
+            </me>
+          </p>
+          <p>
+            Which is not a good approximation.
+            So the approximation is good only near the point of tangency.
+          </p>
+          <p>
+            Since the tangent line here is above the curve.
+            That means here we are overestimating the function.
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Graph
+          <me>
+            f(x)=sinx
+          </me>
+          in Desmos.
+          Label a point <m>(0.5,sin(0.5))</m> on the graph of <m>f(x)=sinx</m>.
+          Also, type <m>y=mx+b</m> in the same frame.
+          Use the slider to adjust the value of <m>m</m> and <m>b</m> so that the line <m>y=mx+b</m> will be the linear approximation for the graph of
+          <m>f(x)=sinx</m> at a point <m>x=0.5</m>.
+        </p>
+        <p>
+          what is the best linear approximation you have?
+        </p>
+      </activity>
+    </subsubsection>
+  </subsection>
+  <subsection>
+    <title>Optimization problems</title>
+    <p>
+      Calculus plays a crucial role in solving optimization problems,
+      where the goal is to find the most efficient or cost-effective method for doing something.
+      In this section,
+      we'll explore various examples of such problems and how to solve them using technology
+      (you need to wait till you take Calculus to be able to fully solve it without technology),
+      including:
+      <ol>
+        <li>
+          <p>
+            Minimize production costs by optimizing the container shape to reduce material use.
+          </p>
+        </li>
+        <li>
+          <p>
+            Maximize a race car's acceleration while ensuring driver safety.
+          </p>
+        </li>
+        <li>
+          <p>
+            Optimize the diameter of a ventilation duct to maximize airflow efficiency.
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the optimal branching angle for tree limbs for maximum sunlight exposure and nutrient distribution.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      write two examples before activity
+    </p>
+    <activity>
+      <p>
+        Given a piece of cardboard with a total surface area of 600 cm<m>^2</m>,
+        your challenge is to design an open-top box with a square base,
+        maximizing the box's volume.
+        <ol>
+          <li>
+            <p>
+              <em>Illustrate your plan with a diagram:</em>
+              Sketch the initial piece of cardboard and indicate where you will cut and fold to create the open-top box.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Define your variables clearly:</em>
+              Let <m>x</m> represent the length of the square base's sides and <m>h</m> the height of the box.
+              What do these variables signify in your diagram?
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Surface Area Equation:</em>
+              Develop an equation for the total surface area of the box using <m>x</m> and <m>h</m>.
+              Remember, the surface area includes the square base and the four side faces.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Analyze the equation for surface area:</em>
+              How many variables are present?
+              Can you express one variable in terms of the other to simplify your calculations?
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Formulate the volume equation of the box:</em>
+              incorporating the relationships between variables established in previous steps.
+              Ensure your volume equation is expressed in terms of a single variable for simplicity.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Examination of the volume formula:</em>
+              Is it expressed solely in terms of <m>x</m> or <m>h</m>?
+              Utilize Desmos or a similar graphing tool to plot this equation and identify the point where the volume reaches its maximum.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Determine the dimensions:</em> Based on your graph,
+              what are the approximate dimensions of the box (length, width,
+              height) that allow for the maximum volume?
+              Provide these measurements.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </activity>
+    <activity>
+      <p>
+        Using technology to find the absolute and local minimum value of the function
+        <me>
+          f(x)=3x^4+8x^3-18x^2
+        </me>
+        in the interval <m>(-5,5)</m>.
+      </p>
+    </activity>
+    <example>
+      <statement>
+        <p>
+          The graph of <m>f(x)=x^3-x+1</m> is concave down from
+          <m>(-\infty,0)</m> and concave up from <m>(0, \infty)</m>.
+          The inflection point is <m>(0,1)</m> because the function changes from concave down to concave up at <m>x=0</m>.
+        </p>
+      </statement>
+    </example>
+    <activity>
+      <p>
+        Graph the function <m>f(x) = 5x^3 + 2x^2 - 3x</m> on Desmos to find the interval(s) where this function increases,
+        decreases, concave up, and concave down.
+        Also find the points where the function has a local maximum,
+        minimum, and inflection point.
+      </p>
+    </activity>
+    <activity>
+      <p>
+        For the following functions determine the following.
+        <ol>
+          <li>
+            <p>
+              Interval(s) where they are increasing,
+              decreasing oscillating, constant, and non-monotonic.
+            </p>
+          </li>
+          <li>
+            <p>
+              Intervals where the functions are concave up or concave down.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find the point(s) where these functions have maximum,
+              minimum, and an inflection point.
+            </p>
+          </li>
+        </ol>
+        <ul>
+          <li>
+            <p>
+              In economics,
+              the price-supply function <m>S(x)</m> of a manufacturing company is given by the function.
+              <me>
+                p=S(x)=1.5e^{-0.14x}
+              </me>
+              where <m>x</m> is the supply quantity and <m>p</m> represents the price per item.
+            </p>
+          </li>
+          <li>
+            <p>
+              The price-demand function <m>D(x)</m> of the same company is given by the function
+              <me>
+                p=D(x)=2e^{0.02x}
+              </me>
+              where <m>x</m> is the demand quantity and <m>p</m> represents the price per item.
+            </p>
+          </li>
+          <li>
+            <p>
+              The revenue function <m>R(x)</m> is given by
+              <me>
+                R(x)=x(-3x+5)
+              </me>
+              where <m>x</m> is the number items sold.
+            </p>
+          </li>
+          <li>
+            <p>
+              The price of a certain calculus textbook in dollars is given by a function
+              <me>
+                p(t)=50
+              </me>
+              where <m>t</m> is the number of years since <m>1980</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </activity>
+    <p>
+      Fix the triangle and create a simulation in Geogebra
+    </p>
+    <activity xml:id="Stewart">
+      <p>
+        The line <m>y = mx + b</m> intersects the parabola <m>y = x^2</m> in points <m>A</m> and <m>B</m> (See the figure).
+        Find the point <m>P</m> on the arc <m>AOB</m> of the parabola that maximizes the area of the triangle <m>PAB</m>.
+      </p>
+    </activity>
+    <figure xml:id="fig_enter-label">
+      <caption>Caption</caption>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw[thick,->] (-1,0) -- (2,0) node[right] {\(x\)};
+\draw[thick,->] (0,-1) -- (0,3) node[above] {\(y\)};
+\draw[domain=-1:1.5,smooth,variable=\x,blue] plot ({\x},{\x*\x});
+\draw[domain=-1:1.5,smooth,variable=\y,red]  plot ({\y},{\y*1.2 + 0.5});
+\fill (0.5,0.25) circle (1pt) node[below right] {\(A\)};
+\fill (1.2,1.9) circle (1pt) node[above right] {\(B\)};
+\fill (0.8,0.64) circle (1pt) node[above] {\(P\)};
+\fill[fill=orange, fill opacity=0.5] (0.5,0.25) -- (1.2,1.9) -- (0.8,0.64) -- cycle;
+\draw[dashed] (0.5,0.25) -- (0.5,0);
+\draw[dashed] (1.2,1.9) -- (1.2,0);
+\draw[dashed] (0.8,0.64) -- (0.8,0);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </figure>
+  </subsection>
+  <subsection>
+    <title>Finding the area under the graph of a function</title>
+    <introduction>
+      <p>
+        One of the most useful applications of integral calculus is learning how to calculate the area under the curve.
+        Areas found under the curve are essential in physics, statistics,
+        engineering, and other applied fields.
+      </p>
+      <p>
+        We will see the following three cases in calculus.
+        <ol>
+          <li>
+            <p>
+              The area of the region completely lying above the <m>x</m>-axis.
+            </p>
+          </li>
+          <li>
+            <p>
+              The area of the region below the curve where a part is located above and below the <m>x</m>-axis.
+            </p>
+          </li>
+          <li>
+            <p>
+              The area of the region below the curve and the <m>x</m>-axis.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[enlargelimits=0.1]
+\addplot[domain=-.15:1,fill=gray!50] {
+x^2}\closedcycle;
+\addplot [thick,color=blue,mark=o,fill=blue,
+fill opacity=0.05]coordinates {
+(1, 1)
+(1, 0)
+(0, 0)  };
+\node [rotate=48] at (axis cs:  .7,  .59) {\(y=x^2\)};
+\node [rotate=90] at (axis cs:  1.05,  .25) {\(x=1\)};
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[enlargelimits=0.1]
+\addplot[domain=-3:3,fill=gray!50] {
+x^3}\closedcycle;
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[enlargelimits=0.1]
+\addplot[domain=-5:0,fill=gray!50] {
+x^3}\closedcycle;
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </introduction>
+    <subsubsection>
+      <title>Finding area under the curve exactly</title>
+      <p>
+        Let's recall areas of some geometrical figures: Area of a triangle with a length of the base <m>b</m> and height <m>h</m>
+        <me>
+          A=\frac{b h}{2}
+        </me>
+      </p>
+      <p>
+        Area of a rectangle with a length of the base <m>L</m> and height <m>W</m>
+        <me>
+          A=L W
+        </me>
+      </p>
+      <p>
+        Area of a square with the length of each side <m>a</m>
+        <me>
+          A=a^2
+        </me>
+      </p>
+      <p>
+        Area of a trapezoid length of the parallel sides <m>a b</m>and height <m>h</m>
+        <me>
+          A=\frac{(a+b) h}{2}
+        </me>
+      </p>
+      <activity>
+        <p>
+          Graph the functions below in Desmos and find the area under the curve between the given values of <m>x</m>.
+          <ol>
+            <li>
+              <p>
+                Find the area under the horizontal line
+                <me>
+                  f(x)=6
+                </me>
+                between the points <m>[-2,5]</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the area under the straight line
+                <me>
+                  f(x)=x
+                </me>
+                between the points <m>[2,6]</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the area under the straight line
+                <me>
+                  f(x)=x-3
+                </me>
+                between the points <m>[0,6]</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the area under the curve
+                <me>
+                  f(x)=\sqrt{1-x^2}
+                </me>
+                between the points <m>[0,1]</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+    <subsubsection>
+      <title>Finding area under the curves by approximately</title>
+      <p>
+        We will learn how to find the area under the curve of a function <m>f(x)</m> in the interval <m>[a,b]</m> by dividing the area into <m>n</m> rectangles of equal width <m>\Delta x</m>.
+      </p>
+      <p>
+        Where the area of the rectangle is A= width*height
+      </p>
+      <example>
+        <statement>
+          <p>
+            Consider the function <m>f(x)=\frac{1}{x}</m>.
+            <ol>
+              <li>
+                <p>
+                  Graph the function <m>f(x)</m> in Desmos.
+                </p>
+              </li>
+              <li>
+                <p>
+                  We need to find the area under the graph of the function between the points <m>[1,8]</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  We will divide the area into seven rectangles of equal width of  <m>\Delta x</m>.
+                  The width can be calculated by the formula
+                  <me>
+                    \Delta x=\frac{b-a}{n}
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Here
+                  <me>
+                    \Delta x=\frac{8-1}{7}=1
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  The four intervals that <m>[1,8]</m> can be split in to are
+                  <me>
+                    [1,2],[2, 3],[3,4],[4.5],[5, 6],[6,7],[7,8]
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find the area of each rectangle.
+                  We know that the width of each rectangle is <m>1</m> The height can be found in three different ways.
+                  Using the left endpoint, or right endpoint,
+                  or the middle point of the interval. \pgfplotsset{ midpoint segments/.code={\pgfmathsetmacro\midpointsegments{#1}}, midpoint segments=3, midpoint/.style args={#1:#2}{ ybar interval,
+                  domain=#1+((#2-#1)/\midpointsegments)/2:#2+((#2-#1)/\midpointsegments)/2, samples=\midpointsegments+1, x filter/.code=\pgfmathparse{\pgfmathresult-((#2-#1)/\midpointsegments)/2} } } \pgfplotsset{ right segments/.code={\pgfmathsetmacro\rightsegments{#1}}, right segments=3, right/.style args={#1:#2}{ ybar interval,
+                  domain=#1+((#2-#1)/\rightsegments):#2+((#2-#1)/\rightsegments),
+                  samples=\rightsegments+1, x filter/.code=\pgfmathparse{\pgfmathresult-((#2-#1)/\rightsegments)} } } \pgfplotsset{ left segments/.code={\pgfmathsetmacro\leftsegments{#1}}, left segments=3, left/.style args={#1:#2}{ ybar interval,
+                  domain=#1:#2, samples=\leftsegments+1, x filter/.code=\pgfmathparse{\pgfmathresult} } }
+                  <image>
+                     <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[ xmin=0,xmax=9,ymin=0,ymax=4, domain=0:10, samples=100, axis lines=middle ] \addplot [thick, red] {f}; \addplot [ black!80,fill=green,opacity=.3, left segments=7, left=1:8 ] {f}; \end{axis}\end{tikzpicture}]]> </latex-image>
+                  </image>
+                </p>
+              </li>
+              <li>
+                <p>
+                  First try the left endpoints to estimate the area.
+                  <me>
+                    A\approx 1f(1)+1f(2)+1f(3)+1f(4)+1f(5)+1f(6)+1f(7)
+                  </me>
+                  <me>
+                    A\approx 1(f(1)+f(2)+f(3)+f(4)+f(5)+f(6)+f(7)=2.5929
+                  </me>
+                  <image>
+                     <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[ xmin=0,xmax=9,ymin=0,ymax=4, domain=0:10, samples=100, axis lines=middle ] \addplot [thick, red] {f}; \addplot [ black!80,fill=green,opacity=.3, right segments=7, right=1:8, ] {f}; \end{axis}\end{tikzpicture}]]> </latex-image>
+                  </image>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Now try the right endpoints to estimate the area.
+                  <me>
+                    A\approx 1f(2)+1f(3)+1f(4)+1f(5)+1f(6)+1f(7)+1f(8)
+                  </me>
+                  <me>
+                    A\approx 1(f(2)+f(3)+f(4)+f(5)+f(6)+f(7)+1f(8))=1.7179
+                  </me>
+                  <image>
+                     <latex-image> <![CDATA[\begin{tikzpicture}\begin{axis}[ xmin=0,xmax=8,ymin=0,ymax=4, domain=0:10, samples=100, axis lines=middle ] \addplot [thick,red] {f}; \addplot [ black!80,fill=green,opacity=.3, midpoint segments=7, midpoint=1:8, ] {f}; \end{axis}\end{tikzpicture}]]> </latex-image>
+                  </image>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Lastly try the middle points to estimate the area.
+                  Midpoint  formula is
+                  <me>
+                    (x,y)=(\frac{x_1 +x_2}{2}, \frac{y_1 +y_2}{2})
+                  </me>
+                  <me>
+                    A\approx 1f(1.5)+1f(2.5)+1f(3.5)+1f(4.5)+1f(5.5)+1f(6.5)+1f(7.5)
+                  </me>
+                  <me>
+                    A\approx 1(f(1.5)+1f(2.5)+1f(3.5)+1f(4.5)+1f(5.5)+1f(6.5)+1f(7.5))=2.0436
+                  </me>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <p>
+          Consider a function <m>f(x)=e^x</m>.
+          Find the area under the curve of
+          <m>f(x)=e^x</m> between <m>[0,2]</m> using <m>4</m> rectangles of equal width.
+          <ol>
+            <li>
+              <p>
+                In order to divide the interval <m>[0,2]</m> into <m>4</m> intervals,
+                first find the rectangle width.
+                The formula to find the width of each rectangle is given by the formula
+                <me>
+                  \Delta x=\frac{b-a}{n}
+                </me>
+                <m>a</m>, <m>b</m>, and <m>n</m> are the left point of the rectangle,
+                the right point of the rectangle,
+                and the number of rectangles respectively.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the four intervals of equal width you just found
+              </p>
+            </li>
+            <li>
+              <p>
+                Identify the left end, middle point,
+                and the middle point of the intervals.
+              </p>
+            </li>
+            <li>
+              <p>
+                First try the left endpoints to estimate the area.
+              </p>
+            </li>
+            <li>
+              <p>
+                Now try the right endpoints to estimate the area.
+              </p>
+            </li>
+            <li>
+              <p>
+                Lastly try the middle points to estimate the area.
+                Midpoint  formula is
+                <me>
+                  (x,y)=(\frac{x_1 +x_2}{2}, \frac{y_1 +y_2}{2})
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                Try finding the approximate area by increasing the number of rectangles.
+                What do you think will happen in context with the approximate area?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </activity>
+    </subsubsection>
+  </subsection>
+</section>
